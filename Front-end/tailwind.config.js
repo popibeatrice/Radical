@@ -3,8 +3,8 @@ module.exports = {
   darkMode: "media",
   theme: {
     screens: {
-      xxs: "365px",
-      xs: "500px",
+      xxs: "350px",
+      xs: "450px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -13,10 +13,11 @@ module.exports = {
       "3xl": "1700px",
     },
     extend: {
-      colors: {
-
-      },
+      colors: {},
       fontFamily: {
+        logo: ["Cinzel Decorative", "cursive"],
+        general: ["Poppins", "sans-serif"],
+        title: ["Cormorant Garamond", "serif"],
       },
     },
   },

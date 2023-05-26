@@ -1,14 +1,17 @@
-import '../styles/index.css';
-const img = document.querySelector('img');
-img.classList.add('rounded-xl');
-let yes = 10;
-yes = 5;
-console.log(yes);
-const GetCash = async function () {
-    console.log('cash');
-};
+import "../styles/index.css";
+import "../styles/tailwind.css";
+import ScrollReveal from "scrollreveal";
 
-const mama = async function () {
-    await GetCash();
-};
-mama();
+const menuBtn = document.querySelector(".menu-btn");
+let menuOpen = false;
+
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuOpen = false;
+  }
+});
+ScrollReveal().reveal(".font-title");

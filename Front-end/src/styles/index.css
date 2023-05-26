@@ -1,3 +1,116 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+main{
+    background: url("../assets/Landing-BG.jpg");
+    background-position:center;
+    background-size: cover;
+}
+.blury-wrapper{
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+}
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger {
+    width: 30px;
+    height: 3.75px;
+    background: #FFF;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+}
+
+/* This creates the top and bottom lines but it does not position them */
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3.75px;
+    background: #FFF;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+}
+
+/* This positions the top and bottom lines */
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+/* Animation */
+/* This moves the middle line off the screen to the left */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+/* This rotates the top line down by 45 degrees but also translates it back
+   on the screen from left to right. You won't see it translate as rotate and
+   translate have been put together. */
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+/* This rotates the bottom line by minus 45 degrees (45 degrees anti-clockwise) */
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.wrap img {
+    height: 50px;
+    width: auto;
+    margin: 0px 0 0 -40px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    5.55556% {
+        transform: translateY(0);
+    }
+    11.11111% {
+        transform: translateY(0);
+    }
+    22.22222% {
+        transform: translateY(-15px);
+    }
+    27.77778% {
+        transform: translateY(0);
+    }
+    33.33333% {
+        transform: translateY(-15px);
+    }
+    44.44444% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
