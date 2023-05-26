@@ -1,6 +1,5 @@
 main{
-    background: url("../assets/Landing-BG.jpg");
-    background-position:center;
+    background: url("../assets/Landing-BG.jpg") center;
     background-size: cover;
 }
 .blury-wrapper{
@@ -19,7 +18,7 @@ main{
 }
 .menu-btn__burger {
     width: 30px;
-    height: 3.75px;
+    height: 3px;
     background: #FFF;
     border-radius: 3px;
     transition: all .5s ease-in-out;
@@ -31,7 +30,7 @@ main{
     content: '';
     position: absolute;
     width: 30px;
-    height: 3.75px;
+    height: 3px;
     background: #FFF;
     border-radius: 3px;
     transition: all .5s ease-in-out;
@@ -66,18 +65,16 @@ main{
 }
 
 .wrap {
-    height: 100%;
-    width: 100%;
     text-align: center;
 }
 
 .wrap img {
     height: 50px;
-    width: auto;
-    margin: 0px 0 0 -40px;
     line-height: 60px;
     position: absolute;
-    left: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 0;
 }
 
