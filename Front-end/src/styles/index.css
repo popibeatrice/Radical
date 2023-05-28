@@ -114,6 +114,13 @@ main {
 
 /*  */
 
+.card-section {
+    background-image: url("../assets/Vaslui.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 a:hover .circle {
     width: 9rem;
 }
