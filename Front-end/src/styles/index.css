@@ -1,8 +1,8 @@
-main{
+main {
     background: url("../assets/Landing-BG.jpg") center;
     background-size: cover;
 }
-.blury-wrapper{
+.blury-wrapper {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3px);
 }
@@ -14,26 +14,26 @@ main{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger {
     width: 30px;
     height: 3px;
-    background: #FFF;
+    background: #fff;
     border-radius: 3px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 /* This creates the top and bottom lines but it does not position them */
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 30px;
     height: 3px;
-    background: #FFF;
+    background: #fff;
     border-radius: 3px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 /* This positions the top and bottom lines */
@@ -109,5 +109,21 @@ main{
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+/*  */
+
+a:hover .circle {
+    width: 9rem;
+}
+
+a:hover .more {
+    color: white;
+}
+
+@media (min-width: 650px) {
+    a:hover .circle {
+        width: 11rem;
     }
 }

@@ -1,303 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"
-    ></script>
-    <title>Vaslui</title>
-  </head>
-  <body class="font-general">
-    <main class="min-h-screen text-white relative">
-      <div class="blury-wrapper min-h-screen">
-        <header
-          class="flex justify-between relative items-center w-[85%] lg:w-[90%] mx-auto pt-8"
-        >
-          <a
-            href="#"
-            class="font-logo text-2xl font-bold xs:text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl"
-            >Vaslui</a
-          >
-          <nav class="hidden md:block rounded-lg">
-            <ul class="flex gap-7 justify-center items-center text-xl">
-              <li class="hover:border-b">
-                <a href="">Obiective</a>
-              </li>
-              <li class="hover:border-b">
-                <a href="">Trasee</a>
-              </li>
-              <li class="hover:border-b">
-                <a href="">Transport</a>
-              </li>
-              <li class="hover:border-b">
-                <a href="">Evenimente</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="menu-btn md:hidden">
-            <div class="menu-btn__burger"></div>
-          </div>
-          <div
-            class="absolute z-10 px-1.5 py-2.5 rounded-xl flex-col gap-4 -bottom-28 lg:-bottom-12 -right-1 flex items-center justify-center lg:flex-row"
-          >
-            <button
-              type="button"
-              class="flex items-center justify-center gap-1.5"
-            >
-              <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
-              <span class="hidden lg:block">RO</span>
-            </button>
-            <button
-              type="button"
-              class="flex items-center opacity-30 justify-center gap-1.5"
-            >
-              <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
-              <span class="hidden lg:block">EN</span>
-            </button>
-          </div>
-        </header>
-        <section class="grid content-center w-[85%] mx-auto mt-[30vh] pb-16">
-          <div class="flex flex-col justify-center items-start gap-2.5">
-            <h1
-              class="font-title h1-animation text-3xl xxs:text-4xl md:text-5xl 2xl:text-6xl font-bold"
-            >
-              Descopera atractiile judetului Vaslui
-            </h1>
-            <p class="xs:text-lg max-w-xl info-pop">
-              Ia parte la o calatorie virtuala imersiva, presarata cu istorie,
-              peisaje pitoresti si cu o multitudine de obiective turistice ce
-              tin in viata cultura acestui judet.
-            </p>
-          </div>
-        </section>
-      </div>
-      <div class="wrap">
-        <img
-          src="../assets/arrow.png"
-          id="arrow"
-          alt="sageata"
-          class="animated bounce"
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
         />
-      </div>
-    </main>
-    <section
-      class="grid max-w-3xl lg:max-w-screen-2xl my-16 lg:my-28 lg:grid-cols-2 items-center justify-between content-center w-[90%] gap-4 mx-auto xs:text-lg sm:text-xl xl:text-2xl"
-    >
-      <div class="max-w-2xl flex flex-col items-center justify-center gap-6">
-        <p class="text-center lg:text-left">
-          Situat in <span class="font-bold">estul Romaniei</span>, in regiunea
-          istorica <span class="font-bold">Moldova</span>, cu radacini ce se
-          intind pe parcursul secolelor, este gazda unor comori de monumente
-          istorice si bijuterii arhitecturale.
-        </p>
-        <p class="text-center lg:text-left">
-          Istoria județului Vaslui este strâns legată de istoria Moldovei. În
-          secolele al <span class="font-bold">XIV-lea</span> și al
-          <span class="font-bold">XV-lea</span>, acest teritoriu a fost parte a
-          Principatului Moldovei și a fost martor al unor importante bătălii și
-          evenimente istorice. Izvoarele istorice atesta ca
-          <span class="font-bold"
-            >numele său provine de la râul de care este strabatut</span
-          >
-          .
-        </p>
-      </div>
-      <div
-        class="slider shadow-2xl shadow-gray-700 max-w-2xl justify-self-end overflow-hidden"
-        id="slider1"
-      >
-        <div id="poza-1"></div>
-        <div id="poza-2"></div>
-        <div id="poza-3"></div>
-        <i
-          class="left arrows bg-white bg-opacity-70 rounded-lg"
-          style="z-index: 2; position: absolute"
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"
+        ></script>
+        <title>Vaslui</title>
+    </head>
+    <body class="font-general">
+        <!-- HERO -->
+        <main class="relative min-h-screen text-white">
+            <div class="blury-wrapper min-h-screen">
+                <header
+                    class="relative mx-auto flex w-[85%] items-center justify-between pt-8 lg:w-[90%]"
+                >
+                    <a
+                        href="#"
+                        class="font-logo text-2xl font-bold xs:text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl"
+                        >Vaslui</a
+                    >
+                    <nav class="hidden rounded-lg md:block">
+                        <ul
+                            class="flex items-center justify-center gap-7 text-xl"
+                        >
+                            <li class="hover:border-b">
+                                <a href="">Obiective</a>
+                            </li>
+                            <li class="hover:border-b">
+                                <a href="">Trasee</a>
+                            </li>
+                            <li class="hover:border-b">
+                                <a href="">Transport</a>
+                            </li>
+                            <li class="hover:border-b">
+                                <a href="">Evenimente</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu-btn md:hidden">
+                        <div class="menu-btn__burger"></div>
+                    </div>
+                    <div
+                        class="absolute -bottom-28 -right-1 z-10 flex flex-col items-center justify-center gap-4 rounded-xl px-1.5 py-2.5 lg:-bottom-12 lg:flex-row"
+                    >
+                        <button
+                            type="button"
+                            class="flex items-center justify-center gap-1.5"
+                        >
+                            <img
+                                src="../assets/steag-ro.png"
+                                class="w-7"
+                                alt="steag-ro"
+                            />
+                            <span class="hidden lg:block">RO</span>
+                        </button>
+                        <button
+                            type="button"
+                            class="flex items-center justify-center gap-1.5 opacity-30"
+                        >
+                            <img
+                                src="../assets/steag-en.png"
+                                class="w-7"
+                                alt="steag-en"
+                            />
+                            <span class="hidden lg:block">EN</span>
+                        </button>
+                    </div>
+                </header>
+                <section
+                    class="mx-auto mt-[30vh] grid w-[85%] content-center pb-16"
+                >
+                    <div
+                        class="flex flex-col items-start justify-center gap-2.5"
+                    >
+                        <h1
+                            class="h1-animation font-title text-3xl font-bold xxs:text-4xl md:text-5xl 2xl:text-6xl"
+                        >
+                            Descopera atractiile judetului Vaslui
+                        </h1>
+                        <p class="info-pop max-w-xl xs:text-lg">
+                            Ia parte la o calatorie virtuala imersiva, presarata
+                            cu istorie, peisaje pitoresti si cu o multitudine de
+                            obiective turistice ce tin in viata cultura acestui
+                            judet.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="wrap">
+                <img
+                    src="../assets/arrow.png"
+                    id="arrow"
+                    alt="sageata"
+                    class="animated bounce"
+                />
+            </div>
+        </main>
+        <!-- INTRO -->
+        <section
+            class="my-16 mx-auto grid w-[90%] max-w-3xl content-center items-center justify-items-center gap-4 xs:text-lg sm:text-xl lg:my-28 lg:max-w-screen-2xl lg:grid-cols-2 lg:justify-between xl:text-2xl"
         >
-          <svg viewBox="0 0 100 100">
-            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
-          </svg>
-        </i>
-        <i
-          class="right arrows bg-white bg-opacity-70 rounded-lg"
-          style="z-index: 2; position: absolute"
+            <div
+                class="flex max-w-2xl flex-col items-center justify-center gap-6"
+            >
+                <p class="text-center lg:text-left">
+                    Situat in <span class="font-bold">estul Romaniei</span>, in
+                    regiunea istorica <span class="font-bold">Moldova</span>, cu
+                    radacini ce se intind pe parcursul secolelor, este gazda
+                    unor comori de monumente istorice si bijuterii
+                    arhitecturale.
+                </p>
+                <p class="text-center lg:text-left">
+                    Istoria județului Vaslui este strâns legată de istoria
+                    Moldovei. În secolele al
+                    <span class="font-bold">XIV-lea</span> și al
+                    <span class="font-bold">XV-lea</span>, acest teritoriu a
+                    fost parte a Principatului Moldovei și a fost martor al unor
+                    importante bătălii și evenimente istorice. Izvoarele
+                    istorice atesta ca
+                    <span class="font-bold"
+                        >numele său provine de la râul de care este
+                        strabatut</span
+                    >
+                    .
+                </p>
+            </div>
+            <div
+                class="slider max-w-2xl overflow-hidden shadow-2xl shadow-gray-700 lg:justify-self-end"
+                id="slider1"
+            >
+                <div id="poza-1"></div>
+                <div id="poza-2"></div>
+                <div id="poza-3"></div>
+                <i
+                    class="left arrows rounded-lg bg-white bg-opacity-70"
+                    style="z-index: 2; position: absolute"
+                >
+                    <svg viewBox="0 0 100 100">
+                        <path
+                            d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                        ></path>
+                    </svg>
+                </i>
+                <i
+                    class="right arrows rounded-lg bg-white bg-opacity-70"
+                    style="z-index: 2; position: absolute"
+                >
+                    <svg viewBox="0 0 100 100">
+                        <path
+                            d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                            transform="translate(100, 100) rotate(180) "
+                        ></path>
+                    </svg>
+                </i>
+            </div>
+        </section>
+        <!-- STEFAN -->
+        <section
+            class="my-24 mx-auto grid w-[90%] max-w-3xl content-center items-center justify-items-center gap-4 xs:text-lg sm:text-xl lg:my-28 lg:max-w-screen-2xl lg:grid-cols-2 lg:justify-between xl:text-2xl"
         >
-          <svg viewBox="0 0 100 100">
-            <path
-              d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
-              transform="translate(100, 100) rotate(180) "
-            ></path>
-          </svg>
-        </i>
-      </div>
-    </section>
-    <section
-      class="grid max-w-3xl lg:max-w-screen-2xl my-16 lg:my-28 lg:grid-cols-2 items-center justify-between content-center w-[90%] gap-4 mx-auto xs:text-lg sm:text-xl xl:text-2xl"
-    >
-      <div
-        class="max-w-2xl lg:order-2 flex flex-col items-center justify-center gap-6"
-      >
-        <h2
-          class="font-title font-bold text-center mb-6 text-2xl xs:text-3xl md:text-4xl xl:text-5xl"
+            <div
+                class="flex max-w-2xl flex-col items-center justify-center gap-8 lg:order-2"
+            >
+                <h2
+                    class="text-center font-title text-2xl font-bold xxs:text-3xl md:text-4xl xl:text-5xl"
+                >
+                    Un erou istoric: Personalitatea care a modelat aceasta
+                    regiune
+                </h2>
+                <p class="text-center xs:text-lg sm:text-xl xl:text-2xl">
+                    Personalitatea ce a lasat cea mai durabila amprenta asupra
+                    judetului Vaslui este indiscutabil
+                    <span class="whitespace-nowrap font-bold"
+                        >Stefan cel Mare</span
+                    >, un erou național în România și unul dintre cei mai
+                    valoroși domnitori ai Moldovei. Meleagurile zonei sunt
+                    martore ale
+                    <span class="font-bold"
+                        >cetatilor, manastirilor si bisericilor</span
+                    >
+                    ridicate de acesta.
+                </p>
+            </div>
+            <img
+                src="../assets/stefan-cel-mare-1.jpg"
+                class="w-full max-w-2xl overflow-hidden rounded-2xl shadow-2xl shadow-gray-700 lg:order-1 lg:justify-self-start"
+                alt="Stefan Cel mare"
+            />
+        </section>
+        <!-- HARTA -->
+        <div
+            class="relative my-32 mx-auto flex h-screen w-[90%] max-w-3xl flex-col items-center justify-center gap-2 lg:max-w-screen-2xl xl:my-32"
         >
-          Un erou istoric: Personalitatea care a modelat aceasta regiune
-        </h2>
-        <p class="text-center xs:text-lg sm:text-xl xl:text-2xl">
-          Personalitatea ce a lasat cea mai durabila amprenta asupra judetului
-          Vaslui este indiscutabil
-          <span class="font-bold whitespace-nowrap">Stefan cel Mare</span>, un
-          erou național în România și unul dintre cei mai valoroși domnitori ai
-          Moldovei. Meleagurile zonei sunt martore ale
-          <span class="font-bold">cetatilor, manastirilor si bisericilor</span>
-          ridicate de acesta.
-        </p>
-      </div>
-      <img
-        src="../assets/stefan-cel-mare-1.jpg"
-        class="rounded-2xl w-full shadow-2xl lg:order-1 shadow-gray-700 max-w-2xl justify-self-start overflow-hidden"
-        alt="Stefan Cel mare"
-      />
-    </section>
-    <script>
-      (function ($) {
-        "use strict";
-        $.fn.sliderResponsive = function (settings) {
-          var set = $.extend(
-            {
-              slidePause: 5000,
-              fadeSpeed: 800,
-              autoPlay: "on",
-              showArrows: "off",
-              hideDots: "off",
-              hoverZoom: "on",
-              titleBarTop: "off",
-            },
-            settings
-          );
+            <h2
+                class="mb-6 max-w-2xl text-center font-title text-2xl font-bold xxs:text-3xl md:text-4xl xl:text-5xl"
+            >
+                Harta interactiva a judetului Vaslui
+            </h2>
+            <div
+                class="flex min-h-[90%] w-[90%] max-w-3xl flex-col items-center justify-center gap-8 lg:max-w-screen-2xl"
+            >
+                <div
+                    id="map"
+                    class="h-full w-full max-w-3xl overflow-hidden rounded-xl border-2 border-[#59422c] shadow-2xl shadow-gray-700 lg:max-w-screen-2xl"
+                ></div>
+                <span
+                    class="w-[90%] max-w-2xl font-bold text-gray-700 sm:self-start"
+                    >*pozitionati omuletul pe harta pentru a vizita virtual
+                    locurile dorite
+                </span>
+            </div>
+        </div>
+        <!-- OBIECTIVE -->
+        <div
+            class="sectiune-obiective relative mx-auto flex w-[90%] max-w-3xl items-center justify-center overflow-hidden lg:my-28 lg:max-w-screen-2xl"
+        >
+            <img
+                class="mx-auto w-[98vw] max-w-none xs:w-[90%] sm:max-w-xl 3xl:max-w-2xl"
+                src="../assets/Vaslui.png"
+                alt=""
+            />
+            <a href="#" class="absolute flex items-center gap-2">
+                <div
+                    class="circle absolute -left-10 flex h-3 w-3 items-center justify-center rounded-3xl bg-gray-900 p-4 duration-[450ms] sm:-left-14 sm:h-4 sm:w-4 sm:p-6"
+                >
+                    <img
+                        class="absolute left-2 my-auto w-5 sm:left-4"
+                        src="../assets/descover.png"
+                        alt=""
+                    />
+                </div>
+                <span class="more z-10 font-bold duration-[450ms]"
+                    >Descopera</span
+                >
+            </a>
+            <article class=""></article>
+        </div>
+        <script>
+            // SLIDER JS
+            (function ($) {
+                "use strict";
+                $.fn.sliderResponsive = function (settings) {
+                    var set = $.extend(
+                        {
+                            slidePause: 5000,
+                            fadeSpeed: 800,
+                            autoPlay: "on",
+                            showArrows: "off",
+                            hideDots: "off",
+                            hoverZoom: "on",
+                            titleBarTop: "off",
+                        },
+                        settings
+                    );
 
-          var $slider = $(this);
-          var size = $slider.find("> div").length; //number of slides
-          var position = 0; // current position of carousal
-          var sliderIntervalID; // used to clear autoplay
+                    var $slider = $(this);
+                    var size = $slider.find("> div").length; //number of slides
+                    var position = 0; // current position of carousal
+                    var sliderIntervalID; // used to clear autoplay
 
-          // Add a Dot for each slide
-          $slider.append("<ul></ul>");
-          $slider.find("> div").each(function () {
-            $slider.find("> ul").append("<li></li>");
-          });
+                    // Add a Dot for each slide
+                    $slider.append("<ul></ul>");
+                    $slider.find("> div").each(function () {
+                        $slider.find("> ul").append("<li></li>");
+                    });
 
-          // Put .show on the first Slide
-          $slider.find("div:first-of-type").addClass("show");
+                    // Put .show on the first Slide
+                    $slider.find("div:first-of-type").addClass("show");
 
-          // Put .showLi on the first dot
-          $slider.find("li:first-of-type").addClass("showli");
+                    // Put .showLi on the first dot
+                    $slider.find("li:first-of-type").addClass("showli");
 
-          //fadeout all items except .show
-          $slider.find("> div").not(".show").fadeOut();
+                    //fadeout all items except .show
+                    $slider.find("> div").not(".show").fadeOut();
 
-          // If Autoplay is set to 'on' than start it
-          if (set.autoPlay === "on") {
-            startSlider();
-          }
+                    // If Autoplay is set to 'on' than start it
+                    if (set.autoPlay === "on") {
+                        startSlider();
+                    }
 
-          // If showarrows is set to 'on' then don't hide them
-          if (set.showArrows === "on") {
-            $slider.addClass("showArrows");
-          }
+                    // If showarrows is set to 'on' then don't hide them
+                    if (set.showArrows === "on") {
+                        $slider.addClass("showArrows");
+                    }
 
-          // If hideDots is set to 'on' then hide them
-          if (set.hideDots === "on") {
-            $slider.addClass("hideDots");
-          }
+                    // If hideDots is set to 'on' then hide them
+                    if (set.hideDots === "on") {
+                        $slider.addClass("hideDots");
+                    }
 
-          // If hoverZoom is set to 'off' then stop it
-          if (set.hoverZoom === "off") {
-            $slider.addClass("hoverZoomOff");
-          }
+                    // If hoverZoom is set to 'off' then stop it
+                    if (set.hoverZoom === "off") {
+                        $slider.addClass("hoverZoomOff");
+                    }
 
-          // If titleBarTop is set to 'on' then move it up
-          if (set.titleBarTop === "on") {
-            $slider.addClass("titleBarTop");
-          }
+                    // If titleBarTop is set to 'on' then move it up
+                    if (set.titleBarTop === "on") {
+                        $slider.addClass("titleBarTop");
+                    }
 
-          // function to start auto play
-          function startSlider() {
-            sliderIntervalID = setInterval(function () {
-              nextSlide();
-            }, set.slidePause);
-          }
+                    // function to start auto play
+                    function startSlider() {
+                        sliderIntervalID = setInterval(function () {
+                            nextSlide();
+                        }, set.slidePause);
+                    }
 
-          // on mouseover stop the autoplay
-          $slider.mouseover(function () {
-            if (set.autoPlay === "on") {
-              clearInterval(sliderIntervalID);
-            }
-          });
+                    // on mouseover stop the autoplay
+                    $slider.mouseover(function () {
+                        if (set.autoPlay === "on") {
+                            clearInterval(sliderIntervalID);
+                        }
+                    });
 
-          // on mouseout starts the autoplay
-          $slider.mouseout(function () {
-            if (set.autoPlay === "on") {
-              startSlider();
-            }
-          });
+                    // on mouseout starts the autoplay
+                    $slider.mouseout(function () {
+                        if (set.autoPlay === "on") {
+                            startSlider();
+                        }
+                    });
 
-          //on right arrow click
-          $slider.find("> .right").click(nextSlide);
+                    //on right arrow click
+                    $slider.find("> .right").click(nextSlide);
 
-          //on left arrow click
-          $slider.find("> .left").click(prevSlide);
+                    //on left arrow click
+                    $slider.find("> .left").click(prevSlide);
 
-          // Go to next slide
-          function nextSlide() {
-            position = $slider.find(".show").index() + 1;
-            if (position > size - 1) position = 0;
-            changeCarousel(position);
-          }
+                    // Go to next slide
+                    function nextSlide() {
+                        position = $slider.find(".show").index() + 1;
+                        if (position > size - 1) position = 0;
+                        changeCarousel(position);
+                    }
 
-          // Go to previous slide
-          function prevSlide() {
-            position = $slider.find(".show").index() - 1;
-            if (position < 0) position = size - 1;
-            changeCarousel(position);
-          }
+                    // Go to previous slide
+                    function prevSlide() {
+                        position = $slider.find(".show").index() - 1;
+                        if (position < 0) position = size - 1;
+                        changeCarousel(position);
+                    }
 
-          //when user clicks slider button
-          $slider.find(" > ul > li").click(function () {
-            position = $(this).index();
-            changeCarousel($(this).index());
-          });
+                    //when user clicks slider button
+                    $slider.find(" > ul > li").click(function () {
+                        position = $(this).index();
+                        changeCarousel($(this).index());
+                    });
 
-          //this changes the image and button selection
-          function changeCarousel() {
-            $slider.find(".show").removeClass("show").fadeOut();
-            $slider
-              .find("> div")
-              .eq(position)
-              .fadeIn(set.fadeSpeed)
-              .addClass("show");
-            // The Dots
-            $slider.find("> ul").find(".showli").removeClass("showli");
-            $slider.find("> ul > li").eq(position).addClass("showli");
-          }
+                    //this changes the image and button selection
+                    function changeCarousel() {
+                        $slider.find(".show").removeClass("show").fadeOut();
+                        $slider
+                            .find("> div")
+                            .eq(position)
+                            .fadeIn(set.fadeSpeed)
+                            .addClass("show");
+                        // The Dots
+                        $slider
+                            .find("> ul")
+                            .find(".showli")
+                            .removeClass("showli");
+                        $slider
+                            .find("> ul > li")
+                            .eq(position)
+                            .addClass("showli");
+                    }
 
-          return $slider;
-        };
-      })(jQuery);
-
-      $(document).ready(function () {
-        $("#slider1").sliderResponsive({
-          fadeSpeed: 300,
-          autoPlay: "off",
-          showArrows: "on",
-          hideDots: "on",
-        });
-      });
-    </script>
-  </body>
+                    return $slider;
+                };
+            })(jQuery);
+            $(document).ready(function () {
+                $("#slider1").sliderResponsive({
+                    fadeSpeed: 300,
+                    autoPlay: "off",
+                    showArrows: "on",
+                    hideDots: "on",
+                });
+            });
+        </script>
+    </body>
 </html>
