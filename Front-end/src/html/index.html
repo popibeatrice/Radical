@@ -53,14 +53,14 @@
               class="flex items-center justify-center gap-1.5"
             >
               <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
-              <span class="hidden lg:block">RO</span>
+              <span class="hidden md:block">RO</span>
             </button>
             <button
               type="button"
               class="flex items-center justify-center gap-1.5 opacity-30"
             >
               <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
-              <span class="hidden lg:block">EN</span>
+              <span class="hidden md:block">EN</span>
             </button>
           </div>
         </header>
@@ -116,11 +116,15 @@
         class="slider max-w-2xl overflow-hidden shadow-2xl shadow-gray-700 lg:justify-self-end"
         id="slider1"
       >
-        <div id="poza-1"></div>
-        <div id="poza-2"></div>
-        <div id="poza-3"></div>
+        <img src="../assets/Ro-Map.png" class="" alt="poze carusel" />
+        <img src="../assets/index.png" class="" alt="poze carusel" />
+        <img
+          src="../assets/biserica-sfantul-ioan-din-vaslui.png"
+          class=""
+          alt="poze carusel"
+        />
         <i
-          class="left arrows rounded-lg bg-white bg-opacity-70"
+          class="left arrows rounded-lg bg-white bg-opacity-70 duration-300 hover:bg-opacity-100"
           style="z-index: 2; position: absolute"
         >
           <svg viewBox="0 0 100 100">
@@ -128,7 +132,7 @@
           </svg>
         </i>
         <i
-          class="right arrows rounded-lg bg-white bg-opacity-70"
+          class="right arrows rounded-lg bg-white bg-opacity-70 duration-300 hover:bg-opacity-100"
           style="z-index: 2; position: absolute"
         >
           <svg viewBox="0 0 100 100">
@@ -227,8 +231,13 @@
           src="../assets/pin.png"
           alt=""
         />
+        <img
+          class="pin absolute right-[49%] bottom-[24%] z-20 w-10 rotate-[-20deg] xxs:bottom-[24%] xxs:right-[45%] xxs:w-12 xs:right-[46%] xs:bottom-[19%] sm:right-[47%] sm:bottom-[23%] lg:right-[36%] lg:bottom-[75%] 2xl:right-[31%] 2xl:bottom-[74%]"
+          src="../assets/pin.png"
+          alt=""
+        />
         <article
-          class="obiective absolute -left-[2%] top-[26%] mb-20 flex w-[140px] rotate-[-12deg] flex-col items-center justify-center rounded-xl bg-opacity-40 shadow-2xl shadow-gray-700 xxs:top-[23%] xxs:-left-[3%] xxs:w-[170px] xs:left-[1%] xs:top-[21%] xs:w-[200px] sm:left-[1%] sm:top-[21%] sm:w-[270px] lg:top-[19%] lg:-left-[4%] lg:rotate-[-6deg] lg:bg-white lg:bg-opacity-40 lg:p-4 2xl:top-[25%] 2xl:left-[1%] 2xl:w-[375px]"
+          class="obiective absolute -left-[2%] top-[26%] mb-20 flex w-[140px] rotate-[-12deg] flex-col items-center justify-center rounded-xl shadow-2xl shadow-gray-700 xxs:top-[23%] xxs:-left-[3%] xxs:w-[170px] xs:left-[1%] xs:top-[21%] xs:w-[200px] sm:left-[1%] sm:top-[21%] sm:w-[270px] lg:top-[19%] lg:-left-[4%] lg:rotate-[-6deg] lg:bg-white lg:bg-opacity-40 lg:p-4 2xl:top-[25%] 2xl:left-[1%] 2xl:w-[375px]"
         >
           <img
             src="../assets/manastirea-malinesti.jpg"
@@ -249,7 +258,7 @@
           </div>
         </article>
         <article
-          class="obiective absolute right-[9%] -bottom-[15%] mb-20 flex w-[140px] rotate-[12deg] flex-col items-center justify-center rounded-xl bg-opacity-40 shadow-2xl shadow-gray-700 xxs:-bottom-[20%] xxs:right-[5%] xxs:w-[170px] xs:right-[11%] xs:-bottom-[31%] xs:w-[200px] sm:right-[10%] sm:-bottom-[16%] sm:w-[270px] lg:-bottom-[29%] lg:right-[14%] lg:rotate-[6deg] lg:bg-white lg:bg-opacity-40 lg:p-4 2xl:-bottom-[28%] 2xl:right-[16%] 2xl:w-[375px]"
+          class="obiective absolute right-[9%] -bottom-[15%] mb-20 flex w-[140px] rotate-[12deg] flex-col items-center justify-center rounded-xl shadow-2xl shadow-gray-700 xxs:-bottom-[20%] xxs:right-[5%] xxs:w-[170px] xs:right-[11%] xs:-bottom-[31%] xs:w-[200px] sm:right-[10%] sm:-bottom-[16%] sm:w-[270px] lg:-bottom-[29%] lg:right-[14%] lg:rotate-[6deg] lg:bg-white lg:bg-opacity-40 lg:p-4 2xl:-bottom-[28%] 2xl:right-[16%] 2xl:w-[375px]"
         >
           <img
             src="../assets/manastirea-malinesti.jpg"
@@ -268,6 +277,15 @@
               1826
             </p>
           </div>
+        </article>
+        <article
+          class="obiective absolute right-[9%] -bottom-[15%] mb-20 hidden w-[140px] rotate-[12deg] flex-col items-center justify-center rounded-xl shadow-2xl shadow-gray-700 xxs:-bottom-[20%] xxs:right-[5%] xxs:w-[170px] xs:right-[11%] xs:-bottom-[31%] xs:w-[200px] sm:right-[10%] sm:-bottom-[16%] sm:w-[270px] lg:bottom-[44%] lg:right-[2%] lg:flex lg:rotate-[6deg] 2xl:bottom-[38%] 2xl:-right-[2%] 2xl:w-[375px]"
+        >
+          <img
+            src="../assets/manastirea-malinesti.jpg"
+            alt=""
+            class="rounded-md lg:rounded-none lg:rounded-t-md"
+          />
         </article>
       </div>
     </div>
@@ -290,24 +308,24 @@
           );
 
           var $slider = $(this);
-          var size = $slider.find('> div').length; //number of slides
+          var size = $slider.find('> img').length; //number of slides
           var position = 0; // current position of carousal
           var sliderIntervalID; // used to clear autoplay
 
           // Add a Dot for each slide
           $slider.append('<ul></ul>');
-          $slider.find('> div').each(function () {
+          $slider.find('> img').each(function () {
             $slider.find('> ul').append('<li></li>');
           });
 
           // Put .show on the first Slide
-          $slider.find('div:first-of-type').addClass('show');
+          $slider.find('img:first-of-type').addClass('show');
 
           // Put .showLi on the first dot
           $slider.find('li:first-of-type').addClass('showli');
 
           //fadeout all items except .show
-          $slider.find('> div').not('.show').fadeOut();
+          $slider.find('> img').not('.show').fadeOut();
 
           // If Autoplay is set to 'on' than start it
           if (set.autoPlay === 'on') {
@@ -385,7 +403,7 @@
           function changeCarousel() {
             $slider.find('.show').removeClass('show').fadeOut();
             $slider
-              .find('> div')
+              .find('> img')
               .eq(position)
               .fadeIn(set.fadeSpeed)
               .addClass('show');
