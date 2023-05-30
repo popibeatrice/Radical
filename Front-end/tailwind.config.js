@@ -15,9 +15,8 @@ module.exports = {
     extend: {
       colors: {},
       fontFamily: {
-        logo: ['Cinzel Decorative', 'cursive'],
-        general: ['Poppins', 'sans-serif'],
-        title: ['Raleway', 'sans-serif'],
+        logo: ['Nunito', 'sans-serif'],
+        title: ['Montserrat', 'sans-serif'],
       },
     },
   },

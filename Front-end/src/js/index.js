@@ -5,7 +5,7 @@ import '../styles/tailwind.css';
 import { Loader } from '@googlemaps/js-api-loader';
 import ScrollReveal from 'scrollreveal';
 
-// MENIU
+// BURGUR
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
@@ -18,23 +18,47 @@ menuBtn.addEventListener('click', () => {
   }
 });
 
+// SHOW / HIDE HEADER
+const body = document.body;
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove('scroll-up');
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+    body.classList.remove('scroll-up');
+    body.classList.add('scroll-down');
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains('scroll-down')
+  ) {
+    body.classList.remove('scroll-down');
+    body.classList.add('scroll-up');
+  }
+  lastScroll = currentScroll;
+});
+
 // SCROLL REVEAL
 ScrollReveal().reveal('.h1-animation', {
   origin: 'left',
-  distance: '100px',
+  distance: '225px',
   opacity: 0,
   delay: 250,
-  duration: 850,
+  duration: 1000,
 });
 ScrollReveal().reveal('.info-pop', {
   opacity: 0,
-  delay: 550,
-  duration: 950,
+  delay: 600,
+  duration: 1000,
 });
 ScrollReveal().reveal('#arrow', {
   opacity: 0,
-  delay: 1250,
-  duration: 750,
+  delay: 1300,
+  duration: 1000,
   reset: true,
 });
 ScrollReveal().reveal('.card-section', {
