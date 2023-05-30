@@ -24,6 +24,7 @@
       >
         <!-- LOGO -->
         <a
+          id="logo"
           href="#"
           class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
         >
@@ -103,6 +104,101 @@
         </div>
       </div>
     </header>
+
+    <!-- DROPDOWN -->
+    <section
+      id="menu_wrap"
+      class="fixed top-0 bottom-0 -right-[100vw] z-10 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-[20vh] transition-all duration-700"
+    >
+      <div class="z-20 flex items-center justify-center gap-4 px-1.5 py-2.5">
+        <button
+          type="button"
+          class="flex items-center justify-center gap-1.5 font-logo font-bold"
+        >
+          <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
+          <span class="">RO</span>
+        </button>
+        <button
+          type="button"
+          class="flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+        >
+          <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
+          <span class="">EN</span>
+        </button>
+      </div>
+      <ul
+        class="flex flex-col items-start justify-center gap-10 pl-[10%] font-logo"
+      >
+        <li
+          class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
+        >
+          <a href="" class="">Obiective</a>
+        </li>
+        <li
+          id="trasee"
+          class="flex flex-col justify-start gap-5 text-3xl font-bold xxs:text-4xl xs:text-5xl md:text-6xl"
+        >
+          <button
+            type="button"
+            class="block w-full text-left font-logo font-bold text-inherit duration-500 hover:text-green-500"
+          >
+            Trasee
+          </button>
+          <ul id="trasee-options" class="ml-5 flex hidden flex-col gap-6">
+            <li>
+              <a
+                href=""
+                class="flex items-center gap-4 duration-500 hover:scale-110"
+              >
+                <img
+                  class="sm:w-18 w-14 xs:w-16"
+                  src="../assets/traseu_bici.png"
+                  alt="traseu bicicleta"
+                />
+                <p class="text-xl font-normal xs:text-2xl">cu bicicleta</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center gap-4 duration-500 hover:scale-110"
+              >
+                <img
+                  class="sm:w-18 w-14 xs:w-16"
+                  src="../assets/traseu_car.png"
+                  alt="traseu masina"
+                />
+                <p class="text-xl font-normal xs:text-2xl">cu masina</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center gap-4 duration-500 hover:scale-110"
+              >
+                <img
+                  class="sm:w-18 w-14 xs:w-16"
+                  src="../assets/traseu_piciorus.png"
+                  alt="traseu pe jos"
+                />
+                <p class="text-xl font-normal xs:text-2xl">pe jos</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
+        >
+          <a href="" class="">Transport</a>
+        </li>
+        <li
+          class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
+        >
+          <a href="" class="">Evenimente</a>
+        </li>
+      </ul>
+    </section>
+
     <!-- MAIN CONTENT -->
     <main class="relative">
       <!-- HERO -->
@@ -114,8 +210,8 @@
             <h1
               class="h1-animation font-title text-3xl font-light tracking-wider xxs:text-4xl md:text-5xl 2xl:text-6xl"
             >
-              Descopera <span class="font-bold">atractiile</span> judetului
-              Vaslui
+              Descopera
+              <span class="font-bold">atractiile</span> judetului Vaslui
             </h1>
             <p class="info-pop max-w-xl xs:text-lg">
               Ia parte la o calatorie virtuala imersiva, presarata cu istorie,
@@ -135,8 +231,7 @@
         />
       </div>
     </main>
-    <!-- DROPDOWN -->
-    <section class="fixed inset-0 z-10 hidden bg-zinc-900"></section>
+
     <!-- <section
       class="grid w-full content-center items-center justify-items-center xs:text-lg sm:text-xl lg:grid-cols-2 xl:text-2xl"
     >
