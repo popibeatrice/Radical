@@ -175,7 +175,15 @@
     background-position: center;
 }
 
-a:hover .circle {
+.photo-gal:hover > img {
+    opacity: 0.3;
+}
+
+.photo-gal:hover .short-description {
+    display: block;
+}
+
+.photo-gal:hover > img a:hover .circle {
     width: 9rem;
 }
 

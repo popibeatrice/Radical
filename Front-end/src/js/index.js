@@ -15,6 +15,7 @@ const html = document.querySelector("html");
 const menuWrap = document.querySelector("#menu_wrap");
 const logo = document.querySelector("#logo");
 const trasee = document.querySelector("#trasee");
+const traseeBtn = document.querySelector("#trasee button");
 const traseeOptions = document.querySelector("#trasee-options");
 const header = document.querySelector("header");
 const headerChild = document.querySelector("#header-child");
@@ -86,11 +87,16 @@ window.addEventListener("resize", () => {
 });
 
 trasee.addEventListener("click", () => {
+    console.log(traseeBtn);
     if (!traseeOpen) {
+        traseeBtn.classList.add("text-green-500");
+        traseeBtn.classList.remove("text-white");
         traseeOptions.classList.add("flex");
         traseeOptions.classList.remove("hidden");
         traseeOpen = true;
     } else {
+        traseeBtn.classList.remove("text-green-500");
+        traseeBtn.classList.add("text-white");
         traseeOpen = false;
         traseeOptions.classList.add("hidden");
         traseeOptions.classList.remove("flex");
@@ -104,6 +110,7 @@ window.addEventListener("scroll", () => {
         const currentScroll = window.pageYOffset;
         if (currentScroll <= 0) {
             body.classList.remove("scroll-up");
+            body.classList.remove("scroll-down");
             return;
         }
 
@@ -122,6 +129,49 @@ window.addEventListener("scroll", () => {
         }
         lastScroll = currentScroll;
     }
+});
+
+//
+
+const introductiveText = document.querySelectorAll(".text-introductiv");
+const photoGallery = document.querySelectorAll(".photo_gal");
+
+// introductiveText.forEach((text, index) => {
+//     text.classList.add("opacity-10", "scale-100");
+// });
+
+// window.addEventListener("scroll", () => {
+//     introductiveText.forEach((text, index) => {
+//         if (text.getBoundingClientRect().top < window.innerHeight / 2 + 100) {
+//             text.classList.remove("opacity-10", "scale-100");
+//             text.classList.add("opacity-100", "scale-105");
+//         } else if (
+//             text.getBoundingClientRect().top < window.innerHeight / 3 - 100 ||
+//             text.getBoundingClientRect().top > window.innerHeight / 3 - 100
+//         ) {
+//             text.classList.add("opacity-10", "scale-100");
+//             text.classList.remove("opacity-100", "scale-105");
+//         }
+//     });
+// });
+
+window.addEventListener("scroll", () => {
+    introductiveText.forEach((text, index) => {
+        const textRect = text.getBoundingClientRect();
+        const screenHeight = window.innerHeight;
+
+        // Check if the text is at the top or bottom of the screen
+        const isAtTop = textRect.top < 0 && textRect.bottom < screenHeight;
+        const isAtBottom = textRect.top > 0 && textRect.bottom > screenHeight;
+
+        if (isAtTop || isAtBottom) {
+            // Fade out the text
+            text.style.opacity = "0.1";
+        } else {
+            // Fade in the text when it's not at the top or bottom
+            text.style.opacity = "1";
+        }
+    });
 });
 
 // SCROLL REVEAL
@@ -158,38 +208,3 @@ ScrollReveal().reveal("#weather", {
     delay: 150,
     duration: 1000,
 });
-
-// GOOGLE MAPS
-const loader = new Loader({
-    apiKey: "AIzaSyDk4l13atzv3uO55ilho7vzc3XYb1Cpgcc",
-    version: "weekly",
-    libraries: ["places"],
-});
-const mapOptions = {
-    center: {
-        lat: 46.6333,
-        lng: 27.7333,
-    },
-    zoom: 12,
-    minZoom: 9,
-    maxZoom: 18,
-    restriction: {
-        latLngBounds: {
-            north: 47.07, // Set the northern latitude boundary
-            south: 46.0, // Set the southern latitude boundary
-            east: 28.58, // Set the eastern longitude boundary
-            west: 27.04, // Set the western longitude boundary
-        },
-        strictBounds: true, // Restrict the map to the defined bounds
-    },
-    mapId: "5b88a2eb555cabb2",
-};
-
-loader
-    .load()
-    .then((google) => {
-        new google.maps.Map(document.getElementById("map"), mapOptions);
-    })
-    .catch((e) => {
-        console.log(e);
-    });
