@@ -14,7 +14,7 @@
         ></script>
         <title>Turul Virtual Al Vasluiului</title>
     </head>
-    <body class="overflow-x-hidden font-logo text-white">
+    <body class="font-logo text-white">
         <div class="pointer-events-none invisible absolute" id="top"></div>
         <!-- HEADER -->
         <header
@@ -259,6 +259,106 @@
                 />
             </div>
         </main>
+
+        <section class="relative flex w-full flex-col flex-wrap sm:flex-row">
+            <div
+                class="sticky-big-image top-0 hidden sm:sticky sm:block sm:h-screen sm:w-1/2"
+            >
+                <img
+                    class="h-full w-full object-cover"
+                    src="../assets/vaslui_de_sus.jpg"
+                    alt=""
+                />
+            </div>
+
+            <div
+                class="scrollable-text relative flex flex-col items-center justify-center bg-zinc-900 px-20 pb-20 pt-[55vh] text-white sm:w-1/2"
+            >
+                <h2
+                    class="text-introductiv relative min-h-[60vh] text-center font-title text-4xl font-thin"
+                >
+                    Fa cunostinta cu
+                    <span class="font-bold text-green-500">Vasluiul</span>
+                </h2>
+                <div class="flex flex-col items-center justify-center">
+                    <p
+                        class="text-introductiv min-h-screen text-center text-xl"
+                    >
+                        Situat in <span class="font-bold">estul Romaniei</span>,
+                        in regiunea istorica
+                        <span class="font-bold">Moldova</span>, cu radacini ce
+                        se intind pe parcursul secolelor, este gazda unor comori
+                        de monumente istorice si bijuterii arhitecturale.
+                    </p>
+                    <p class="text-introductiv min-h-screen">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Deserunt fuga fugiat hic numquam atque obcaecati earum?
+                        Tenetur nulla obcaecati quae similique aliquam incidunt,
+                        doloribus nihil officiis facilis nostrum, dolorum cum
+                        laborum inventore ratione expedita consequatur corporis
+                        ex consequuntur asperiores repellendus? Sequi dicta
+                        atque, cumque cum quidem nemo est. Eaque, eveniet.
+                    </p>
+                    <p class="text-introductiv min-h-screen">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Rem est pariatur sed dolor autem quas facilis hic
+                        fugiat eos quasi placeat dolore fugit excepturi
+                        molestiae nisi voluptatem magnam id ipsum, cupiditate
+                        voluptas recusandae? Necessitatibus aperiam,
+                        consequuntur, quisquam laudantium aliquid repellendus
+                        ipsam obcaecati libero excepturi, voluptates qui ut vero
+                        distinctio ratione numquam a saepe ab nesciunt commodi
+                        consequatur. Doloremque, iusto consequatur.
+                    </p>
+                    <p class="text-introductiv min-h-screen">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque, cupiditate! Dolores ducimus voluptates et ea a
+                        eligendi, laborum nesciunt blanditiis incidunt
+                        temporibus dolorem, similique obcaecati magni minus
+                        cupiditate accusantium tenetur ipsa sunt at nulla? Vel
+                        repellendus voluptas reprehenderit, iste autem commodi
+                        ex consequuntur modi ducimus quisquam perferendis ea
+                        tenetur nulla quo beatae assumenda, natus ratione
+                        incidunt dolor tempora! Quasi nisi mollitia quibusdam
+                        quae minus ut perferendis iste accusamus ratione
+                        facilis, non est excepturi provident voluptatem
+                        doloremque, at dicta expedita tenetur.
+                    </p>
+                    <div class="grid grid-cols-1 gap-10 xl:grid-cols-2">
+                        <img
+                            class="object-cover"
+                            src="../assets/copou-vaslui.jpg"
+                            alt="copou-vaslui"
+                        />
+                        <img
+                            class="object-cover"
+                            src="../assets/podul_inalt.jpg"
+                            alt=""
+                        />
+                        <img
+                            class="object-cover"
+                            src="../assets/curtea_domneasca.jpg"
+                            alt=""
+                        />
+                        <img
+                            class="object-cover"
+                            src="../assets/barlad.jpg"
+                            alt=""
+                        />
+                        <img
+                            class="object-cover"
+                            src="../assets/manastirea_bujoreni.jpg"
+                            alt=""
+                        />
+                        <img
+                            class="object-cover"
+                            src="../assets/manastirea-malinesti.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- <section
       class="grid w-full content-center items-center justify-items-center xs:text-lg sm:text-xl lg:grid-cols-2 xl:text-2xl"
     >
@@ -456,12 +556,12 @@
     </div> -->
         <!-- FOOTER -->
         <footer
-            class="relative flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
+            class="relative mt-44 flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
         >
             <!-- METEO IN VASLUI + ORA IN RO -->
             <div
                 id="weather"
-                class="meteo-ora lg:-top-18 absolute left-0 right-0 -top-24 mx-auto flex h-min w-[80%] max-w-md flex-col items-center justify-center gap-8 rounded-lg bg-white py-8 text-black xxs:w-[70%] lg:left-auto lg:w-[55%] lg:max-w-none lg:items-start lg:gap-8 lg:rounded-r-none lg:rounded-l-lg lg:bg-white lg:py-10 lg:px-14"
+                class="meteo-ora lg:-top-18 absolute left-0 right-0 -top-24 mx-auto flex h-min w-[80%] max-w-md flex-col items-center justify-center gap-8 rounded-lg bg-white py-8 text-black shadow-2xl shadow-zinc-800 xxs:w-[70%] lg:left-auto lg:w-[55%] lg:max-w-none lg:items-start lg:gap-8 lg:rounded-r-none lg:rounded-l-lg lg:bg-white lg:py-10 lg:px-14"
             >
                 <div class="basi-0 flex items-baseline justify-center gap-5">
                     <span
@@ -531,13 +631,13 @@
                 <div
                     class="flex flex-col items-center justify-center font-normal xs:items-start lg:ml-4"
                 >
-                    <div class="text-xl font-bold text-green-400">By</div>
+                    <div class="text-xl font-bold text-green-500">By</div>
                     <div>POPICA BEATRICE</div>
                     <div>MARIAN DAVID</div>
                 </div>
                 <div id="go_up" class="mr-4">
                     <a href="#top" class="flex items-center justify-center">
-                        <span class="relative text-green-400 md:text-lg"
+                        <span class="relative text-green-500 md:text-lg"
                             >Sus</span
                         >
                         <img
