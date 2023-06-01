@@ -140,7 +140,6 @@ window.addEventListener('scroll', () => {
 //
 
 const introductiveText = document.querySelectorAll('.text-introductiv');
-const photoGallery = document.querySelectorAll('.photo_gal');
 
 // introductiveText.forEach((text, index) => {
 //     text.classList.add("opacity-10", "scale-100");
@@ -162,7 +161,7 @@ const photoGallery = document.querySelectorAll('.photo_gal');
 // });
 
 window.addEventListener('scroll', () => {
-  introductiveText.forEach((text, index) => {
+  introductiveText.forEach((text) => {
     const textRect = text.getBoundingClientRect();
     const screenHeight = window.innerHeight;
 
