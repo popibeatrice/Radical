@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden scroll-smooth">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -142,7 +142,7 @@
         >
           <button
             type="button"
-            class="block w-full text-left font-logo font-bold text-inherit duration-500 hover:text-green-500"
+            class="block w-full text-left font-logo font-bold text-white duration-500 hover:text-green-500"
           >
             Trasee
           </button>
@@ -234,9 +234,9 @@
       </div>
     </main>
 
-    <section class="relative flex w-full flex-col flex-wrap sm:flex-row">
+    <section class="relative flex w-full flex-col flex-wrap md:flex-row">
       <div
-        class="sticky-big-image top-0 hidden sm:sticky sm:block sm:h-screen sm:w-1/2"
+        class="sticky-big-image top-0 hidden md:sticky md:block md:h-screen md:w-1/2"
       >
         <img
           class="h-full w-full object-cover"
@@ -246,22 +246,24 @@
       </div>
 
       <div
-        class="scrollable-text relative flex flex-col items-center justify-center bg-zinc-900 px-20 pb-20 pt-[55vh] text-white sm:w-1/2"
+        class="scrollable-text relative flex flex-col items-center justify-center bg-zinc-900 px-6 pb-20 pt-[55vh] text-white xs:px-16 md:w-1/2"
       >
         <h2
-          class="text-introductiv relative min-h-[60vh] text-center font-title text-4xl font-thin"
+          class="text-introductiv relative min-h-[50vh] text-center font-title text-3xl font-thin duration-1000 xs:text-4xl"
         >
           Fa cunostinta cu
           <span class="font-bold text-green-500">Vasluiul</span>
         </h2>
         <div class="flex flex-col items-center justify-center">
-          <p class="text-introductiv min-h-screen text-center text-xl">
+          <p
+            class="text-introductiv my-24 max-w-xl text-center text-xl duration-1000"
+          >
             Situat in <span class="font-bold">estul Romaniei</span>, in regiunea
             istorica <span class="font-bold">Moldova</span>, cu radacini ce se
             intind pe parcursul secolelor, este gazda unor comori de monumente
             istorice si bijuterii arhitecturale.
           </p>
-          <p class="text-introductiv min-h-screen">
+          <p class="text-introductiv my-24 max-w-xl text-center duration-1000">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
             fuga fugiat hic numquam atque obcaecati earum? Tenetur nulla
             obcaecati quae similique aliquam incidunt, doloribus nihil officiis
@@ -269,7 +271,7 @@
             consequatur corporis ex consequuntur asperiores repellendus? Sequi
             dicta atque, cumque cum quidem nemo est. Eaque, eveniet.
           </p>
-          <p class="text-introductiv min-h-screen">
+          <p class="text-introductiv my-24 max-w-xl text-center duration-1000">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem est
             pariatur sed dolor autem quas facilis hic fugiat eos quasi placeat
             dolore fugit excepturi molestiae nisi voluptatem magnam id ipsum,
@@ -279,7 +281,9 @@
             ratione numquam a saepe ab nesciunt commodi consequatur. Doloremque,
             iusto consequatur.
           </p>
-          <p class="text-introductiv min-h-screen">
+          <p
+            class="text-introductiv xl:mt-none mt-24 mb-40 max-w-xl text-center duration-1000"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
             cupiditate! Dolores ducimus voluptates et ea a eligendi, laborum
             nesciunt blanditiis incidunt temporibus dolorem, similique obcaecati
@@ -291,29 +295,99 @@
             facilis, non est excepturi provident voluptatem doloremque, at dicta
             expedita tenetur.
           </p>
-          <div class="grid grid-cols-1 gap-10 xl:grid-cols-2">
-            <img
-              class="object-cover"
-              src="../assets/copou-vaslui.jpg"
-              alt="copou-vaslui"
-            />
-            <img class="object-cover" src="../assets/podul_inalt.jpg" alt="" />
-            <img
-              class="object-cover"
-              src="../assets/curtea_domneasca.jpg"
-              alt=""
-            />
-            <img class="object-cover" src="../assets/barlad.jpg" alt="" />
-            <img
-              class="object-cover"
-              src="../assets/manastirea_bujoreni.jpg"
-              alt=""
-            />
-            <img
-              class="object-cover"
-              src="../assets/manastirea-malinesti.jpg"
-              alt=""
-            />
+          <div
+            class="grid w-full max-w-5xl grid-cols-1 justify-items-center gap-10 xl:grid-cols-2"
+          >
+            <div
+              class="photo-gal relative flex w-full max-w-lg flex-col items-center justify-center gap-5 object-cover object-center xl:h-56"
+            >
+              <img
+                class="h-56 w-full rounded-md duration-500"
+                src="../assets/podul_inalt.jpg"
+                alt=""
+              />
+              <div
+                class="short-description text-center duration-500 lg:text-left xl:absolute xl:bottom-3 xl:left-3 xl:hidden"
+              >
+                <h3 class="font-title font-bold">Ala bala - Vasluiiii</h3>
+                <span>Lorem ipsum dolor sit amet llorem borem</span>
+              </div>
+            </div>
+            <div
+              class="photo-gal relative flex w-full max-w-lg flex-col items-center justify-center gap-5 object-cover object-center duration-500"
+            >
+              <img
+                class="h-56 w-full rounded-md duration-500"
+                src="../assets/zoo.webp"
+                alt=""
+              />
+              <div
+                class="short-description text-center duration-500 lg:text-left xl:absolute xl:bottom-3 xl:left-3 xl:hidden"
+              >
+                <h3 class="font-title font-bold">Ala bala - Vasluiiii</h3>
+                <span>Lorem ipsum dolor sit amet llorem borem</span>
+              </div>
+            </div>
+            <div
+              class="photo-gal relative flex w-full max-w-lg flex-col items-center justify-center gap-5 object-cover object-center duration-500"
+            >
+              <img
+                class="h-56 w-full rounded-md duration-500"
+                src="../assets/manastirea_bujoreni.jpg"
+                alt=""
+              />
+              <div
+                class="short-description text-center duration-500 lg:text-left xl:absolute xl:bottom-3 xl:left-3 xl:hidden"
+              >
+                <h3 class="font-title font-bold">Ala bala - Vasluiiii</h3>
+                <span>Lorem ipsum dolor sit amet llorem borem</span>
+              </div>
+            </div>
+            <div
+              class="photo-gal relative flex w-full max-w-lg flex-col items-center justify-center gap-5 object-cover object-center duration-500"
+            >
+              <img
+                class="h-56 w-full rounded-md duration-500"
+                src="../assets/manastirea-malinesti.jpg"
+                alt=""
+              />
+              <div
+                class="short-description text-center duration-500 lg:text-left xl:absolute xl:bottom-3 xl:left-3 xl:hidden"
+              >
+                <h3 class="font-title font-bold">Ala bala - Vasluiiii</h3>
+                <span>Lorem ipsum dolor sit amet llorem borem</span>
+              </div>
+            </div>
+            <div
+              class="photo-gal relative flex w-full max-w-lg flex-col items-center justify-center gap-5 object-cover object-center duration-500"
+            >
+              <img
+                class="h-56 w-full rounded-md duration-500"
+                src="../assets/curtea_biserica.jpg"
+                alt=""
+              />
+              <div
+                class="short-description text-center duration-500 lg:text-left xl:absolute xl:bottom-3 xl:left-3 xl:hidden"
+              >
+                <h3 class="font-title font-bold">Ala bala - Vasluiiii</h3>
+                <span>Lorem ipsum dolor sit amet llorem borem</span>
+              </div>
+            </div>
+            <div
+              class="photo-gal relative flex w-full max-w-lg flex-col items-center justify-center gap-5 object-cover object-center duration-500"
+            >
+              <img
+                class="h-56 w-full rounded-md duration-500"
+                src="../assets/copou-vaslui.jpg"
+                alt=""
+              />
+              <div
+                class="short-description text-center duration-500 lg:text-left xl:absolute xl:bottom-3 xl:left-3 xl:hidden"
+              >
+                <h3 class="font-title font-bold">Ala bala - Vasluiiii</h3>
+                <span>Lorem ipsum dolor sit amet llorem borem</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
