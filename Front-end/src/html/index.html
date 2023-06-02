@@ -5,13 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1"
         />
-        <script
-            src="https://code.jquery.com/jquery-3.7.0.min.js"
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-            crossorigin="anonymous"
-        ></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
         <title>Turul Virtual Al Vasluiului</title>
     </head>
     <body class="font-logo text-white">
@@ -262,7 +261,7 @@
 
         <section class="relative flex w-full flex-col flex-wrap md:flex-row">
             <div
-                class="sticky-big-image top-0 hidden bg-red-700 md:sticky md:block md:h-screen md:w-1/2"
+                class="sticky-big-image top-0 hidden md:sticky md:block md:h-screen md:w-1/2"
             >
                 <img
                     class="h-full w-full object-cover"
@@ -317,28 +316,55 @@
         </section>
 
         <!-- TRASEE -->
-        <div class="container">
-            <!-- Container for all sliders, and pagination -->
-            <div class="sliders-container">
-                <!-- Here will be injected sliders for images, numbers, titles and links -->
 
-                <!-- Simple pagination for the slider -->
-                <ul class="pagination">
-                    <li class="pagination__item">
-                        <a class="pagination__button"></a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__button"></a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__button"></a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__button"></a>
-                    </li>
-                </ul>
+        <section id="tranding">
+            <div class="container">
+                <div class="swiper tranding-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img
+                                    src="../assets/ciclisti2-1024x576.jpg"
+                                    alt="Tranding"
+                                />
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img
+                                    src="../assets/ciclisti2-1024x576.jpg"
+                                    alt="Tranding"
+                                />
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img
+                                    src="../assets/ciclisti2-1024x576.jpg"
+                                    alt="Tranding"
+                                />
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                    </div>
+
+                    <div class="tranding-slider-control">
+                        <div class="swiper-button-prev slider-arrow">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-button-next slider-arrow">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- <section
       class="grid w-full content-center items-center justify-items-center xs:text-lg sm:text-xl lg:grid-cols-2 xl:text-2xl"
@@ -635,6 +661,16 @@
             </div>
             <!-- BACK TO TOP -->
         </footer>
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <script src=" https://cdn.jsdelivr.net/npm/momentum-slider@0.0.8/dist/momentum-slider.min.js "></script>
         <script>
             // SLIDER JS
