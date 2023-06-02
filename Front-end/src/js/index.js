@@ -134,42 +134,18 @@ window.addEventListener("scroll", () => {
 //
 
 const introductiveText = document.querySelectorAll(".text-introductiv");
-const photoGallery = document.querySelectorAll(".photo_gal");
-
-// introductiveText.forEach((text, index) => {
-//     text.classList.add("opacity-10", "scale-100");
-// });
-
-// window.addEventListener("scroll", () => {
-//     introductiveText.forEach((text, index) => {
-//         if (text.getBoundingClientRect().top < window.innerHeight / 2 + 100) {
-//             text.classList.remove("opacity-10", "scale-100");
-//             text.classList.add("opacity-100", "scale-105");
-//         } else if (
-//             text.getBoundingClientRect().top < window.innerHeight / 3 - 100 ||
-//             text.getBoundingClientRect().top > window.innerHeight / 3 - 100
-//         ) {
-//             text.classList.add("opacity-10", "scale-100");
-//             text.classList.remove("opacity-100", "scale-105");
-//         }
-//     });
-// });
 
 window.addEventListener("scroll", () => {
-    introductiveText.forEach((text, index) => {
-        const textRect = text.getBoundingClientRect();
-        const screenHeight = window.innerHeight;
-
-        // Check if the text is at the top or bottom of the screen
-        const isAtTop = textRect.top < 0 && textRect.bottom < screenHeight;
-        const isAtBottom = textRect.top > 0 && textRect.bottom > screenHeight;
-
-        if (isAtTop || isAtBottom) {
-            // Fade out the text
-            text.style.opacity = "0.1";
+    introductiveText.forEach((text) => {
+        if (
+            text.getBoundingClientRect().top > window.innerHeight / 2 + 100 ||
+            text.getBoundingClientRect().top < window.innerHeight / 3 - 100
+        ) {
+            text.classList.add("opacity-10", "scale-100");
+            text.classList.remove("opacity-100", "scale-105");
         } else {
-            // Fade in the text when it's not at the top or bottom
-            text.style.opacity = "1";
+            text.classList.remove("opacity-10", "scale-100");
+            text.classList.add("opacity-100", "scale-105");
         }
     });
 });
