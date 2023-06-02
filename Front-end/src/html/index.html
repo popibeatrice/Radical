@@ -262,7 +262,7 @@
 
         <section class="relative flex w-full flex-col flex-wrap md:flex-row">
             <div
-                class="sticky-big-image top-0 hidden md:sticky md:block md:h-screen md:w-1/2"
+                class="sticky-big-image top-0 hidden bg-red-700 md:sticky md:block md:h-screen md:w-1/2"
             >
                 <img
                     class="h-full w-full object-cover"
@@ -282,7 +282,7 @@
                 </h2>
                 <div class="flex flex-col items-center justify-center">
                     <p
-                        class="text-introductiv my-24 max-w-xl text-center text-xl duration-1000"
+                        class="text-introductiv my-28 max-w-xl text-center text-xl duration-1000 lg:my-44"
                     >
                         Situat in <span class="font-bold">estul Romaniei</span>,
                         in regiunea istorica <span>Moldova</span>, cu radacini
@@ -293,37 +293,52 @@
                         <span class="font-bold">Stefan cel Mare</span>.
                     </p>
                     <p
-                        class="text-introductiv my-36 max-w-xl text-center text-xl duration-1000"
+                        class="text-introductiv my-28 max-w-xl text-center text-xl duration-1000 lg:my-44"
                     >
-                        <span class="font-bold"> Orasul Vaslui</span>, resedinta
-                        judetului, este, privit de sus, o țesătură urbană
-                        compactă, inundata de natura, între dealurile Moldovei,
-                        fiind caracterizat de mai toata lumea ca fiind o oaza de
-                        liniste.
+                        Cele mai semnificative orase ale judetului sunt, cu
+                        siguranta, <span class="font-bold">Vasluiul</span>,
+                        resedinta de judet, sub forma unei țesături urbane
+                        compactă între dealurile Moldovei,
+                        <span class="font-bold">Barladul</span>, important
+                        centru comercial si cultural in epoca medievala si
+                        <span class="font-bold">Husiul</span>, renumit pentru
+                        vinurile sale si prezenta numeroaselor crame și
+                        podgorii.
                     </p>
                     <p
-                        class="text-introductiv my-36 max-w-xl text-center text-xl duration-1000"
+                        class="text-introductiv my-28 mb-48 max-w-xl text-center text-xl duration-1000 lg:my-44 lg:mb-80"
                     >
-                        Situat la aproximativ 45 de kilometri sud-est de Vaslui,
-                        <span class="font-bold">Barladul </span>este un alt oras
-                        important al judetului, o plimbare pe aleile sale pline
-                        de poveste te va purta înapoi în timp, în epoca
-                        medievală, când acesta era un important centru comercial
-                        și cultural.
-                    </p>
-                    <p
-                        class="text-introductiv xl:mt-none mt-36 mb-40 max-w-xl text-center text-xl duration-1000"
-                    >
-                        <span class="font-bold">Husi</span>, orasul dintre vii,
-                        este renumit pentru vinurile sale si prezenta
-                        numeroaselor crame și podgorii care îți vor oferi o
-                        experiență vinicolă autentică.
+                        Toate cele trei orase impartasesc o atmosfera specifica,
+                        sunt linistite, au peisaje pitoresti, iar o plimbare pe
+                        aleile lor pline de poveste te va purta înapoi în timp.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- TRASEE -->
+        <div class="container">
+            <!-- Container for all sliders, and pagination -->
+            <div class="sliders-container">
+                <!-- Here will be injected sliders for images, numbers, titles and links -->
+
+                <!-- Simple pagination for the slider -->
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__button"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__button"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__button"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__button"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <!-- <section
       class="grid w-full content-center items-center justify-items-center xs:text-lg sm:text-xl lg:grid-cols-2 xl:text-2xl"
@@ -620,6 +635,7 @@
             </div>
             <!-- BACK TO TOP -->
         </footer>
+        <script src=" https://cdn.jsdelivr.net/npm/momentum-slider@0.0.8/dist/momentum-slider.min.js "></script>
         <script>
             // SLIDER JS
             (function ($) {
