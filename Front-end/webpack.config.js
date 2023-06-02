@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/js/index.js',
+    indexEn: './src/js/indexEn.js',
   },
   mode: 'development',
   devServer: {
@@ -50,6 +51,12 @@ module.exports = {
       filename: 'index.html',
       template: 'src/html/index.html',
       chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'indexEn.html',
+      template: 'src/html/indexEn.html',
+      chunks: ['indexEn'],
     }),
   ],
   output: {
