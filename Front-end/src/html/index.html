@@ -535,9 +535,10 @@
                         >Vaslui<span class="hidden lg:inline">,</span>
                     </span>
                     <div
-                        class="ora hidden text-xl xxs:text-2xl lg:block lg:text-xl 2xl:text-2xl 3xl:text-3xl"
+                        class="hidden text-xl xxs:text-2xl lg:block lg:text-xl 2xl:text-2xl 3xl:text-3xl"
                     >
-                        <span class="text-green-500">3:56:56</span> PM
+                        <span class="ora text-green-500">3:56:56</span>
+                        <span class="pm-am uppercase"> PM</span>
                     </div>
                 </div>
                 <div
@@ -550,17 +551,20 @@
                             <img
                                 src="../assets/cloud.png"
                                 class="w-16 lg:w-20"
+                                id="vreme-icon"
                                 alt="iconita vreme"
                             />
                             <span class="">
-                                <span class="text-green-500">17</span> &degC
+                                <span class="temp text-green-500">17</span>
+                                &degC
                             </span>
                         </div>
                     </div>
                     <div
-                        class="ora order-1 text-xl xxs:text-2xl lg:hidden lg:text-xl 2xl:text-2xl 3xl:text-3xl"
+                        class="order-1 text-xl xxs:text-2xl lg:hidden lg:text-xl 2xl:text-2xl 3xl:text-3xl"
                     >
-                        <span class="text-green-500">3:56:56</span> PM
+                        <span class="ora text-green-500">3:56:56</span>
+                        <span class="pm-am uppercase"> PM</span>
                     </div>
                 </div>
             </div>
@@ -602,10 +606,7 @@
                     <div>MARIAN DAVID</div>
                 </div>
                 <div id="go_up" class="mr-4">
-                    <a
-                        href="#top"
-                        class="sus-cu-tine flex items-center justify-center"
-                    >
+                    <a href="#top" class="flex items-center justify-center">
                         <span class="relative text-green-500 md:text-lg"
                             >Sus</span
                         >
