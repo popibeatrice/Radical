@@ -1,335 +1,276 @@
 .hero-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../assets/Landing-BG.jpg');
-  background-size: cover;
-  background-position: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../assets/Landing-BG.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 /* HEADER */
 .logo {
-  background-size: cover;
+    background-size: cover;
 }
 
 .menu-is-open {
-  overflow: hidden;
+    overflow: hidden;
 
-  header {
-    filter: none;
-  }
+    header {
+        filter: none;
+    }
 }
 
 .menu-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger {
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
-  transition: all 0.5s ease-in-out;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
 }
 
 /* This creates the top and bottom lines but it does not position them */
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
-  transition: all 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
 }
 
 /* This positions the top and bottom lines */
 .menu-btn__burger::before {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .menu-btn__burger::after {
-  transform: translateY(10px);
+    transform: translateY(10px);
 }
 
 /* Animation */
 /* This moves the middle line off the screen to the left */
 .menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
+    transform: translateX(-50px);
+    background: transparent;
 }
 
 /* This rotates the top line down by 45 degrees but also translates it back
    on the screen from left to right. You won't see it translate as rotate and
    translate have been put together. */
 .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
+    transform: rotate(45deg) translate(35px, -35px);
 }
 
 /* This rotates the bottom line by minus 45 degrees (45 degrees anti-clockwise) */
 .menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+    transform: rotate(-45deg) translate(35px, 35px);
 }
 
 #menu_wrap ::-webkit-scrollbar {
-  display: none;
-  width: 0 !important;
+    display: none;
+    width: 0 !important;
 }
 #menu_wrap {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Header with scroll */
 .scroll-down {
-  header {
-    transform: translate3d(0, -100%, 0);
-  }
+    header {
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
 .scroll-up {
-  header {
-    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
-    background: rgb(256, 256, 256);
-    color: #000000;
-  }
-  .color-swap g path {
-    fill: #000000 !important;
-  }
-  header nav li a::after {
-    background-color: rgb(39, 197, 94) !important;
-  }
-  .menu-btn__burger,
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    background: #000000;
-  }
+    header {
+        filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+        background: rgb(256, 256, 256);
+        color: #000000;
+    }
+    .color-swap g path {
+        fill: #000000 !important;
+    }
+    header nav li a::after {
+        background-color: rgb(39, 197, 94) !important;
+    }
+    .menu-btn__burger,
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+        background: #000000;
+    }
 }
 
 /* ANIMATION STOPPER */
 .resize-animation-stopper * {
-  animation: none !important;
-  transition: none !important;
+    animation: none !important;
+    transition: none !important;
 }
 
 .wrap {
-  text-align: center;
+    text-align: center;
 }
 
 .wrap img {
-  height: 50px;
-  line-height: 60px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: 0;
+    height: 50px;
+    line-height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
 }
 
 .bounce {
-  animation-iteration-count: infinite;
-  animation-duration: 1.5s;
-  animation: bounce 3.6s ease infinite;
-  transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  5.55556% {
-    transform: translateY(0);
-  }
-  11.11111% {
-    transform: translateY(0);
-  }
-  22.22222% {
-    transform: translateY(-15px);
-  }
-  27.77778% {
-    transform: translateY(0);
-  }
-  33.33333% {
-    transform: translateY(-15px);
-  }
-  44.44444% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+    5.55556% {
+        transform: translateY(0);
+    }
+    11.11111% {
+        transform: translateY(0);
+    }
+    22.22222% {
+        transform: translateY(-15px);
+    }
+    27.77778% {
+        transform: translateY(0);
+    }
+    33.33333% {
+        transform: translateY(-15px);
+    }
+    44.44444% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /*  */
 
 .card-section {
-  background-image: url('../assets/svg.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url("../assets/svg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .sectiune-obiective {
-  background-image: url('../assets/17880402_1369462236470793_5888373315776008962_o.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url("../assets/17880402_1369462236470793_5888373315776008962_o.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (min-width: 640px) {
+    a:hover .circle {
+        width: 11rem;
+    }
+}
+a:hover .more {
+    color: white;
 }
 
 /* TRASEE */
 
-@media (min-width: 640px) {
-  a:hover .circle {
-    width: 11rem;
-  }
-}
-a:hover .more {
-  color: white;
-}
-/* STICKY SECTION */
-.container {
-  max-width: 124rem;
-  padding: 0 1rem;
-  margin: 0 auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.section-heading {
-  font-size: 3rem;
-  color: var(--primary);
-  padding: 2rem 0;
-}
-
-#tranding {
-  padding: 4rem 0;
-}
-
-@media (max-width: 1440px) {
-  #tranding {
-    padding: 7rem 0;
-  }
-}
-
-#tranding .tranding-slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 48rem;
-  padding: 2rem 0;
-  position: relative;
-}
-
-@media (max-width: 500px) {
-  #tranding .tranding-slider {
-    height: 35rem;
-  }
-}
-
-.tranding-slide {
-  width: 30rem;
-  height: 36rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-@media (max-width: 500px) {
-  .tranding-slide {
-    width: 16rem !important;
-    height: 24rem !important;
-  }
-  .tranding-slide .tranding-slide-img img {
-    width: 16rem !important;
-    height: 24rem !important;
-  }
-}
-
 .tranding-slide .tranding-slide-img img {
-  width: 26rem;
-  height: 32rem;
-  border-radius: 2rem;
-  object-fit: cover;
+    width: 16rem;
+    height: 10rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
 }
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
-  display: none;
+    display: none;
 }
 
 .tranding-slider-control {
-  position: relative;
-  bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tranding-slider-control .swiper-button-next {
-  left: 58% !important;
-  transform: translateX(-58%) !important;
+    left: 58% !important;
+    transform: translateX(-58%) !important;
 }
 
 @media (max-width: 990px) {
-  .tranding-slider-control .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
+    .tranding-slider-control .swiper-button-next {
+        left: 70% !important;
+        transform: translateX(-70%) !important;
+    }
 }
 
 .tranding-slider-control .swiper-button-next {
-  left: 80% !important;
-  transform: translateX(-80%) !important;
+    left: 80% !important;
+    transform: translateX(-80%) !important;
 }
 
 .tranding-slider-control .swiper-button-prev {
-  left: 30% !important;
-  transform: translateX(-30%) !important;
+    left: 30% !important;
+    transform: translateX(-30%) !important;
 }
 
 .tranding-slider-control .swiper-button-prev {
-  left: 20% !important;
-  transform: translateX(-20%) !important;
+    left: 20% !important;
+    transform: translateX(-20%) !important;
 }
 .tranding-slider-control .slider-arrow {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  left: 42%;
-  transform: translateX(-42%);
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    left: 42%;
+    transform: translateX(-42%);
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
 .tranding-slider-control .slider-arrow ion-icon {
-  font-size: 2rem;
-  color: #222224;
+    font-size: 2rem;
+    color: #222224;
 }
 
 .tranding-slider-control .slider-arrow::after {
-  content: '';
+    content: "";
 }
 
 .tranding-slider-control .swiper-pagination {
-  position: relative;
-  width: 15rem;
-  bottom: 1rem;
+    position: relative;
+    width: 15rem;
+    bottom: 1rem;
+    overflow: hidden;
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    overflow: hidden;
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-  background: rgba(34, 197, 94);
+    background: rgba(34, 197, 94);
+    overflow: hidden;
 }
 
 input:focus + label,

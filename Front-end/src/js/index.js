@@ -263,6 +263,14 @@ ScrollReveal().reveal('#cur', {
   duration: 1000,
   viewFactor: 1,
 });
+ScrollReveal().reveal('#cur', {
+  origin: 'right',
+  distance: '200px',
+  opacity: 0,
+  delay: 1000,
+  duration: 1000,
+  viewFactor: 1,
+});
 
 // VREME + ORA
 const temp = document.querySelector('.temp');
@@ -340,18 +348,21 @@ window.onload = async () => {
 
 setInterval(updateLocalTime, 1000);
 
-var TrandingSlider = new Swiper('.tranding-slider', {
+// TRASEE
+var TrandingSlider = new Swiper('.swiper', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
-  loop: false,
   slidesPerView: 'auto',
+  spaceBetween: 80,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
     depth: 100,
     modifier: 2.5,
+    slideShadows: false,
   },
+  allowTouchMove: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
