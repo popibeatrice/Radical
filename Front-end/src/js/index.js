@@ -27,6 +27,63 @@ enSwitchs.forEach((enSwitch) => {
   });
 });
 
+// GPT REQ
+const gptForm = document.querySelector('form');
+const gptSpit = document.querySelector('.gpt-spit');
+const gptSpitContent = document.querySelector('.gpt-spit span');
+const gptSpinner = document.querySelector('.spinner');
+
+gptForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const prompt = gptForm.prompt.value;
+
+  // UI CHANGE
+  gptSpitContent.textContent = '';
+  gptSpinner.classList.remove('hidden');
+
+  const promptObject = {
+    prompt: prompt,
+  };
+  try {
+    const respons = await axios.post('/gpt/ro', promptObject);
+    gptSpinner.classList.add('hidden');
+    gptSpit.classList.remove('items-center', 'justify-center');
+    gptSpit.classList.add('items-start', 'justify-start');
+    gptSpitContent.textContent = respons.data.completion.content;
+  } catch (error) {
+    console.log(error);
+  }
+  gptForm.reset();
+});
+
+// LINIE
+const linie = document.querySelector('.linie');
+
+function isElementInViewport(el) {
+  let rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+window.addEventListener('scroll', () => {
+  const isVisible = isElementInViewport(linie);
+  if (isVisible === true) {
+    linie.classList.remove('w-0');
+    linie.classList.add('w-[105%]');
+  }
+});
+
+const isVisible = isElementInViewport(linie);
+if (isVisible === true) {
+  linie.classList.remove('w-0');
+  linie.classList.add('w-[105%]');
+}
+
 // BURGUR
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
@@ -43,7 +100,7 @@ let traseeOpen = false;
 menuBtn.addEventListener('click', () => {
   if (!menuOpen) {
     menuOpen = true;
-    header.style.transition = 'none';
+    header.style.transitionProperty = 'none';
     body.classList.remove('scroll-up');
     menuBtn.classList.add('open');
     html.classList.add('overflow-y-hidden');
@@ -59,7 +116,7 @@ menuBtn.addEventListener('click', () => {
   } else {
     menuOpen = false;
     if (window.pageYOffset > 0) body.classList.add('scroll-up');
-    header.style.transition = 'all';
+    header.style.transitionProperty = 'all';
     header.classList.remove('resize-animation-stopper');
     menuBtn.classList.remove('open');
     menuWrap.classList.remove('translate-x-[-100vw]');
@@ -123,7 +180,6 @@ trasee.addEventListener('click', () => {
 });
 
 // SHOW / HIDE HEADER
-
 window.addEventListener('scroll', () => {
   if (!body.classList.contains('resize-animation-stopper')) {
     const currentScroll = window.pageYOffset;
@@ -146,8 +202,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
   }
 });
-
-//
 
 const introductiveText = document.querySelectorAll('.text-introductiv');
 
@@ -187,7 +241,7 @@ ScrollReveal().reveal('#arrow', {
 });
 ScrollReveal().reveal('.card-section', {
   opacity: 0,
-  delay: 450,
+  delay: 350,
   duration: 1000,
   origin: 'top',
   distance: '100px',
@@ -201,9 +255,16 @@ ScrollReveal().reveal('#weather', {
   duration: 1000,
   viewFactor: 0.7,
 });
+ScrollReveal().reveal('#cur', {
+  origin: 'right',
+  distance: '200px',
+  opacity: 0,
+  delay: 1000,
+  duration: 1000,
+  viewFactor: 1,
+});
 
 // VREME + ORA
-
 const temp = document.querySelector('.temp');
 const oras = document.querySelectorAll('.ora');
 const iconVreme = document.querySelector('#vreme-icon');
@@ -278,8 +339,6 @@ window.onload = async () => {
 };
 
 setInterval(updateLocalTime, 1000);
-
-console.log('pipi');
 
 var TrandingSlider = new Swiper('.tranding-slider', {
   effect: 'coverflow',

@@ -203,7 +203,6 @@ ScrollReveal().reveal('#weather', {
 });
 
 // VREME + ORA
-
 const temp = document.querySelector('.temp');
 const oras = document.querySelectorAll('.ora');
 const iconVreme = document.querySelector('#vreme-icon');
@@ -278,8 +277,6 @@ window.onload = async () => {
 };
 
 setInterval(updateLocalTime, 1000);
-
-console.log('pipi');
 
 (function () {
   var slidersContainer = document.querySelector('.sliders-container');

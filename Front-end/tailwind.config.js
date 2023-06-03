@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         logo: ['Nunito', 'sans-serif'],
         title: ['Montserrat', 'sans-serif'],
+        cur: ['Courgette', 'cursive'],
       },
     },
   },
