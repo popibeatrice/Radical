@@ -99,7 +99,7 @@ trasee.addEventListener('click', () => {
 // SHOW / HIDE HEADER
 window.addEventListener('scroll', () => {
   if (!body.classList.contains('resize-animation-stopper')) {
-    const currentScroll = window.pageYOffset;
+    const currentScroll = window.scrollY;
     if (currentScroll <= 0) {
       body.classList.remove('scroll-up');
       body.classList.remove('scroll-down');
@@ -119,3 +119,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
   }
 });
+
+if (window.scrollY > 0) {
+  body.classList.add('scroll-up');
+}
