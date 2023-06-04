@@ -1,0 +1,111 @@
+/* HEADER */
+.logo {
+  background-size: cover;
+}
+
+.menu-is-open {
+  overflow: hidden;
+
+  header {
+    filter: none;
+  }
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* This creates the top and bottom lines but it does not position them */
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* This positions the top and bottom lines */
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+
+/* Animation */
+/* This moves the middle line off the screen to the left */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+/* This rotates the top line down by 45 degrees but also translates it back
+     on the screen from left to right. You won't see it translate as rotate and
+     translate have been put together. */
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+/* This rotates the bottom line by minus 45 degrees (45 degrees anti-clockwise) */
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+#menu_wrap ::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+#menu_wrap {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Header with scroll */
+.scroll-down {
+  header {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.scroll-up {
+  header {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    background: rgb(256, 256, 256);
+    color: #000000;
+  }
+  .color-swap g path {
+    fill: #000000 !important;
+  }
+  header nav li a::after {
+    background-color: rgb(39, 197, 94) !important;
+  }
+  .menu-btn__burger,
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    background: #000000;
+  }
+}
+
+/* ANIMATION STOPPER */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}

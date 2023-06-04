@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     indexEn: './src/js/indexEn.js',
+    obiective: './src/js/obiective.js',
   },
   mode: 'development',
   devServer: {
@@ -57,6 +58,12 @@ module.exports = {
       filename: 'indexEn.html',
       template: 'src/html/indexEn.html',
       chunks: ['indexEn'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'obiective.html',
+      template: 'src/html/obiective.html',
+      chunks: ['obiective'],
     }),
   ],
   output: {
