@@ -17,15 +17,71 @@ import axios from 'axios';
 const body = document.body;
 let lastScroll = 0;
 
-// EN SWITCH
-const enSwitchs = document.querySelectorAll('.en-switch');
+// RO SWITCH
+const roSwitchs = document.querySelectorAll('.ro-switch');
 
-enSwitchs.forEach((enSwitch) => {
-  enSwitch.addEventListener('click', () => {
-    console.log(location.origin);
-    location.href = location.origin + '/en';
+roSwitchs.forEach((roSwitch) => {
+  roSwitch.addEventListener('click', () => {
+    location.href = location.origin;
   });
 });
+
+// GPT REQ
+const gptForm = document.querySelector('form');
+const gptSpit = document.querySelector('.gpt-spit');
+const gptSpitContent = document.querySelector('.gpt-spit span');
+const gptSpinner = document.querySelector('.spinner');
+
+gptForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const prompt = gptForm.prompt.value;
+
+  // UI CHANGE
+  gptSpitContent.textContent = '';
+  gptSpinner.classList.remove('hidden');
+
+  const promptObject = {
+    prompt: prompt,
+  };
+  try {
+    const respons = await axios.post('/gpt/en', promptObject);
+    gptSpinner.classList.add('hidden');
+    gptSpit.classList.remove('items-center', 'justify-center');
+    gptSpit.classList.add('items-start', 'justify-start');
+    gptSpitContent.textContent = respons.data.completion.content;
+  } catch (error) {
+    console.log(error);
+  }
+  gptForm.reset();
+});
+
+// LINIE
+const linie = document.querySelector('.linie');
+
+function isElementInViewport(el) {
+  let rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+window.addEventListener('scroll', () => {
+  const isVisible = isElementInViewport(linie);
+  if (isVisible === true) {
+    linie.classList.remove('w-0');
+    linie.classList.add('w-[105%]');
+  }
+});
+
+const isVisible = isElementInViewport(linie);
+if (isVisible === true) {
+  linie.classList.remove('w-0');
+  linie.classList.add('w-[105%]');
+}
 
 // BURGUR
 const menuBtn = document.querySelector('.menu-btn');
@@ -43,7 +99,7 @@ let traseeOpen = false;
 menuBtn.addEventListener('click', () => {
   if (!menuOpen) {
     menuOpen = true;
-    header.style.transition = 'none';
+    header.style.transitionProperty = 'none';
     body.classList.remove('scroll-up');
     menuBtn.classList.add('open');
     html.classList.add('overflow-y-hidden');
@@ -59,7 +115,7 @@ menuBtn.addEventListener('click', () => {
   } else {
     menuOpen = false;
     if (window.pageYOffset > 0) body.classList.add('scroll-up');
-    header.style.transition = 'all';
+    header.style.transitionProperty = 'all';
     header.classList.remove('resize-animation-stopper');
     menuBtn.classList.remove('open');
     menuWrap.classList.remove('translate-x-[-100vw]');
@@ -123,7 +179,6 @@ trasee.addEventListener('click', () => {
 });
 
 // SHOW / HIDE HEADER
-
 window.addEventListener('scroll', () => {
   if (!body.classList.contains('resize-animation-stopper')) {
     const currentScroll = window.pageYOffset;
@@ -146,8 +201,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
   }
 });
-
-//
 
 const introductiveText = document.querySelectorAll('.text-introductiv');
 
@@ -187,7 +240,7 @@ ScrollReveal().reveal('#arrow', {
 });
 ScrollReveal().reveal('.card-section', {
   opacity: 0,
-  delay: 450,
+  delay: 350,
   duration: 1000,
   origin: 'top',
   distance: '100px',
@@ -200,6 +253,14 @@ ScrollReveal().reveal('#weather', {
   delay: 150,
   duration: 1000,
   viewFactor: 0.7,
+});
+ScrollReveal().reveal('#cur', {
+  origin: 'left',
+  distance: '200px',
+  opacity: 0,
+  delay: 1000,
+  duration: 1000,
+  viewFactor: 1,
 });
 
 // VREME + ORA
@@ -278,95 +339,27 @@ window.onload = async () => {
 
 setInterval(updateLocalTime, 1000);
 
-(function () {
-  var slidersContainer = document.querySelector('.sliders-container');
-
-  // Initializing the numbers slider
-  var msNumbers = new MomentumSlider({
-    el: slidersContainer,
-    cssClass: 'ms--numbers',
-    range: [1, 4],
-    rangeContent: function (i) {
-      return '0' + i;
-    },
-    style: {
-      transform: [{ scale: [0.4, 1] }],
-      opacity: [0, 1],
-    },
-    interactive: false,
-  });
-
-  // Initializing the titles slider
-  var titles = [
-    'King of the Ring Fight',
-    'Sound of Streets',
-    'Urban Fashion',
-    'Windy Sunset',
-  ];
-  var msTitles = new MomentumSlider({
-    el: slidersContainer,
-    cssClass: 'ms--titles',
-    range: [0, 3],
-    rangeContent: function (i) {
-      return '<h3>' + titles[i] + '</h3>';
-    },
-    vertical: true,
-    reverse: true,
-    style: {
-      opacity: [0, 1],
-    },
-    interactive: false,
-  });
-
-  // Initializing the links slider
-  var msLinks = new MomentumSlider({
-    el: slidersContainer,
-    cssClass: 'ms--links',
-    range: [0, 3],
-    rangeContent: function () {
-      return '<a class="ms-slide__link">View Case</a>';
-    },
-    vertical: true,
-    interactive: false,
-  });
-
-  // Get pagination items
-  var pagination = document.querySelector('.pagination');
-  var paginationItems = [].slice.call(pagination.children);
-
-  // Initializing the images slider
-  var msImages = new MomentumSlider({
-    // Element to append the slider
-    el: slidersContainer,
-    // CSS class to reference the slider
-    cssClass: 'ms--images',
-    // Generate the 4 slides required
-    range: [0, 3],
-    rangeContent: function () {
-      return '<div class="ms-slide__image-container"><div class="ms-slide__image"></div></div>';
-    },
-    // Syncronize the other sliders
-    sync: [msNumbers, msTitles, msLinks],
-    // Styles to interpolate as we move the slider
-    style: {
-      '.ms-slide__image': {
-        transform: [{ scale: [1.5, 1] }],
-      },
-    },
-    // Update pagination if slider change
-    change: function (newIndex, oldIndex) {
-      if (typeof oldIndex !== 'undefined') {
-        paginationItems[oldIndex].classList.remove('pagination__item--active');
-      }
-      paginationItems[newIndex].classList.add('pagination__item--active');
-    },
-  });
-
-  // Select corresponding slider item when a pagination button is clicked
-  pagination.addEventListener('click', function (e) {
-    if (e.target.matches('.pagination__button')) {
-      var index = paginationItems.indexOf(e.target.parentNode);
-      msImages.select(index);
-    }
-  });
-})();
+// TRASEE
+var TrandingSlider = new Swiper('.swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 80,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+    slideShadows: false,
+  },
+  allowTouchMove: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

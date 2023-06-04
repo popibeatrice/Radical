@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <title>The Virtual Tour Of Vaslui</title>
   </head>
@@ -13,7 +17,7 @@
     <div class="pointer-events-none invisible absolute" id="top"></div>
     <!-- HEADER -->
     <header
-      class="fixed top-0 left-0 z-20 w-screen py-[0.75rem] font-logo font-bold transition-all duration-1000"
+      class="fixed top-0 left-0 z-50 w-screen py-[0.75rem] font-logo font-bold transition-all duration-1000"
     >
       <div
         id="header-child"
@@ -50,14 +54,14 @@
               <a
                 href=""
                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                >Obiective</a
+                >Sights</a
               >
             </li>
             <li class="">
               <a
                 href=""
                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                >Trasee</a
+                >Routes</a
               >
             </li>
             <li class="">
@@ -71,7 +75,7 @@
               <a
                 href=""
                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                >Evenimente</a
+                >Events</a
               >
             </li>
           </ul>
@@ -86,14 +90,14 @@
         >
           <button
             type="button"
-            class="flex items-center justify-center gap-1.5 font-logo font-bold"
+            class="ro-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
           >
             <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
             <span class="">RO</span>
           </button>
           <button
             type="button"
-            class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+            class="flex items-center justify-center gap-1.5 font-logo font-bold"
           >
             <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
             <span class="">EN</span>
@@ -105,19 +109,19 @@
     <!-- DROPDOWN -->
     <section
       id="menu_wrap"
-      class="fixed top-0 bottom-0 -right-[100vw] z-10 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-24 transition-all duration-700"
+      class="fixed top-0 bottom-0 -right-[100vw] z-40 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-24 transition-all duration-700"
     >
       <div class="z-20 flex items-center justify-center gap-4 px-1.5 py-2.5">
         <button
           type="button"
-          class="flex items-center justify-center gap-1.5 font-logo font-bold"
+          class="ro-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
         >
           <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
           <span class="">RO</span>
         </button>
         <button
           type="button"
-          class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+          class="flex items-center justify-center gap-1.5 font-logo font-bold"
         >
           <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
           <span class="">EN</span>
@@ -129,7 +133,7 @@
         <li
           class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
         >
-          <a href="" class="">Obiective</a>
+          <a href="" class="">Sights</a>
         </li>
         <li
           id="trasee"
@@ -139,7 +143,7 @@
             type="button"
             class="block w-full text-left font-logo font-bold text-white duration-500 hover:text-green-500"
           >
-            Trasee
+            Routes
           </button>
           <ul id="trasee-options" class="ml-5 hidden flex-col gap-6">
             <li>
@@ -152,7 +156,7 @@
                   src="../assets/traseu_bici.png"
                   alt="traseu bicicleta"
                 />
-                <p class="text-xl font-normal xs:text-2xl">cu bicicleta</p>
+                <p class="text-xl font-normal xs:text-2xl">by bicycle</p>
               </a>
             </li>
             <li>
@@ -165,7 +169,7 @@
                   src="../assets/traseu_car.png"
                   alt="traseu masina"
                 />
-                <p class="text-xl font-normal xs:text-2xl">cu masina</p>
+                <p class="text-xl font-normal xs:text-2xl">by car</p>
               </a>
             </li>
             <li>
@@ -178,7 +182,7 @@
                   src="../assets/traseu_piciorus.png"
                   alt="traseu pe jos"
                 />
-                <p class="text-xl font-normal xs:text-2xl">pe jos</p>
+                <p class="text-xl font-normal xs:text-2xl">on foot</p>
               </a>
             </li>
           </ul>
@@ -191,7 +195,7 @@
         <li
           class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
         >
-          <a href="" class="">Evenimente</a>
+          <a href="" class="">Events</a>
         </li>
       </ul>
     </section>
@@ -207,13 +211,13 @@
             <h1
               class="h1-animation font-title text-3xl font-light tracking-wider xxs:text-4xl md:text-5xl 2xl:text-6xl"
             >
-              Descopera
-              <span class="font-bold">atractiile</span> judetului Vaslui
+              Discover the
+              <span class="font-bold">attractions</span> of Vaslui County
             </h1>
             <p class="info-pop max-w-xl xs:text-lg">
-              Ia parte la o calatorie virtuala imersiva, presarata cu istorie,
-              peisaje pitoresti si cu o multitudine de obiective turistice ce
-              tin in viata cultura acestui judet.
+              Take part in an immersive virtual journey, sprinkled with history,
+              picturesque landscapes, and a multitude of tourist attractions
+              that keep the culture of this county alive.
             </p>
           </div>
         </section>
@@ -231,7 +235,7 @@
 
     <section class="relative flex w-full flex-col flex-wrap md:flex-row">
       <div
-        class="sticky-big-image top-0 hidden bg-red-700 md:sticky md:block md:h-screen md:w-1/2"
+        class="sticky-big-image top-0 hidden md:sticky md:block md:h-screen md:w-1/2"
       >
         <img
           class="h-full w-full object-cover"
@@ -246,67 +250,157 @@
         <h2
           class="text-introductiv relative min-h-[50vh] text-center font-title text-3xl font-thin duration-1000 xs:text-4xl"
         >
-          Fa cunostinta cu
-          <span class="font-bold text-green-500">Vasluiul</span>
+          Get to know
+          <span class="font-bold text-green-500">Vaslui</span>
         </h2>
         <div class="flex flex-col items-center justify-center">
           <p
             class="text-introductiv my-28 max-w-xl text-center text-xl duration-1000 lg:my-44"
           >
-            Situat in <span class="font-bold">estul Romaniei</span>, in regiunea
-            istorica <span>Moldova</span>, cu radacini ce se intind pe parcursul
-            secolelor, este gazda unor comori de monumente istorice, unor
-            bijuterii arhitecturale si duce mai departe puternica amprenta a
-            domnitorului <span class="font-bold">Stefan cel Mare</span>.
+            Located in <span class="font-bold">Eastern Romania</span>, in the
+            historical region of <span>Moldova</span>, with roots that stretch
+            throughout the centuries, it is home to historical monuments,
+            architectural gems, and carries on the strong imprint of ruler
+            <span class="font-bold">Stephen the Great</span>.
           </p>
           <p
             class="text-introductiv my-28 max-w-xl text-center text-xl duration-1000 lg:my-44"
           >
-            Cele mai semnificative orase ale judetului sunt, cu siguranta,
-            <span class="font-bold">Vasluiul</span>, resedinta de judet, sub
-            forma unei țesături urbane compactă între dealurile Moldovei,
-            <span class="font-bold">Barladul</span>, important centru comercial
-            si cultural in epoca medievala si
-            <span class="font-bold">Husiul</span>, renumit pentru vinurile sale
-            si prezenta numeroaselor crame și podgorii.
+            The most significant cities of the county are, without a doubt,
+            <span class="font-bold">Vaslui</span>, the county seat, forming a
+            compact urban fabric amidst the hills of Moldova,
+            <span class="font-bold">Bârlad</span>, an important commercial and
+            cultural center in the medieval era, and
+            <span class="font-bold">Husi</span>, renowned for its wines and the
+            presence of numerous wineries and vineyards.
           </p>
           <p
             class="text-introductiv my-28 mb-48 max-w-xl text-center text-xl duration-1000 lg:my-44 lg:mb-80"
           >
-            Toate cele trei orase impartasesc o atmosfera specifica, sunt
-            linistite, au peisaje pitoresti, iar o plimbare pe aleile lor pline
-            de poveste te va purta înapoi în timp.
+            All three cities share a specific atmosphere, they are peaceful,
+            have picturesque landscapes, and a walk along their story-filled
+            alleys will transport you back in time.
           </p>
         </div>
       </div>
     </section>
 
     <!-- TRASEE -->
-    <div class="container">
-      <!-- Container for all sliders, and pagination -->
-      <div class="sliders-container">
-        <!-- Here will be injected sliders for images, numbers, titles and links -->
+    <section
+      class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden py-20"
+    >
+      <h2
+        class="font-title text-6xl font-thin uppercase tracking-wider text-green-500"
+      >
+        Routes
+      </h2>
+      <div
+        class="absolute -left-[5rem] -top-[10rem] rounded-[50%] bg-green-500 bg-opacity-50 xl:h-[28rem] xl:w-[28rem]"
+      ></div>
 
-        <!-- Simple pagination for the slider -->
-        <ul class="pagination">
-          <li class="pagination__item">
-            <a class="pagination__button"></a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__button"></a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__button"></a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__button"></a>
-          </li>
-        </ul>
+      <div
+        class="absolute left-[6rem] top-[12rem] rounded-[50%] bg-green-500 bg-opacity-70 xl:h-[10rem] xl:w-[10rem]"
+      ></div>
+      <div
+        class="absolute -right-[5rem] -bottom-[10rem] rounded-[50%] bg-green-500 bg-opacity-50 xl:h-[28rem] xl:w-[28rem]"
+      ></div>
+      <div
+        class="absolute -right-[3rem] bottom-[18rem] rounded-[50%] bg-green-500 bg-opacity-50 xl:h-[6rem] xl:w-[6rem]"
+      ></div>
+      <div
+        class="absolute right-[4rem] bottom-[24rem] rounded-[50%] bg-green-500 bg-opacity-70 xl:h-[4rem] xl:w-[4rem]"
+      ></div>
+
+      <div
+        class="swiper flex w-full flex-col items-center justify-center gap-4 text-black"
+      >
+        <div class="swiper-wrapper h-full w-full py-14">
+          <div
+            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
+          >
+            <div
+              class="absolute -top-[12rem] h-[20rem] w-full rounded-[50%] bg-green-500 bg-opacity-50"
+            ></div>
+            <div
+              class="absolute top-[4rem] z-10 flex h-24 w-24 items-center justify-center rounded-[50%] border-2 border-green-500 bg-white"
+            >
+              <img class="h-16 w-16" src="../assets/car.png" alt="" />
+            </div>
+            <div class="flex flex-col items-center gap-1 px-10 text-black">
+              <h2 class="font-logo text-2xl font-bold xs:text-3xl">By car</h2>
+              <p class="text-center text-lg xs:text-xl">
+                Routes that can be done by car.
+              </p>
+              <a
+                class="mt-7 cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider text-white transition-colors duration-300 hover:bg-green-700"
+                href="#"
+                >Discover</a
+              >
+            </div>
+          </div>
+          <div
+            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
+          >
+            <div
+              class="absolute -top-[12rem] h-[20rem] w-full rounded-[50%] bg-green-500 bg-opacity-50"
+            ></div>
+            <div
+              class="absolute top-[4rem] z-10 flex h-24 w-24 items-center justify-center rounded-[50%] border-2 border-green-500 bg-white"
+            >
+              <img class="h-16 w-16" src="../assets/bicycle.png" alt="" />
+            </div>
+            <div class="flex flex-col items-center gap-1 px-10 text-black">
+              <h2 class="font-logo text-2xl font-bold xs:text-3xl">
+                By bicycle
+              </h2>
+              <p class="text-center text-lg xs:text-xl">
+                Routes that can be done by bicycle.
+              </p>
+              <a
+                class="mt-7 cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider text-white transition-colors duration-300 hover:bg-green-700"
+                href="#"
+                >Discover</a
+              >
+            </div>
+          </div>
+          <div
+            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
+          >
+            <div
+              class="absolute -top-[12rem] h-[20rem] w-full rounded-[50%] bg-green-500 bg-opacity-50"
+            ></div>
+            <div
+              class="absolute top-[4rem] z-10 flex h-24 w-24 items-center justify-center rounded-[50%] border-2 border-green-500 bg-white"
+            >
+              <img class="h-16 w-16" src="../assets/sneaker.png" alt="" />
+            </div>
+            <div class="flex flex-col items-center gap-1 px-10 text-black">
+              <h2 class="font-logo text-2xl font-bold xs:text-3xl">On foot</h2>
+              <p class="text-center text-lg xs:text-xl">
+                Routes that can be done on foot.
+              </p>
+              <a
+                class="mt-7 cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider text-white transition-colors duration-300 hover:bg-green-700"
+                href="#"
+                >Discover</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="tranding-slider-control w-[14rem]">
+          <div class="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-    </div>
+    </section>
 
     <div
-      class="sectiune-obiective flex min-h-[100vh] items-center justify-center pb-20"
+      class="sectiune-obiective flex min-h-[100vh] items-center justify-center py-20"
     >
       <div
         class="mx-auto flex w-[90%] max-w-3xl flex-col items-center justify-center lg:my-28 lg:max-w-screen-2xl"
@@ -327,7 +421,7 @@
                 alt=""
               />
             </div>
-            <span class="more z-10 font-bold duration-[450ms]">Descopera</span>
+            <span class="more z-10 font-bold duration-[450ms]">Discover</span>
           </a>
           <img
             class="pin absolute left-[37%] top-[24%] z-20 w-6 rotate-[20deg] xxs:top-[20%] xxs:left-[40%] xxs:w-8 xs:left-[39%] xs:top-[12%] sm:left-[38%] sm:top-[12%] lg:left-[30%] lg:top-[20%] 2xl:left-[35%] 2xl:top-[18%]"
@@ -388,6 +482,91 @@
         </div>
       </div>
     </div>
+
+    <!-- GPT SECTION -->
+    <section
+      class="flex min-h-screen flex-col items-center justify-start gap-10 bg-zinc-900 pt-28 pb-52"
+    >
+      <div
+        class="mx-4 flex flex-col items-center justify-center gap-[0.4em] font-title text-lg font-bold xxs:text-xl xs:flex-row xs:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl"
+      >
+        <div class="relative">
+          <span class="whitespace-nowrap text-center tracking-wider">
+            <span class="relative z-20"> F</span><span>R</span
+            ><span class="relative z-20">E</span><span>Q</span
+            ><span class="relative z-20">U</span><span>E</span
+            ><span class="relative z-20">N</span><span>T</span
+            ><span class="relative z-20">L</span><span>Y</span
+            ><span class="relative z-20"> A</span><span>S</span
+            ><span class="relative z-20">K</span><span>E</span
+            ><span class="relative z-20">D</span>
+          </span>
+          <div
+            class="linie absolute top-[50%] -left-[2.5%] z-10 mx-auto h-0.5 w-0 rounded-xl bg-green-500 transition-all delay-300 duration-1000 md:h-1"
+          ></div>
+          <span
+            id="cur"
+            class="absolute left-6 top-[100%] py-1 font-cur text-xl text-green-500 xxs:text-2xl xs:left-52 xs:text-3xl sm:py-1.5 md:left-60 xl:left-72 xl:py-2 xl:text-4xl 2xl:left-[26rem] 2xl:py-3 2xl:text-5xl 3xl:left-[29rem] 3xl:py-4 3xl:text-6xl"
+            >Your</span
+          >
+        </div>
+        <h3 class="self-end tracking-wider xs:self-center">QUESTIONS</h3>
+      </div>
+      <form
+        action=""
+        class="relative mt-10 flex w-[90%] max-w-md flex-col items-center justify-start md:mt-24 2xl:mt-36"
+      >
+        <input
+          type="text"
+          name="prompt"
+          class="absolute w-[70%] rounded-lg border-2 border-white bg-transparent px-4 py-2 font-logo font-bold outline-none transition-all duration-500 valid:border-green-500 focus:border-green-500 md:w-full md:text-lg"
+          required
+          id="prompt"
+        />
+        <label
+          for="prompt"
+          class="absolute top-3 z-10 rounded bg-zinc-900 px-2 font-logo text-xs font-bold text-white outline-none transition-all duration-500 xxs:text-base"
+          >Your question</label
+        >
+        <div
+          class="mt-14 self-center text-center font-logo text-sm font-thin md:self-start"
+        >
+          *Answers generated with the help of artificial intelligence.
+        </div>
+        <button
+          type="submit"
+          class="mt-8 rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider transition-colors duration-300 hover:bg-white hover:text-green-500"
+        >
+          Ask
+        </button>
+      </form>
+      <div
+        class="gpt-spit flex h-[300px] w-[90%] max-w-2xl items-center justify-center rounded-lg border border-green-500 bg-opacity-10 p-5 text-center font-logo font-bold"
+      >
+        <span
+          >The answers to your questions will be generated within this
+          frame!</span
+        >
+        <svg
+          class="spinner hidden"
+          width="65px"
+          height="65px"
+          viewBox="0 0 66 66"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer
       class="relative flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
@@ -475,13 +654,21 @@
         </div>
         <div id="go_up" class="mr-4">
           <a href="#top" class="flex items-center justify-center">
-            <span class="relative text-green-500 md:text-lg">Sus</span>
+            <span class="relative text-green-500 md:text-lg">Back to top</span>
             <img class="w-10" src="../assets/arrow-top.png" alt="sageata" />
           </a>
         </div>
       </div>
       <!-- BACK TO TOP -->
     </footer>
-    <script src=" https://cdn.jsdelivr.net/npm/momentum-slider@0.0.8/dist/momentum-slider.min.js "></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
