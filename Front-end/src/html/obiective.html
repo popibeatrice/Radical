@@ -7,9 +7,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;700&family=Nunito:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Obiective Turistice</title>
   </head>
-  <body class="font-logo text-black">
+  <body class="relative font-logo text-black">
     <div class="pointer-events-none invisible absolute" id="top"></div>
     <!-- HEADER -->
     <header
@@ -22,7 +28,7 @@
         <!-- LOGO -->
         <a
           id="logo"
-          href="#"
+          href="./index.html"
           class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
         >
           <svg
@@ -197,9 +203,9 @@
     </section>
 
     <!-- MAIN -->
-    <main class="relative">
+    <main class="relative pb-[10rem]">
       <!-- HERO + SEARCH ? -->
-      <div class="min-h-[100vh] pt-44">
+      <div class="pt-44">
         <div class="flex flex-col items-center justify-center gap-4">
           <form
             action=""
@@ -252,7 +258,53 @@
           </div>
         </div>
       </div>
+      <div
+        class="grid-cont mx-auto mt-10 w-[90%] max-w-screen-2xl justify-center"
+      ></div>
     </main>
+
+    <!-- SLIDE UP -->
+    <section
+      class="slide-up fixed left-0 right-0 bottom-0 z-[80] mx-auto h-0 w-[95%] overflow-hidden rounded-t-xl bg-white transition-all duration-1000"
+    >
+      <div
+        class="flex h-full w-full flex-col items-center justify-start gap-32 overflow-x-hidden overflow-y-scroll pb-[2rem] text-black"
+      >
+        <div
+          class="flex w-[80%] max-w-screen-3xl flex-col items-center justify-center gap-6 lg:flex-row lg:justify-between"
+        >
+          <div class="flex w-[40%] flex-col items-center justify-center gap-6">
+            <h2
+              class="title text-center font-title text-3xl tracking-wider text-green-500 xxs:text-4xl xl:text-5xl 2xl:text-6xl"
+            >
+              Titlu
+            </h2>
+            <p
+              class="descp hidden w-full max-w-xl text-center font-logo font-bold lg:block"
+            >
+              Descriere
+            </p>
+          </div>
+          <div
+            class="flex h-full w-[60%] flex-col items-center justify-center gap-32 lg:gap-6"
+          >
+            <div
+              id="map"
+              class="h-[350px] w-full rounded-md shadow-lg shadow-zinc-500 lg:h-[450px]"
+            ></div>
+            <p class="descp max-w-xl text-center font-logo font-bold lg:hidden">
+              Descriere
+            </p>
+          </div>
+        </div>
+        <div
+          class="galerie w-[80%] max-w-screen-3xl justify-items-center"
+        ></div>
+      </div>
+    </section>
+    <div
+      class="slide-wrap pointer-events-none fixed inset-0 z-[70] h-full w-full transition-all duration-1000"
+    ></div>
     <!-- FOOTER -->
     <footer
       class="relative flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold text-white xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
@@ -347,5 +399,6 @@
       </div>
       <!-- BACK TO TOP -->
     </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk4l13atzv3uO55ilho7vzc3XYb1Cpgcc&libraries=places"></script>
   </body>
 </html>

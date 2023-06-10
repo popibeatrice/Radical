@@ -1,0 +1,5 @@
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  background: #000000;
+}

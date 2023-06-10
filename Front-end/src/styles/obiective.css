@@ -3,3 +3,15 @@
 .menu-btn__burger::after {
   background: #000000;
 }
+
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  gap: 2rem;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}

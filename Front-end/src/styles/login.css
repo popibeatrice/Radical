@@ -1,0 +1,8 @@
+input:focus + label,
+input:valid + label {
+  transform: translate(0, -100%);
+  color: #22c55e;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white;
+}

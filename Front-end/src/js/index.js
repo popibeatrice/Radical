@@ -12,7 +12,6 @@ const enSwitchs = document.querySelectorAll('.en-switch');
 
 enSwitchs.forEach((enSwitch) => {
   enSwitch.addEventListener('click', () => {
-    console.log(location.origin);
     location.href = location.origin + '/en';
   });
 });
