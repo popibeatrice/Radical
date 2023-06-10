@@ -61,14 +61,14 @@
      on the screen from left to right. You won't see it translate as rotate and
      translate have been put together. */
 .menu-btn.open .menu-btn__burger::before {
+    background-color: #ffffff;
     transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
 }
 
 /* This rotates the bottom line by minus 45 degrees (45 degrees anti-clockwise) */
 .menu-btn.open .menu-btn__burger::after {
+    background-color: #ffffff;
     transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
 }
 
 #menu_wrap ::-webkit-scrollbar {
