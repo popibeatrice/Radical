@@ -7,6 +7,8 @@ module.exports = {
     index: './src/js/index.js',
     indexEn: './src/js/indexEn.js',
     trasee_pe_jos: './src/js/trasee_pe_jos.js',
+    trasee_masina: './src/js/trasee_masina.js',
+    trasee_bicicleta: './src/js/trasee_bicicleta.js',
     obiective: './src/js/obiective.js',
     login: './src/js/login.js',
     indexAdmin: './src/js/indexAdmin.js',
@@ -96,15 +98,26 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       // Also generate a test.html
+      filename: 'trasee_masina.html',
+      template: 'src/html/trasee_masina.html',
+      chunks: ['trasee_masina'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
       filename: 'edit.html',
       template: 'src/html/edit.html',
       chunks: ['edit'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'trasee_bicicleta.html',
+      template: 'src/html/trasee_bicicleta.html',
+      chunks: ['trasee_bicicleta'],
     }),
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
     clean: true,
-    publicPath: '/',
   },
 };

@@ -135,6 +135,7 @@ ScrollReveal().reveal('#cur', {
 });
 
 // TRASEE
+
 var TrandingSlider = new Swiper('.swiper', {
   effect: 'coverflow',
   grabCursor: true,
