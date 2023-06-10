@@ -6,7 +6,9 @@ module.exports = {
     entry: {
         index: "./src/js/index.js",
         indexEn: "./src/js/indexEn.js",
+        trasee_masina: "./src/js/trasee_masina.js",
         trasee_pe_jos: "./src/js/trasee_pe_jos.js",
+        trasee_bicicleta: "./src/js/trasee_bicicleta.js",
         obiective: "./src/js/obiective.js",
     },
     mode: "development",
@@ -66,15 +68,27 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             // Also generate a test.html
-            filename: "trasee_pe_jos.html",
-            template: "src/html/trasee_pe_jos.html",
-            chunks: ["trasee_pe_jos"],
+            filename: "trasee_masina.html",
+            template: "src/html/trasee_masina.html",
+            chunks: ["trasee_masina"],
         }),
         new HtmlWebpackPlugin({
             // Also generate a test.html
             filename: "obiective.html",
             template: "src/html/obiective.html",
             chunks: ["obiective"],
+        }),
+        new HtmlWebpackPlugin({
+            // Also generate a test.html
+            filename: "trasee_pe_jos.html",
+            template: "src/html/trasee_pe_jos.html",
+            chunks: ["trasee_pe_jos"],
+        }),
+        new HtmlWebpackPlugin({
+            // Also generate a test.html
+            filename: "trasee_bicicleta.html",
+            template: "src/html/trasee_bicicleta.html",
+            chunks: ["trasee_bicicleta"],
         }),
     ],
     output: {
