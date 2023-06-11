@@ -131,18 +131,20 @@ const GetDefInfo = async () => {
   // Get the value of the 'variable' parameter
   const myVariable = params.get('variable');
 
-  const res = await axios.get(`/admin/edit/${myVariable}`);
-  const info = res.data.sight[0];
-  console.log(res.data);
-  console.log(info);
-  titluRO.value = info.titleRo;
-  titluEN.value = info.titleEn;
-  descpRO.value = info.descpRo;
-  descpEN.value = info.descpEn;
-  type.value = info.type;
-  const lat = parseFloat(info.lat['$numberDecimal']);
-  const lng = parseFloat(info.lng['$numberDecimal']);
-  initMap(lat, lng);
+  try {
+    const res = await axios.get(`/admin/edit/${myVariable}`);
+    const info = res.data.sight[0];
+    titluRO.value = info.titleRo;
+    titluEN.value = info.titleEn;
+    descpRO.value = info.descpRo;
+    descpEN.value = info.descpEn;
+    type.value = info.type;
+    const lat = parseFloat(info.lat['$numberDecimal']);
+    const lng = parseFloat(info.lng['$numberDecimal']);
+    initMap(lat, lng);
+  } catch (error) {
+    location.href = location.origin + '/admin';
+  }
 };
 GetDefInfo();
 
