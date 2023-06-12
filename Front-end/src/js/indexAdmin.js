@@ -4,12 +4,13 @@ import '../styles/indexAdmin.css';
 import '../styles/tailwind.css';
 import axios from 'axios';
 import editIcon from '../assets/edit.svg';
+import deleteIcon from '../assets/icons8-delete.svg';
 import biserica from '../assets/icons8-church.svg';
 import castel from '../assets/icons8-castle.svg';
 import fotbal from '../assets/icons8-stadium.svg';
 
+const token = localStorage.getItem('token');
 const IsLogged = async () => {
-  const token = localStorage.getItem('token');
   try {
     const res = await axios.post(
       '/admin',
@@ -35,6 +36,8 @@ const RenderCard = (id, titlu, type) => {
   // ELEMENTE
   const card = document.createElement('div');
   const edit = document.createElement('a');
+  const deleteBtn = document.createElement('button');
+  const wrap = document.createElement('div');
   const title = document.createElement('h2');
   const icon = document.createElement('img');
 
@@ -66,9 +69,33 @@ const RenderCard = (id, titlu, type) => {
   edit.classList.add('w-10', 'h-10', 'bg-cover', 'bg-center');
   edit.style.backgroundImage = `url('${editIcon}')`;
 
+  deleteBtn.classList.add('w-10', 'h-10', 'bg-cover', 'bg-center');
+  deleteBtn.style.backgroundImage = `url('${deleteIcon}')`;
+  deleteBtn.setAttribute('type', 'button');
+  deleteBtn.addEventListener('click', async () => {
+    try {
+      await axios.post(
+        `/admin/delete/${id}`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      card.remove();
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+  wrap.classList.add('flex', 'items-center', 'justify-center', 'gap-3');
+  wrap.appendChild(deleteBtn);
+  wrap.appendChild(edit);
+
   card.appendChild(icon);
   card.appendChild(title);
-  card.appendChild(edit);
+  card.appendChild(wrap);
   gridCont.appendChild(card);
 };
 
