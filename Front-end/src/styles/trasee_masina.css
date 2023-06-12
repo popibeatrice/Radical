@@ -1,16 +1,5 @@
-.first_full_photo {
-    background-image: url("../assets/peisaj3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
 #map {
     position: sticky !important ;
-}
-.photo_title {
-    background: url("../assets/peisaj.jpg");
-    background-position: center;
-    background-size: cover;
 }
 
 .menu-btn__burger {
