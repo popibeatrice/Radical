@@ -7,6 +7,31 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../assets/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +57,7 @@
         <!-- LOGO -->
         <a
           id="logo"
-          href="#"
+          href="/en"
           class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
         >
           <svg
@@ -58,28 +83,21 @@
           <ul class="flex items-center justify-center gap-7 text-xl">
             <li class="">
               <a
-                href=""
+                href="/sights"
                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
                 >Sights</a
               >
             </li>
             <li class="">
               <a
-                href=""
+                href="#trasee-section"
                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
                 >Routes</a
               >
             </li>
             <li class="">
               <a
-                href=""
-                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                >Transport</a
-              >
-            </li>
-            <li class="">
-              <a
-                href=""
+                href="/events"
                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
                 >Events</a
               >
@@ -139,7 +157,7 @@
         <li
           class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
         >
-          <a href="" class="">Sights</a>
+          <a href="/sights" class="">Sights</a>
         </li>
         <li
           id="trasee"
@@ -154,7 +172,7 @@
           <ul id="trasee-options" class="ml-5 hidden flex-col gap-6">
             <li>
               <a
-                href=""
+                href="/routes/bike"
                 class="flex items-center gap-4 duration-500 hover:scale-110"
               >
                 <img
@@ -167,7 +185,7 @@
             </li>
             <li>
               <a
-                href=""
+                href="/routes/car"
                 class="flex items-center gap-4 duration-500 hover:scale-110"
               >
                 <img
@@ -180,7 +198,7 @@
             </li>
             <li>
               <a
-                href=""
+                href="/routes/onfoot"
                 class="flex items-center gap-4 duration-500 hover:scale-110"
               >
                 <img
@@ -193,15 +211,11 @@
             </li>
           </ul>
         </li>
+
         <li
           class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
         >
-          <a href="" class="">Transport</a>
-        </li>
-        <li
-          class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
-        >
-          <a href="" class="">Events</a>
+          <a href="/events" class="">Events</a>
         </li>
       </ul>
     </section>
@@ -293,6 +307,7 @@
 
     <!-- TRASEE -->
     <section
+      id="trasee-section"
       class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden py-20"
     >
       <h2
@@ -339,7 +354,7 @@
               </p>
               <a
                 class="mt-7 cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider text-white transition-colors duration-300 hover:bg-green-700"
-                href="#"
+                href="/routes/car"
                 >Discover</a
               >
             </div>
@@ -364,7 +379,7 @@
               </p>
               <a
                 class="mt-7 cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider text-white transition-colors duration-300 hover:bg-green-700"
-                href="#"
+                href="/routes/bike"
                 >Discover</a
               >
             </div>
@@ -387,7 +402,7 @@
               </p>
               <a
                 class="mt-7 cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-title font-bold tracking-wider text-white transition-colors duration-300 hover:bg-green-700"
-                href="#"
+                href="/routes/onfoot"
                 >Discover</a
               >
             </div>
@@ -411,11 +426,16 @@
       <div
         class="mx-auto flex w-[90%] max-w-3xl flex-col items-center justify-center lg:my-28 lg:max-w-screen-2xl"
       >
+        <h2
+          class="text-center font-logo text-5xl font-bold text-green-500 xxs:text-6xl xs:text-7xl md:text-8xl"
+        >
+          Sights
+        </h2>
         <div
           class="card-section relative mx-auto mb-16 min-h-[400px] w-[270px] xxs:w-[330px] xs:w-[450px] sm:min-h-[600px] sm:w-[600px] lg:min-h-[750px] lg:w-[700px] 2xl:min-h-[825px] 2xl:w-[1000px]"
         >
           <a
-            href="#"
+            href="/sights"
             class="absolute left-[47%] top-[50%] flex items-center gap-2 2xl:top-[52%]"
           >
             <div
@@ -440,7 +460,7 @@
             alt=""
           />
           <img
-            class="pin absolute right-[49%] bottom-[32%] z-20 w-6 rotate-[-20deg] xxs:bottom-[28%] xxs:right-[45%] xxs:w-8 xs:right-[46%] xs:bottom-[19%] sm:right-[45%] sm:bottom-[23%] lg:right-[36%] lg:bottom-[75%] 2xl:right-[42%] 2xl:bottom-[78%]"
+            class="pin absolute right-[49%] bottom-[32%] z-20 w-6 rotate-[-20deg] xxs:bottom-[28%] xxs:right-[45%] xxs:w-8 xs:right-[46%] xs:bottom-[19%] sm:right-[45%] sm:bottom-[23%] lg:right-[36%] lg:bottom-[75%] 2xl:right-[43%] 2xl:bottom-[75%]"
             src="../assets/pin.png"
             alt=""
           />
@@ -479,11 +499,7 @@
           <article
             class="obiective absolute right-[9%] -bottom-[15%] mb-20 hidden w-[140px] rotate-[12deg] flex-col items-center justify-center rounded-xl shadow-2xl shadow-gray-700 xxs:-bottom-[20%] xxs:right-[5%] xxs:w-[170px] xs:right-[11%] xs:-bottom-[31%] xs:w-[200px] sm:right-[10%] sm:-bottom-[16%] sm:w-[270px] lg:bottom-[44%] lg:right-[2%] lg:flex lg:rotate-[6deg] 2xl:bottom-[40%] 2xl:right-[8%] 2xl:w-[375px]"
           >
-            <img
-              src="../assets/manastirea-malinesti.jpg"
-              alt=""
-              class="rounded-md"
-            />
+            <img src="../assets/podu_inalt.jpg" alt="" class="rounded-md" />
           </article>
         </div>
       </div>
@@ -626,7 +642,7 @@
         class="flex w-[80%] items-center justify-center lg:justify-start lg:self-start"
       >
         <a
-          href="#"
+          href="/en"
           class="flex items-center justify-center gap-1.5 xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
         >
           <svg
