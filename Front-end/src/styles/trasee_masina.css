@@ -368,13 +368,66 @@
     background-size: cover;
     background-position: center;
 }
-.parvan3 {
-    background: url("../assets/muzeul_parvan3.jpg");
+.parvan4 {
+    background: url("../assets/muzeul_parvan4.jpg");
     background-size: cover;
     background-position: center;
 }
-.parvan4 {
-    background: url("../assets/muzeul_parvan4.jpg");
+.parvan5 {
+    background: url("../assets/observator.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.parvan6 {
+    background: url("../assets/muzeu_parvan5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* moreni */
+.moreni1 {
+    background: url("../assets/manastire_schit.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.moreni2 {
+    background: url("../assets/manastire_moreni3.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.moreni3 {
+    background: url("../assets/manastirea_moreni2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.moreni4 {
+    background: url("../assets/manastirea_moreni4.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.moreni5 {
+    background: url("../assets/manastirea_moreni5.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.moreni6 {
+    background: url("../assets/schitul_ticlaoani.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.moreni7 {
+    background: url("../assets/Schitul_Ticlaoani.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.eminescu1 {
+    background: url("../assets/eminescu2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.eminescu2 {
+    background: url("../assets/eminescu1.jpg");
     background-size: cover;
     background-position: center;
 }

@@ -73,18 +73,9 @@ function initMap() {
             title: "manastirea floresti",
             location: { lat: 46.554261, lng: 27.557337 },
         }, // Change the coordinates and title as needed
-        { title: "Teiu secular", location: { lat: 46.567229, lng: 27.517587 } },
         {
             title: "manastirea Sfântului Ioan",
             location: { lat: 46.622377, lng: 27.413383 },
-        },
-        // {
-        //     title: "restaurant galmondo",
-        //     location: { lat: 46.228138, lng: 27.668902 },
-        // },
-        {
-            title: "crama perieni",
-            location: { lat: 46.254469, lng: 27.653143 },
         },
         {
             title: "casa alexandru cuza",

@@ -12,6 +12,8 @@
     background: #000;
 }
 
+/* PRIMUL TRASEU */
+
 .palatu_copiilor {
     background: url("../assets/casa_mavrocordat.jpg");
     background-size: cover;
@@ -32,8 +34,6 @@
     background-size: cover;
     background-position: center;
 }
-
-/* PRIMUL TRASEU */
 
 /* manastirea fastaci */
 .teatru_vara1 {
