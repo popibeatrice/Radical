@@ -421,3 +421,13 @@
     background-size: cover;
     background-position: center;
 }
+.eminescu1 {
+    background: url("../assets/eminescu2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.eminescu2 {
+    background: url("../assets/eminescu1.jpg");
+    background-size: cover;
+    background-position: center;
+}
