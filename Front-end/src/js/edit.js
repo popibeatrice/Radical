@@ -24,12 +24,6 @@ const IsLogged = async () => {
 
 IsLogged();
 
-let map;
-let infowindow;
-let marker;
-let Latitude;
-let Longitude;
-
 const form = document.querySelector('form');
 const titluRO = document.querySelector('#titluRO');
 const titluEN = document.querySelector('#titluEN');
@@ -46,6 +40,15 @@ window.addEventListener('load', function () {
   form.reset();
 });
 
+let map;
+let infowindow;
+let marker;
+let Latitude;
+let Longitude;
+let removedImgs = [];
+let initialSize = 0;
+let removedSize = 0;
+
 function initMap(latDef, lngDef) {
   let vasluiCounty = { lat: latDef, lng: lngDef };
 
@@ -53,6 +56,15 @@ function initMap(latDef, lngDef) {
     center: vasluiCounty,
     zoom: 18,
   });
+
+  // Create the marker for the initial location
+  marker = new google.maps.Marker({
+    position: vasluiCounty,
+    map: map,
+    title: 'Locatie Initiala',
+  });
+
+  let wow = false;
 
   var input = document.getElementById('sight-search-input');
   var options = {
@@ -73,6 +85,7 @@ function initMap(latDef, lngDef) {
     var lat = place.geometry.location.lat();
     var lng = place.geometry.location.lng();
 
+    wow = true;
     // Move map to the selected location and zoom in
     map.setCenter({ lat: lat, lng: lng });
     map.setZoom(18);
@@ -96,23 +109,25 @@ function initMap(latDef, lngDef) {
 
     // Create and open infowindow when marker is clicked
     google.maps.event.addListener(marker, 'click', function () {
-      if (infowindow) {
-        infowindow.close();
+      if (wow) {
+        if (infowindow) {
+          infowindow.close();
+        }
+        infowindow = new google.maps.InfoWindow({
+          content:
+            '<div class="infowindow-content">' +
+            '<img class="infowindow-photo" src="' +
+            place.photos[0].getUrl() +
+            '" alt="Place Photo">' +
+            '<div class="infowindow-details">' +
+            '<strong>' +
+            place.name +
+            '</strong><br>' +
+            place.formatted_address +
+            '</div></div>',
+        });
+        infowindow.open(map, marker);
       }
-      infowindow = new google.maps.InfoWindow({
-        content:
-          '<div class="infowindow-content">' +
-          '<img class="infowindow-photo" src="' +
-          place.photos[0].getUrl() +
-          '" alt="Place Photo">' +
-          '<div class="infowindow-details">' +
-          '<strong>' +
-          place.name +
-          '</strong><br>' +
-          place.formatted_address +
-          '</div></div>',
-      });
-      infowindow.open(map, marker);
     });
 
     // Do something with lat and lng, such as saving them to the database
@@ -121,16 +136,16 @@ function initMap(latDef, lngDef) {
   });
 }
 
+// Get the URL query string
+const queryString = window.location.search;
+
+// Create an URLSearchParams object with the query string
+const params = new URLSearchParams(queryString);
+
+// Get the value of the 'variable' parameter
+const myVariable = params.get('variable');
+
 const GetDefInfo = async () => {
-  // Get the URL query string
-  const queryString = window.location.search;
-
-  // Create an URLSearchParams object with the query string
-  const params = new URLSearchParams(queryString);
-
-  // Get the value of the 'variable' parameter
-  const myVariable = params.get('variable');
-
   try {
     const res = await axios.get(`/admin/edit/${myVariable}`);
     const info = res.data.sight[0];
@@ -141,9 +156,67 @@ const GetDefInfo = async () => {
     type.value = info.type;
     const lat = parseFloat(info.lat['$numberDecimal']);
     const lng = parseFloat(info.lng['$numberDecimal']);
+    Latitude = lat;
+    Longitude = lng;
     initMap(lat, lng);
+
+    const files = res.data.files;
+    initialSize = files.length - 1;
+    console.log(initialSize);
+    files.forEach((file) => {
+      if (file.includes('cover')) {
+        const imgCover = document.createElement('img');
+        imgCover.src = `https://visitvaslui.fra1.digitaloceanspaces.com/${file}`;
+        imgCover.classList.add(
+          'object-contain',
+          'border',
+          'border-zinc-500',
+          'object-center',
+          'w-[100%]',
+          'max-w-xl',
+          'rounded-lg'
+        );
+        copertaPreview.appendChild(imgCover);
+      } else {
+        const imgs = document.createElement('img');
+        const wrap = document.createElement('div');
+        const close = document.createElement('div');
+        close.textContent = 'X';
+        close.classList.add(
+          'text-red-500',
+          'absolute',
+          'z-10',
+          'w-10',
+          'h-10',
+          '-right-6',
+          '-top-4',
+          'text-4xl',
+          'text-bold',
+          'cursor-pointer'
+        );
+        close.addEventListener('click', () => {
+          wrap.remove();
+          removedImgs.push(file);
+          removedSize = removedImgs.length;
+        });
+        wrap.classList.add('relative');
+        imgs.classList.add(
+          'object-contain',
+          'border',
+          'border-zinc-500',
+          'object-center',
+          'w-[100%]',
+          'max-w-xl',
+          'rounded-lg'
+        );
+        imgs.src = `https://visitvaslui.fra1.digitaloceanspaces.com/${file}`;
+        wrap.appendChild(imgs);
+        wrap.appendChild(close);
+        imaginiPreview.appendChild(wrap);
+      }
+    });
   } catch (error) {
-    location.href = location.origin + '/admin';
+    console.log(error);
   }
 };
 GetDefInfo();
@@ -184,7 +257,7 @@ function handleMultiplePhotosUpload() {
     return;
   }
 
-  if (selectedImages.length + files.length > 4) {
+  if (initialSize - removedSize + selectedImages.length + files.length > 4) {
     showError('Maximum 4 poze permise!', imaginiPreview);
     return;
   }
@@ -264,11 +337,137 @@ imagini.addEventListener('change', handleMultiplePhotosUpload);
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   // Convert the main image file to base64
-  const reader = new FileReader();
-  reader.readAsDataURL(coperta.files[0]);
-  reader.onload = async function () {
-    const mainImageBase64 = reader.result; // No need to split the data URL
+  console.log(coperta.files);
+  console.log(selectedImages);
+  if (coperta.files.length === 0) {
+    console.log('Nu ati schimbat poza de coperta');
+  }
+  if (initialSize === removedSize && selectedImages.length === 0) {
+    console.log('Nu ati selectat poze');
+    return;
+  }
+  if (
+    !titluRO.value ||
+    !titluEN.value ||
+    !descpRO.value ||
+    !descpEN.value ||
+    !type.value
+  ) {
+    console.log('Campuri goale');
+    return;
+  }
+  if (coperta.files.length !== 0 && selectedImages.length !== 0) {
+    const reader = new FileReader();
+    reader.readAsDataURL(coperta.files[0]);
+    reader.onload = async function () {
+      const mainImageBase64 = reader.result; // No need to split the data URL
 
+      const extraPhotosBase64Array = [];
+      const extraPhotosPromises = Array.from(selectedImages).map((file) => {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        return new Promise((resolve) => {
+          fileReader.onload = function () {
+            const base64 = fileReader.result; // No need to split the data URL
+            extraPhotosBase64Array.push(base64);
+            resolve();
+          };
+        });
+      });
+      try {
+        await Promise.all(extraPhotosPromises);
+        const formData = {
+          titluRo: titluRO.value,
+          titluEn: titluEN.value,
+          descpRo: descpRO.value,
+          descpEn: descpEN.value,
+          type: type.value,
+          lat: Latitude,
+          lng: Longitude,
+          cover: mainImageBase64,
+          newCover: true,
+          newExtra: true,
+          extra: extraPhotosBase64Array,
+          toRemove: removedImgs,
+        };
+        const res = await axios
+          .post(`/admin/edit/${myVariable}`, formData, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        if (res.status === 200) location.href = location.origin + '/admin';
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  }
+  if (coperta.files.length === 0 && selectedImages.length === 0) {
+    try {
+      const formData = {
+        titluRo: titluRO.value,
+        titluEn: titluEN.value,
+        descpRo: descpRO.value,
+        descpEn: descpEN.value,
+        type: type.value,
+        lat: Latitude,
+        lng: Longitude,
+        newCover: false,
+        newExtra: false,
+        toRemove: removedImgs,
+      };
+      const res = await axios
+        .post(`/admin/edit/${myVariable}`, formData, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      if (res.status === 200) location.href = location.origin + '/admin';
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  if (coperta.files.length !== 0 && selectedImages.length === 0) {
+    const reader = new FileReader();
+    reader.readAsDataURL(coperta.files[0]);
+    reader.onload = async function () {
+      const mainImageBase64 = reader.result; // No need to split the data URL
+      try {
+        const formData = {
+          titluRo: titluRO.value,
+          titluEn: titluEN.value,
+          descpRo: descpRO.value,
+          descpEn: descpEN.value,
+          type: type.value,
+          lat: Latitude,
+          lng: Longitude,
+          cover: mainImageBase64,
+          newCover: true,
+          newExtra: false,
+          toRemove: removedImgs,
+        };
+        const res = await axios
+          .post(`/admin/edit/${myVariable}`, formData, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        if (res.status === 200) location.href = location.origin + '/admin';
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  }
+  if (coperta.files.length === 0 && selectedImages.length !== 0) {
     const extraPhotosBase64Array = [];
     const extraPhotosPromises = Array.from(selectedImages).map((file) => {
       const fileReader = new FileReader();
@@ -291,11 +490,13 @@ form.addEventListener('submit', async (e) => {
         type: type.value,
         lat: Latitude,
         lng: Longitude,
-        cover: mainImageBase64,
+        newCover: false,
+        newExtra: true,
         extra: extraPhotosBase64Array,
+        toRemove: removedImgs,
       };
       const res = await axios
-        .post('/admin/create', formData, {
+        .post(`/admin/edit/${myVariable}`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -307,5 +508,5 @@ form.addEventListener('submit', async (e) => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 });

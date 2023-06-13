@@ -66,7 +66,7 @@ const RenderCard = (title, descp, id, lat, lng) => {
   const cardBtn = document.createElement('button');
 
   // CARD
-  card.style.backgroundImage = `url('https://visitvaslui.fra1.cdn.digitaloceanspaces.com/${id}/cover.jpg')`;
+  card.style.backgroundImage = `url('https://visitvaslui.fra1.digitaloceanspaces.com/${id}/cover.jpg')`;
   card.style.backgroundSize = 'cover';
   card.style.backgroundPosition = 'center';
   card.style.backgroundRepeat = 'no-repeat';
@@ -141,7 +141,7 @@ const RenderCard = (title, descp, id, lat, lng) => {
     const imgNames = await GetExtra(id);
     imgNames.forEach((name) => {
       const img = document.createElement('img');
-      img.src = `https://visitvaslui.fra1.cdn.digitaloceanspaces.com/${name}`;
+      img.src = `https://visitvaslui.fra1.digitaloceanspaces.com/${name}`;
       img.classList.add(
         'h-[300px]',
         'w-full',
