@@ -9,6 +9,7 @@ module.exports = {
         trasee_pe_jos: "./src/js/trasee_pe_jos.js",
         routes_onfeet: "./src/js/routes_onfeet.js",
         trasee_masina: "./src/js/trasee_masina.js",
+        routes_car: "./src/js/routes_car.js",
         trasee_bicicleta: "./src/js/trasee_bicicleta.js",
         obiective: "./src/js/obiective.js",
         login: "./src/js/login.js",
@@ -112,6 +113,12 @@ module.exports = {
             filename: "trasee_masina.html",
             template: "src/html/trasee_masina.html",
             chunks: ["trasee_masina"],
+        }),
+        new HtmlWebpackPlugin({
+            // Also generate a test.html
+            filename: "routes_car.html",
+            template: "src/html/routes_car.html",
+            chunks: ["routes_car"],
         }),
         new HtmlWebpackPlugin({
             // Also generate a test.html

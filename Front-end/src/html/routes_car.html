@@ -56,7 +56,7 @@
                 <!-- LOGO -->
                 <a
                     id="logo"
-                    href="/"
+                    href="/en"
                     class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
                 >
                     <svg
@@ -82,23 +82,23 @@
                     <ul class="flex items-center justify-center gap-7 text-xl">
                         <li class="">
                             <a
-                                href="/obiective"
+                                href="/sights"
                                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                                >Obiective</a
+                                >Sights</a
                             >
                         </li>
                         <li class="">
                             <a
-                                href="/trasee/masina"
+                                href="#trasee-section"
                                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                                >Trasee</a
+                                >Routes</a
                             >
                         </li>
                         <li class="">
                             <a
-                                href="/evenimente"
+                                href="/events"
                                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100 focus:after:scale-x-100"
-                                >Evenimente</a
+                                >Events</a
                             >
                         </li>
                     </ul>
@@ -113,7 +113,7 @@
                 >
                     <button
                         type="button"
-                        class="flex items-center justify-center gap-1.5 font-logo font-bold"
+                        class="ro-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
                     >
                         <img
                             src="../assets/steag-ro.png"
@@ -124,7 +124,7 @@
                     </button>
                     <button
                         type="button"
-                        class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+                        class="flex items-center justify-center gap-1.5 font-logo font-bold"
                     >
                         <img
                             src="../assets/steag-en.png"
@@ -140,14 +140,14 @@
         <!-- DROPDOWN -->
         <section
             id="menu_wrap"
-            class="fixed top-0 bottom-0 -right-[100vw] z-40 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-24 text-white transition-all duration-700"
+            class="fixed top-0 bottom-0 -right-[100vw] z-40 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-24 transition-all duration-700"
         >
             <div
                 class="z-20 flex items-center justify-center gap-4 px-1.5 py-2.5"
             >
                 <button
                     type="button"
-                    class="flex items-center justify-center gap-1.5 font-logo font-bold"
+                    class="ro-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
                 >
                     <img
                         src="../assets/steag-ro.png"
@@ -158,7 +158,7 @@
                 </button>
                 <button
                     type="button"
-                    class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+                    class="flex items-center justify-center gap-1.5 font-logo font-bold"
                 >
                     <img
                         src="../assets/steag-en.png"
@@ -174,7 +174,7 @@
                 <li
                     class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
                 >
-                    <a href="/obiective" class="">Obiective</a>
+                    <a href="/sights" class="">Sights</a>
                 </li>
                 <li
                     id="trasee"
@@ -184,12 +184,12 @@
                         type="button"
                         class="block w-full text-left font-logo font-bold text-white duration-500 hover:text-green-500"
                     >
-                        Trasee
+                        Routes
                     </button>
                     <ul id="trasee-options" class="ml-5 hidden flex-col gap-6">
                         <li>
                             <a
-                                href="/trasee/bicicleta"
+                                href="/routes/bike"
                                 class="flex items-center gap-4 duration-500 hover:scale-110"
                             >
                                 <img
@@ -198,13 +198,13 @@
                                     alt="traseu bicicleta"
                                 />
                                 <p class="text-xl font-normal xs:text-2xl">
-                                    cu bicicleta
+                                    by bicycle
                                 </p>
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/trasee/masina"
+                                href="/routes/car"
                                 class="flex items-center gap-4 duration-500 hover:scale-110"
                             >
                                 <img
@@ -213,13 +213,13 @@
                                     alt="traseu masina"
                                 />
                                 <p class="text-xl font-normal xs:text-2xl">
-                                    cu masina
+                                    by car
                                 </p>
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/trasee/pejos"
+                                href="/routes/onfoot"
                                 class="flex items-center gap-4 duration-500 hover:scale-110"
                             >
                                 <img
@@ -228,7 +228,7 @@
                                     alt="traseu pe jos"
                                 />
                                 <p class="text-xl font-normal xs:text-2xl">
-                                    pe jos
+                                    on foot
                                 </p>
                             </a>
                         </li>
@@ -238,12 +238,12 @@
                 <li
                     class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
                 >
-                    <a href="/evenimente" class="">Evenimente</a>
+                    <a href="/events" class="">Events</a>
                 </li>
             </ul>
         </section>
 
-        <main>
+        <main class="pb-36">
             <section
                 class="flex min-h-screen flex-col items-center justify-center gap-6 px-6"
             >
@@ -252,22 +252,22 @@
                 >
                     <span
                         class="font-logo text-6xl font-thin uppercase tracking-wider xs:text-7xl sm:text-8xl lg:text-9xl"
-                        >Trasee</span
+                        >Car</span
                     >
                     <br />
-                    pentru
                     <span class="font-title uppercase text-green-500"
-                        >mașina</span
+                        >routes</span
                     ><img
-                        class="absolute -bottom-[95%] -right-[48%] -z-10 hidden w-auto lg:block xl:-bottom-[105%] xl:-right-[65%] xl:max-w-[672px]"
+                        class="absolute -bottom-[95%] -right-[48%] -z-10 hidden w-auto lg:block xl:-right-[150%] xl:-bottom-[120%] xl:max-w-[672px]"
                         src="../assets/atomic-road-forest.png"
                         alt=""
                     />
                 </h1>
                 <p class="max-w-xs text-center font-logo lg:max-w-md">
-                    Descoperă trei trasee ce te vor îndruma spre găsirea
-                    porților către istoria, cultura și religia acestui județ, în
-                    marea de natură și peisaje pitorești ce leagă întreaga zonă.
+                    Discover three routes that will guide you to find the gates
+                    to the history, culture, and religion of this county, amidst
+                    the vastness of nature and picturesque landscapes that
+                    connect the entire area.
                 </p>
                 <img
                     class="w-[85%] max-w-[18rem] sm:max-w-sm lg:hidden"
@@ -282,9 +282,9 @@
                 <h2
                     class="m-6 max-w-md text-center font-title text-2xl text-green-500 xxs:text-3xl sm:text-4xl lg:order-1 lg:hidden"
                 >
-                    Nordul județului
+                    The north of the county
                     <span class="font-cur font-normal text-black"
-                        >- primul traseu</span
+                        >- the first route</span
                     >
                 </h2>
                 <div
@@ -302,16 +302,16 @@
                     <h2
                         class="hidden max-w-xl text-center font-title text-4xl text-green-500 lg:block xl:text-5xl 2xl:text-6xl"
                     >
-                        Nordul județului
+                        The north of the county
                         <span class="font-cur font-normal text-black"
-                            >- primul traseu</span
+                            >- the first route</span
                         >
                     </h2>
                     <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                        Primul traseu îți va aduce aminte de personalitățile
-                        care au adus onoare țării, te va îndemna spre
-                        spiritualitate și te va familiariza cu viața și cultura
-                        din perioada din care Vasluiul își are rădăcinile.
+                        The first route will remind you of personalities who
+                        have brought honor to the country, will encourage you
+                        towards spirituality, and acquaint you with the life and
+                        culture of the period from which Vaslui draws its roots.
                     </p>
                     <div
                         class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-3 shadow-2xl lg:w-[90%] lg:max-w-3xl xl:gap-x-14"
@@ -322,23 +322,23 @@
                             alt="pin point"
                         />
                         <h3 class="font-title text-3xl">
-                            Mănăstirea
                             <span class="font-bold text-green-500"
                                 >Fâstăci</span
                             >
+                            Monastery
                         </h3>
                         <p class="max-w-md text-lg">
-                            Prima locație din acest traseu o constituie
-                            <span class="font-bold">Mănăstirea Fâstăci</span>, o
-                            bijuterie arhitecturală și spirituală, construită în
-                            stil bizantin, cu o istorie care se crede că datează
-                            încă din
-                            <span class="font-bold">secolul al XV-lea</span>
-                            când a fost construită de un nobil ca recunoștință
-                            pentru un călugăr care i-a salvat viața. Este
-                            amplasată într-o zonă pitorească, în apropierea
-                            satului cu același nume, și se bucură de un peisaj
-                            natural deosebit, încărcat de păduri și câmpuri.
+                            The first location on this route is
+                            <span class="font-bold"></span> Fâstăci Monastery,
+                            an architectural and spiritual gem built in
+                            Byzantine style, with a history believed to date
+                            back to
+                            <span class="font-bold">the 15th century</span> when
+                            it was constructed by a nobleman as a gratitude for
+                            a monk who saved his life. It is located in a
+                            picturesque area near the village of the same name
+                            and is surrounded by a beautiful natural landscape,
+                            abundant with forests and fields.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[80%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -367,29 +367,34 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Muzeul Județean
-                            <span class="font-bold text-green-500"
-                                >Ștefan cel Mare</span
-                            >
+                            The
+                            <span class="font-bold text-green-500">
+                                Stephen the Great
+                            </span>
+                            County Museum
                         </h3>
                         <p class="max-w-md text-lg">
-                            <span class="font-bold">Muzeul Județean</span>
-                            cuprinde
-                            <span class="font-bold"
-                                >șapte secții din cinci domenii</span
-                            >, respectiv istorie, arheologie, etnografie,
-                            cultură și artă. Tot în acest muzeu poate fi
-                            observată o
-                            <span class="font-bold"
-                                >dioramă a bătăliei de la Vaslui</span
-                            >, care s-a distins de alte bătălii dintre creștini
-                            și turci prin amploarea forțelor desfășurate, prin
-                            armamentul folosit, prin tacticile de luptă aplicate
-                            și, mai ales, prin ingeniozitatea armatei
-                            voievodului
-                            <span class="font-bold"> Ștefan cel Mare</span>,
-                            domnitorul Țării Moldovei, de a învinge o oaste de
-                            aproximativ două ori mai mare decât a sa.
+                            <span class="font-bold">
+                                The Stephen the Great County Museum</span
+                            >
+                            encompasses
+                            <span class="font-bold">
+                                seven sections from five domains</span
+                            >, namely history, archaeology, ethnography,
+                            culture, and art. Within this museum, visitors can
+                            also observe a
+                            <span class="font-bold">
+                                diorama of the Battle of Vaslui</span
+                            >, which stands out from other battles between
+                            Christians and Turks due to the magnitude of the
+                            deployed forces, the weaponry used, the applied
+                            combat tactics, and most importantly, the ingenuity
+                            of Voivode
+                            <span class="font-bold">
+                                Stephen the Great's army</span
+                            >. Despite facing an opposing force approximately
+                            twice the size of his own, Stephen the Great, the
+                            ruler of Moldavia, managed to achieve victory.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -416,12 +421,11 @@
                         class="flex flex-col items-center justify-center gap-6 px-6"
                     >
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            Vei continua traseul cu alte două obiective cu
-                            însemnătate istorică, iar pentru a ajunge la ele
-                            este nevoie să mergi pe drumul DN24 Vaslui - Iași,
-                            până în comuna
-                            <span class="font-bold"> Solesti</span>, unde vei
-                            putea vizita:
+                            You will continue the route with two more historical
+                            landmarks, and to reach them, you need to follow the
+                            DN24 Vaslui - Iasi road until you reach the commune
+                            of <span class="font-bolf">Solesti</span>, where you
+                            will be able to visit:
                         </p>
                     </div>
                     <div
@@ -433,23 +437,22 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Casa și mormântul
+                            The house and tomb of
                             <span class="font-bold text-green-500"
-                                >Elenei Cuza</span
+                                >Elena Cuza</span
                             >
                         </h3>
                         <p class="max-w-md text-lg">
-                            Următoarele locații se află una lângă alta, în
-                            <span class="font-bold">satul Solesti</span> și este
-                            vorba de
-                            <span class="font-bold">Casa Elena Cuza</span> sau
-                            Conacul Rosetti-Solescu, care datează încă din
-                            <span class="font-bold"> secolul al XIX-lea</span>
-                            și reprezintă locul în care a copilărit viitoarea
-                            Prima Doamnă a României, și
-                            <span class="font-bold"> mormântul acesteia</span>,
-                            dorința ei fiind aceea de a se odihni în curtea
-                            bisericii de lângă casă în care a crescut.
+                            The next locations are situated next to each other
+                            in the village of Solesti, and they are
+                            <span class="font-bold">Casa Elena Cuza</span> or
+                            Conacul Rosetti-Solescu, which dates back to the
+                            <span class="font-bold">19th century</span> and
+                            represents the place where the future First Lady of
+                            Romania spent her childhood, and
+                            <span class="font-bold"> her tomb</span>, as it was
+                            her wish to be laid to rest in the churchyard next
+                            to the house where she grew up.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[80%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -484,29 +487,29 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Muzeul
+                            Ethnographic Museum
+                            <br />
                             <span class="font-bold text-green-500"
-                                >etnografic Satu Nou</span
+                                >Satu Nou</span
                             >
                         </h3>
                         <p class="max-w-md text-lg">
-                            La doar 5 minute de obiectivele anterioare, se află
-                            al doilea muzeu din traseu, mai exact
-                            <span class="font-bold"
-                                >Muzeul etnografic Satu Nou</span
-                            >
-                            care are ca rol conservarea pieselor vestimentare
-                            specifice satului românesc, documentelor vieții
-                            spirituale din trecut, unei serii de piese din
-                            folclorul muzical sau unor unelte de care persoanele
-                            se foloseau pentru a-și duce traiul în mediul rural,
-                            pentru cunoașterea culturii populare din județul
-                            Vaslui. Pentru a putea vizita acest obiectiv este
-                            nevoie să faci o programare prin intermediul
-                            consiliului local, la numărul:
+                            Just 5 minutes away from the previous attractions,
+                            you will find the second museum on the route,
+                            specifically
+                            <span class="font-bold">
+                                The Ethnographic Museum Satu Nou</span
+                            >. Its role is to preserve traditional clothing
+                            items from the Romanian village, documents
+                            reflecting the spiritual life of the past, a
+                            collection of musical folklore, as well as tools
+                            used by people in rural areas for their livelihood.
+                            Visiting this museum requires making an appointment
+                            through the local council at the following number:
                             <span class="font-bold text-green-500"
                                 >0784256866</span
-                            >.
+                            >
+                            .
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -530,10 +533,10 @@
                         class="flex flex-col items-center justify-center gap-6 px-6"
                     >
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            Continuând pe drumul DN24 Vaslui - Iași, după
-                            aproximativ 15 minute, se poate observa, pe partea
-                            stângă a șoselei, o poartă arcuită din piatră ce
-                            indică intrarea către:
+                            Continuing on the DN24 Vaslui - Iasi road, after
+                            approximately 15 minutes, on the left side of the
+                            road, you can observe an arched stone gate that
+                            indicates the entrance to:
                         </p>
                     </div>
                     <div
@@ -546,52 +549,54 @@
                         />
                         <h3 class="max-w-md font-title text-3xl">
                             <span class="font-bold text-green-500"
-                                >Movila lui Burcel
+                                >Burcel's Mound
                             </span>
-                            și Mănăstirea
+                            (Movila lui Burcel) and the
                             <span class="font-bold text-green-500"
                                 >Sfinții Împărați Constantin și Elena
                             </span>
+                            Monastery
                         </h3>
                         <p class="max-w-md text-lg">
-                            <span class="font-cur">
-                                <span class="font-bold">Povestea spune</span> că
-                                în 1498, voievodul Ștefan cel Mare trecea prin
-                                zona sudică a Podișului Moldovei, într-o zi de
-                                duminică, și nu mică i-a fost mirarea când a
-                                văzut un țăran fără o mână, arând pământul.
-                                Întrebat de ce ară pământul duminica, țăranul pe
-                                nume Burcel i-a răspuns că este foarte sărac și
-                                că nu are cu ce să-și întrețină familia.
-                                Întrebat de ce nu are o mână, răzeșul a răspuns
-                                că a pierdut-o în bătălia de la Vaslui. Măritul
-                                voievod, impresionat, i-a dăruit țăranului șase
-                                pungi cu galbeni și un act prin care acel loc să
-                                fie pentru totdeauna proprietatea familiei
-                                Burcel.
+                            <span class="font-cur"
+                                ><span class="font-bold"
+                                    >The story goes that</span
+                                >
+                                in 1498, Voivode Stephen the Great was passing
+                                through the southern area of the Moldavian
+                                Plateau on a Sunday when he was greatly
+                                surprised to see a peasant plowing the land with
+                                only one hand. When asked why he was working on
+                                Sunday, the peasant named Burcel replied that he
+                                was very poor and had no means to support his
+                                family. When asked why he was missing a hand,
+                                the peasant explained that he lost it in the
+                                Battle of Vaslui. Impressed by his story, the
+                                generous voivode gifted the peasant six bags of
+                                gold coins and granted him a document declaring
+                                that the land would forever belong to the Burcel
+                                family.
                             </span>
                             <br />
-                            Astăzi, pe pământul legendarei Movile ale lui
-                            Burcel, stau așezate atât o frumoasă biserică ce stă
-                            sub numele de
-                            <span class="font-bold">
-                                Sfinții Împărați Constantin și Elena</span
-                            >, cât și sculpturile vestite,
+                            Today, on the land of the legendary Burcel's Mound,
+                            there is a beautiful church named
                             <span class="font-bold"
-                                >un monument falnic alcătuit din trei
-                                cruci</span
+                                >Sfinții Împărați Constantin și Elena</span
                             >
-                            care se spune că are diferite însemnătăți, Sfânta
-                            Treime, cele trei provincii românești sau cei trei
-                            mari sfinți ai Ortodoxiei,
+                            (Saints Emperor Constantine and Helena), as well as
+                            the renowned sculptures. One notable monument is
+                            <span class="font-bold">
+                                a majestic structure composed of three
+                                crosses</span
+                            >, believed to hold various meanings such as the
+                            Holy Trinity, the three Romanian provinces, or the
+                            three great saints of Orthodoxy. Another remarkable
+                            monument is the one
                             <span class="font-bold"
-                                >un monument care arată Harta României
-                                Mari</span
-                            >, iar una altul fiind
-                            <span class="font-bold"
-                                >Femeia din bronz care este simbolul Daciei
-                                Traiane</span
-                            >.
+                                >depicting the Map of Greater Romania</span
+                            >, while yet another significant sculpture is the
+                            <span class="font-bold">Bronze Woman</span>,
+                            symbolizing Trajan's Dacia.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -627,10 +632,11 @@
                         </div>
                     </div>
                     <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                        Pentru a încheia traseul, va fi necesar să te aventurezi
-                        pe un drum neasfaltat, printre satele județului, compus
-                        din DJ426 și DJ427, în jurul căruia peisajele naturale
-                        nu își vor face lipsa prezenta.
+                        To conclude the route, you will need to venture onto an
+                        unpaved road, passing through the villages of the
+                        county, composed of DJ426 and DJ427. Along this route,
+                        you will be surrounded by natural landscapes that will
+                        captivate your senses.
                     </p>
                     <div
                         class="lg:gap- relative mb-32 flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-3 shadow-2xl lg:w-[90%] lg:max-w-3xl xl:gap-14"
@@ -641,23 +647,23 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Casa Memorială
+                            The
                             <span class="font-bold text-green-500"
-                                >Emil Racoviță
-                            </span>
+                                >Emil Racovita</span
+                            >
+                            Memorial House
                         </h3>
                         <p class="max-w-md text-lg">
-                            După un drum prin câteva dintre satele județului
-                            Vaslui, încheiem traseul în comuna
-                            <span class="font-bold">Dănești</span>, unde vei
-                            găsi casa în care cunoscutul om de știință
-                            <span class="font-bold">Emil Racoviță</span> s-a
-                            născut și a trăit. Aceasta a fost transformată în
-                            <span class="font-bold">muzeu memorial</span> unde
-                            sunt prezente, la expoziție, obiecte legate de
-                            copilăria savantului, fotocopii, facsimile și
-                            colecții memoriale privind viața și activitatea
-                            academicianului.
+                            After a journey through several villages in Vaslui
+                            County, we conclude the route in the commune of
+                            <span class="font-bold">Danesti</span> , where you
+                            will find the house where the renowned scientist
+                            <span class="font-bold">Emil Racoviță</span> was
+                            born and lived. This house has been transformed into
+                            a memorial museum that exhibits objects related to
+                            the scientist's childhood, photocopies, facsimiles,
+                            and memorial collections depicting his life and
+                            academic achievements.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -686,9 +692,9 @@
                 <h2
                     class="m-6 max-w-md text-center font-title text-2xl text-green-500 xxs:text-3xl sm:text-4xl lg:order-1 lg:hidden"
                 >
-                    Sud-Vestul judetului
+                    The southwest of the county
                     <span class="font-cur font-normal text-black"
-                        >- al doilea traseu</span
+                        >- the second route</span
                     >
                 </h2>
                 <div
@@ -706,15 +712,16 @@
                     <h2
                         class="hidden max-w-xl text-center font-title text-4xl text-green-500 lg:block xl:text-5xl 2xl:text-6xl"
                     >
-                        Sud-Vestul judetului
+                        The southwest of the county
                         <span class="font-cur font-normal text-black"
-                            >- al doilea traseu</span
+                            >- the second route</span
                         >
                     </h2>
                     <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                        Al doilea traseu te poartă prin sud-vestul județului,
-                        având ca punct de plecare orașul Vaslui și traversând
-                        limita de vest a județului, până în orașul Bârlad.
+                        The second route takes you through the southwestern part
+                        of the Vaslui county, starting from the city of Vaslui
+                        and crossing the western border of the county until it
+                        reaches the city of Barlad.
                     </p>
                     <div
                         class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-3 shadow-2xl lg:w-[90%] lg:max-w-3xl xl:gap-x-14"
@@ -725,27 +732,23 @@
                             alt="pin point"
                         />
                         <h3 class="font-title text-3xl">
-                            Manastirea
-                            <span class="font-bold text-green-500">
-                                Floresti</span
+                            <span class="font-bold text-green-500"
+                                >Florești</span
                             >
+                            Monastery
                         </h3>
                         <p class="max-w-md text-lg">
-                            <span class="font-bold">Mănăstirea Florești</span>
-                            este cunoscută pentru arhitectura ei impresionantă,
-                            în stil
-                            <span class="font-bold">neogotic</span>, care o face
-                            specială printre mănăstirile ortodoxe. Se spune că
-                            este unul dintre
-                            <span class="font-bold"
-                                >lăcașurile cele mai vechi</span
-                            >
-                            din județul Vaslui, fiind restaurată pentru a-i
-                            păstra frumusețea în ciuda trecerii timpului. Lângă
-                            satul ce poartă numele mănăstirii se află și
-                            <span class="font-bold">Lacul Gădeasa</span>, un loc
-                            perfect pentru a vă reconecta cu natura, fiind
-                            situat într-un cadru pitoresc.
+                            <span class="font-bold">Florești Monastery</span> is
+                            known for its impressive neogothic architecture,
+                            which sets it apart from other Orthodox monasteries.
+                            It is said to be one of the oldest places of worship
+                            in Vaslui County and has been restored to preserve
+                            its beauty despite the passage of time. Near the
+                            village that bears the monastery's name, you will
+                            also find
+                            <span class="font-bold">Gădeasa Lake</span>, a
+                            perfect place to reconnect with nature, as it is
+                            situated in a picturesque setting.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[80%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -780,24 +783,24 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Mănăstirea
+                            The
                             <span class="font-bold text-green-500"
                                 >Nașterea Sfântului Ioan Botezătorul</span
                             >
-                            Ivănești
+                            Monastery - Ivănești
                         </h3>
                         <p class="max-w-md text-lg">
-                            Mănăstirea a fost înființată
-                            <span class="font-bold"> în anul 2000</span>, la
-                            cererea credincioșilor din comuna Ivanesti, și este
-                            o construcție din lemn, pe temelie de piatră, în
-                            formă de cruce. Deoarece hramul mănăstirii este
-                            „Nașterea Sf. Ioan Botezătorul”, pe bolta
-                            pronaosului este pictat Sf. Ioan Botezătorul și mai
-                            multe scene din viața acestui sfânt. În curtea
-                            mănăstirii se poate observa bustul domnitorului
-                            Ștefan cel Mare, așezat la jumătatea distanței
-                            dintre biserică și altarul de vară.
+                            The monastery was founded in
+                            <span class="font-bold">the year 2000</span> at the
+                            request of the faithful from the Ivănești commune.
+                            It is a wooden construction with a stone foundation,
+                            in the shape of a cross. Since the monastery is
+                            dedicated to the Nativity of St. John the Baptist,
+                            the dome of the narthex is painted with St. John the
+                            Baptist and several scenes from his life. In the
+                            monastery courtyard, you can also see a bust of the
+                            ruler Stephen the Great, placed halfway between the
+                            church and the summer altar.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[80%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -824,11 +827,11 @@
                         class="flex flex-col items-center justify-center gap-6 px-6"
                     >
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            În ciuda faptului că drumul de la Biserica Nașterea
-                            Sfântului Ioan Botezătorul și până la următorul
-                            obiectiv este mai anevoios, acesta traversează, rând
-                            pe rând, sate care păstrează în viață obiceiurile și
-                            tradițiile regiunii.
+                            Despite the fact that the road from the Nașterea
+                            Sfântului Ioan Botezătorul Monastery to the next
+                            destination is more extensive, it passes through
+                            various villages that keep alive the customs and
+                            traditions of the region.
                         </p>
                     </div>
                     <div
@@ -840,30 +843,30 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Centrul
                             <span class="font-bold text-green-500">
                                 Mihai Eminescu</span
                             >
-                            - Casa
-                            <span class="font-bold text-green-500">Rosie</span>
+                            Center -
+                            <span class="font-bold text-green-500"
+                                >The Red </span
+                            >House
                         </h3>
                         <p class="max-w-md text-lg">
                             <span class="font-bold"
-                                >Centrul Mihai Eminescu</span
+                                >The "Centrul Mihai Eminescu"</span
                             >
-                            din Bârlad este un concept unic la nivel naţional ca
-                            patriomoniu şi prezentare. Este locul unde se
-                            găseşte capodopera eminesciană si care are o
-                            colectie care constă în
+                            in Barlad is a unique concept at the national level
+                            in terms of heritage and presentation. It is the
+                            place where the masterpiece of Eminescu's work is
+                            located, and it has a collection that consists of
                             <span class="font-bold"
-                                >peste 5.800 de volume din care 2.100 sunt cu şi
-                                despre Mihai Eminescu</span
-                            >
-                            . Lada în care poetul ţinea manuscrisele, numeroase
-                            discuri, casete audio şi CD-uri cu romanţe pe
-                            versurile lui Mihai Eminescu sau lucrări de artă
-                            realizate pentru a ilustra cât mai bine creația
-                            eminesciană, pot fi admirate în cadrul unei vizite.
+                                >over 5,800 volumes, out of which 2,100 are
+                                related to Mihai Eminescu</span
+                            >. The chest in which the poet kept his manuscripts,
+                            numerous records, audio tapes, and CDs with romances
+                            based on Mihai Eminescu's verses, as well as
+                            artworks created to illustrate his literary works,
+                            can be admired during a visit to the center.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -884,10 +887,9 @@
                         class="flex flex-col items-center justify-center gap-6 px-6"
                     >
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            Parasind Municipiul Barlad si indreptandu-te inapoi
-                            spre Vaslui, in locul in care se incheie acest
-                            traseu, vei trece cateva monumente istorice ce nu
-                            pot fi ratate.
+                            Leaving the city of Barlad and heading back towards
+                            Vaslui, at the end of this route, you will pass by
+                            several historical monuments that cannot be missed.
                         </p>
                     </div>
                     <div
@@ -900,21 +902,23 @@
                         />
                         <h3 class="max-w-md font-title text-3xl">
                             <span class="font-bold text-green-500"
-                                >Podul Doamnei</span
+                                >The Lady's Bridge</span
                             >
                         </h3>
                         <p class="max-w-md text-lg">
-                            Podul de la Chițcani a fost ridicat
-                            <span class="font-bold"
-                                >în anul 1841 de către Mihail Sturza</span
+                            <span class="font-bold">The Chițcani Bridge</span>
+                            was built
+                            <span class="font-bold">
+                                in 1841 by Mihail Sturza</span
                             >
-                            cu scopul de a dezvolta rețeaua de drumuri ce legau
-                            capitala Moldovei, Iași, cu principalele centre
-                            comerciale. Podul Doamnei își trage numele de la o
-                            veche stație de poștă de pe „Drumul Olăcului”, din
-                            <span class="font-bold">secolele XVII-XVIII</span>,
-                            și se află pe DN24 la aproximativ 70 de metri de
-                            șosea.
+                            with the purpose of developing the road network that
+                            connected the capital of Moldova, Iași, with the
+                            main commercial centers.
+                            <span class="font-bold">The Lady's Bridge</span>
+                            takes its name from an old postal station on the
+                            "Drumul Olacului" (Olac Road) from the 17th and 18th
+                            centuries. It is located on DN24, approximately 70
+                            meters from the main road.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -940,33 +944,30 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Manastirea
                             <span class="font-bold text-green-500">Moreni</span>
-                            si Schitul
+                            Monastery and
                             <span class="font-bold text-green-500"
-                                >Ticlauani</span
+                                >Țiclăuani</span
                             >
+                            Hermitage
                         </h3>
                         <p class="max-w-md text-lg">
-                            <span class="font-bold">
-                                Impunătoarea Mănăstirea Moreni </span
-                            >, situată la poalele dealului Țiclău,
-                            <span class="font-bold">
-                                la 27 de km sud de municipiul Vaslui </span
-                            >, ce este astăzi casa a 26 de maici și surori, își
-                            are rădăcinile încă din
-                            <span class="font-bold"> anii 1540-1546 </span>,
-                            când Lupan Buznea ridică o simplă biserică de lemn
-                            pe același pământ. Lăcașul de cult obține numele de
-                            <span class="font-bold"> Mănăstirea Moreni </span>
-                            mult mai târziu,
-                            <span class="font-bold"> în anul 1853 </span>, când
-                            o altă biserică, tot din lemn, preia locul celei
-                            anterioare.
-                            <span class="font-bold"> Schitul Ticlăuani </span>,
-                            ce aparține de Mănăstirea Moreni, se află într-o
-                            zonă de un pitoresc aparte, cu o priveliște superbă
-                            asupra întregii zone.
+                            <span class="font-bold"
+                                >The impressive Moreni Monastery</span
+                            >
+                            , located at the foot of Țiclău Hill, 27 km south of
+                            Vaslui city, is currently home to 26 nuns and
+                            sisters. Its roots can be traced back to
+                            <span class="font-bold">the years 1540-1546</span>
+                            when Lupan Buznea built a simple wooden church on
+                            the same land. The place of worship acquired the
+                            name Moreni Monastery much later,
+                            <span class="font-bold">in 1853</span> when another
+                            wooden church replaced the previous one.
+                            <span class="font-bold">Țiclăuani Hermitage</span> ,
+                            which belongs to Moreni Monastery, is situated in a
+                            particularly picturesque area, offering a splendid
+                            view of the entire region.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1007,21 +1008,29 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Statuia ecvestră a lui
+                            The equestrian statue of
                             <span class="font-bold text-green-500">
-                                Ștefan cel Mare</span
+                                Stephen the Great</span
                             >
-                            de la Podul Înalt
+                            at Podul Înalt
                         </h3>
                         <p class="max-w-md text-lg">
-                            Este un monument de bronz, sculptat de Mircea
-                            Ștefănescu și finalizat
-                            <span class="font-bold">în anul 1975</span>, în
-                            onoarea Bătăliei de la Podul Înalt, în care
-                            <span class="font-bold">
-                                domnitorul Ștefan cel Mare
-                            </span>
-                            a învins oastea otomană.
+                            <span class="font-bold"
+                                >The equestrian statue of Stephen the Great at
+                                Podul Înalt</span
+                            >
+                            is a bronze monument sculpted by Mircea Ștefănescu
+                            and completed<span class="font-bold"> in 1975</span
+                            >. It was created in honor of the<span
+                                class="font-bold"
+                            >
+                                Battle of Podul Înalt</span
+                            >, where ruler
+                            <span class="font-bold">Stephen the Great</span>
+                            defeated the Ottoman army. The statue stands as a
+                            tribute to the valor and military achievements of
+                            Stephen the Great and serves as a reminder of the
+                            historical significance of the battle.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1050,9 +1059,9 @@
                 <h2
                     class="m-6 max-w-md text-center font-title text-2xl text-green-500 xxs:text-3xl sm:text-4xl lg:order-1 lg:hidden"
                 >
-                    Județul Vaslui
+                    Vaslui County
                     <span class="font-cur font-normal text-black"
-                        >- al treilea traseu</span
+                        >- the third route</span
                     >
                 </h2>
                 <div
@@ -1070,18 +1079,18 @@
                     <h2
                         class="hidden max-w-xl text-center font-title text-4xl text-green-500 lg:block xl:text-5xl 2xl:text-6xl"
                     >
-                        Județul Vaslui
+                        Vaslui County
                         <span class="font-cur font-normal text-black"
-                            >- al treilea traseu</span
+                            >- the third route</span
                         >
                     </h2>
                     <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                        Ultimul traseu, care trece prin cele trei orașe
-                        principale ale județului, Vaslui, Bârlad și Huși, leagă
-                        obiectivele reprezentative ale fiecăruia. Traseul începe
-                        din Municipiul Vaslui, deși poate fi început din oricare
-                        din cele trei orașe, fiind gândit sub forma unui circuit
-                        închis.
+                        The last route, which passes through the three main
+                        cities of the county, Vaslui, Barlad, and Husi, connects
+                        the representative landmarks of each. The route begins
+                        in the city of Vaslui, although it can be started from
+                        any of the three cities, as it is designed as a closed
+                        circuit.
                     </p>
                     <div
                         class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-3 shadow-2xl lg:w-[90%] lg:max-w-3xl xl:gap-14"
@@ -1092,27 +1101,29 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Ansamblul
+                            The Ensemble of the
                             <span class="font-bold text-green-500"
-                                >Curților Domnești</span
+                                >Princely Courts</span
                             >
                         </h3>
                         <p class="max-w-md text-lg">
-                            Este un sit istoric ce cuprinde atât o reconstituire
-                            arhitecturală a fostei Curți Domnești, ce a fost
-                            construită
-                            <span class="font-bold">în perioada 1435-1436</span
-                            >, cât și
+                            The route starts at a historic site that encompasses
+                            both an architectural reconstruction of the former
+                            princely court, built
+                            <span class="font-bold">between 1435-1436</span>,
+                            and
                             <span class="font-bold"
-                                >Biserica Tăierea Capului Sfântului Ioan
-                                Botezătorul</span
-                            >, ctitorită de însuși
+                                >the Church of Taierea Capului Sfantului Ioan
+                                Botezatorul</span
+                            >
+                            (Beheading of St. John the Baptist), founded by
                             <span class="font-bold"
-                                >Ștefan cel Mare în anul 1490</span
-                            >. Este simbolul turistic al municipiului Vaslui,
-                            fiind vizitat zilnic de zeci de persoane. Mai mult,
-                            întreaga zonă reprezintă un spațiu propice relaxării
-                            în armonia naturii, istoriei și a spiritualității.
+                                >Stefan cel Mare himself in 1490</span
+                            >. It is the tourist symbol of the city of Vaslui
+                            and is visited daily by dozens of people. Moreover,
+                            the entire area represents a space conducive to
+                            relaxation in the harmony of nature, history, and
+                            spirituality.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1142,11 +1153,11 @@
                         class="flex flex-col items-center justify-center gap-6 px-6"
                     >
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            Mai apoi, te vei îndrepta spre Bârlad, pe strada
-                            DN24, drum de-a lungul căruia vei putea observa, pe
-                            partea din stânga, atât Statuia ecvestră a lui
-                            Ștefan cel Mare de la Podul Înalt, cât și un drum,
-                            care te va ghida către Podul Doamnei.
+                            Later on, you will head towards Barlad, on DN24
+                            street, along which you will be able to observe, on
+                            the left side, both the Equestrian Statue of Stefan
+                            cel Mare at Podul Inalt and a road that will guide
+                            you to the Lady's Bridge.
                         </p>
                     </div>
                     <div
@@ -1158,25 +1169,18 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Grădina
-                            <span class="font-bold text-green-500">
-                                Zoologică</span
-                            >
+                            <span class="font-bold text-green-500">Zoo</span>
                         </h3>
                         <p class="max-w-md text-lg">
-                            Desi la început era formată dintr-un singur urs
-                            închis într-o cușcă,
+                            Although initially consisting of only one bear
+                            confined in a cage,
+                            <span class="font-bold">the Barlad Zoo</span> ,
+                            established <span class="font-bold">in 1959</span>,
+                            now houses
                             <span class="font-bold"
-                                >Grădina Zoologică Bârlad</span
+                                >over 540 specimens from 65 species</span
                             >
-                            , înființată
-                            <span class="font-bold">în anul 1959</span>, deține
-                            acum
-                            <span class="font-bold"
-                                >peste 540 de exemplare din 65 de specii</span
-                            >
-                            , fiind cea mai mare grădină de acest tip din
-                            Moldova.
+                            , making it the largest zoo of its kind in Moldova.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1200,17 +1204,14 @@
                         class="flex flex-col items-center justify-center gap-6 px-6"
                     >
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            Tot în Bârlad, poți observa și monumentul ridicat în
-                            memoria pictorului
-                            <span class="font-bold">Nicolae Tonitza</span>, în
-                            locul în care, în trecut, era așezată casa în care
-                            s-a născut și a copilărit.
+                            In Barlad, you can also observe the monument erected
+                            in memory of the Barlad-born painter Nicolae
+                            Tonitza. The monument is located at the site where
+                            his birthplace and childhood home once stood.
                         </p>
-                        <img
-                            class="h-[250px] w-[85%] max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
-                            src="../assets/monument_pictor.jpg"
-                            alt=""
-                        />
+                        <div
+                            class="pictor h-[250px] w-[85%] max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
+                        ></div>
                     </div>
                     <div
                         class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-3 shadow-2xl lg:w-[90%] lg:max-w-3xl xl:gap-x-14"
@@ -1221,37 +1222,36 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Muzeul
+                            The
                             <span class="font-bold text-green-500"
-                                >Vasile Pârvân</span
+                                >Vasile Pârvan</span
                             >
+                            Museum
                         </h3>
                         <p class="max-w-md text-lg">
                             <span class="font-bold"
-                                >Muzeul "Vasile Pârvan"</span
+                                >The Vasile Pârvan Museum</span
+                            >is a museum of history and art, founded
+                            <span class="font-bold">in 1947</span> and named in
+                            honor of the Romanian archaeologist
+                            <span class="font-bold">Vasile Pârvan</span> , who
+                            was born in Bârlad. The museum houses diverse
+                            collections that present the history and culture of
+                            the city and the surrounding region. Within the
+                            museum, you can visit six different sections:
+                            archaeology, art, history, astronomy, cultural
+                            Barlad, and natural sciences. Its exhibits include
+                            archaeological objects, historical documents,
+                            ethnographic artifacts, paintings, and sculptures.
+                            The astronomy section features an observatory and
+                            the only digital planetarium in Vaslui County, which
+                            is also one of the few digital planetariums in the
+                            country. These two attractions can be visited within
+                            <span class="font-bold"
+                                >the Marcel Guguianu Exhibition Pavilion</span
                             >
-                            din Bârlad este un muzeu de istorie și artă, fondat
-                            <span class="font-bold">în anul 1947</span> și este
-                            denumit în onoarea arheologului român
-                            <span class="font-bold">Vasile Pârvan</span>, care
-                            s-a născut în Bârlad. Muzeul găzduiește colecții
-                            variate care prezintă istoria și cultura orașului și
-                            a regiunii înconjurătoare. În cadrul lui puteți
-                            vizita
-                            <span class="font-bold"> 6 secțiuni</span>diferite:
-                            arheologie, artă, istorie, astronomie, Bârladul
-                            cultural și științe ale naturii. Printre exponatele
-                            sale se numără obiecte arheologice, documente
-                            istorice, artefacte etnografice, tablouri și
-                            sculpturi. Secțiunea de astrologie cuprinde un
-                            observator și singurul planetariu digital din
-                            județul Vaslui, care este și printre puținele
-                            planetații digitale din țară. Aceste două atracții
-                            pot fi vizitate în cadrul
-                            <span class="font-bold">
-                                Pavilionului Expozițional Marcel Guguianu</span
-                            >, împreună cu o serie de lucrări ale artistului
-                            bârlădean.
+                            , along with a series of works by the local artist
+                            from Bârlad.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1279,11 +1279,12 @@
                     </div>
                     <div class="gap-6 px-6">
                         <p class="max-w-2xl xl:text-lg 2xl:text-xl">
-                            După ce părăsești Bârladul, pe strada DN24A,
-                            îndreptându-te spre estul județului, vei face o
-                            oprire la Mănăstirea Bujoreni la care ajungi virând
-                            la stânga după satul Popeni. În drum spre mănăstire
-                            se află un stejar multisecular ce merită văzut.
+                            After leaving Barlad on DN24A street and heading
+                            towards the eastern part of the county, you will
+                            make a stop at Bujoreni Monastery, which you can
+                            reach by turning left after the village of Popeni.
+                            On the way to the monastery, there is a
+                            centuries-old oak tree that is worth seeing.
                         </p>
                     </div>
 
@@ -1296,20 +1297,22 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Mănastirea
                             <span class="font-bold text-green-500"
                                 >Bujoreni</span
                             >
+                            Monastery
                         </h3>
                         <p class="max-w-md text-lg">
-                            <span class="font-bold">Mănăstirea Bujoreni</span> ,
-                            numită și Schitul Măgarului, datorită legendei care
-                            spune că un cioban și-a găsit măgarul în genunchi în
-                            fața unui stejar ce adăpostea în scorbura lui o
-                            icoană a Maicii Domnului, ca mai apoi să ridice un
-                            schit pe acel loc, iar trupul stejarului ajungând
-                            sfântă masă, este mai frumoasă ca niciodată și
-                            deschisă tuturor creștinilor.
+                            <span class="font-bold">Bujoreni Monastery</span>,
+                            also known as Schitul Magarului (Donkey's
+                            Hermitage), derives its name from a legend that
+                            tells the story of a shepherd who found his donkey
+                            kneeling in front of an oak tree that housed an icon
+                            of the Virgin Mary in its hollow. Inspired by this
+                            miraculous event, a hermitage was established on
+                            that spot, and the trunk of the oak tree became a
+                            holy table. Today, the monastery stands as a
+                            beautiful place of worship, open to all Christians.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[80%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1332,6 +1335,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div
                         class="lg:gap- relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-3 shadow-2xl lg:w-[90%] lg:max-w-3xl xl:gap-14"
                     >
@@ -1341,20 +1345,20 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Monumentul istoric al
+                            The historical monument of the
                             <span class="font-bold text-green-500"
-                                >Bătăliei de la Țiganca</span
+                                >Battle of Țigănca</span
                             >
                         </h3>
                         <p class="max-w-md text-lg">
-                            Monumentul ridicat în memoria uneia dintre cele mai
-                            sângeroase bătălii purtate de români pentru
-                            reîntregirea țării, cunoscută și sub numele de
-                            <span class="font-bold">bătălia de la Țiganca</span>
-                            , unde 10.000 de soldați români au murit sau au fost
-                            dați dispăruți, poate fi observat în cadrul primului
-                            parc istoric din județul Vaslui, aflat
-                            <span class="font-bold">în comuna Fălciu</span>.
+                            The monument erected in memory of one of the
+                            bloodiest battles fought by Romanians for the
+                            unification of the country, also known as
+                            <span class="font-bold">the Battle of Țigănca</span>
+                            , where 10,000 Romanian soldiers lost their lives or
+                            went missing, can be seen in the first historical
+                            park of Vaslui County, located in the commune of
+                            Fălciu.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1380,26 +1384,27 @@
                             alt="pin point"
                         />
                         <h3 class="max-w-md font-title text-3xl">
-                            Crama
+                            The
                             <span class="font-bold text-green-500"
-                                >Averești</span
+                                >Averesti</span
                             >
+                            Winery
                         </h3>
                         <p class="max-w-md text-lg">
-                            Ajuns în <span class="font-bold">Huși</span>, orașul
-                            dintre vii, te așteaptă vestitul
-                            <span class="font-bold"
-                                >Centru Viticol Averești</span
-                            >
-                            . Aici, vița de vie a fost cultivată de mii de ani,
-                            meseria fiind transmisă din tată în fiu, iar în
-                            fiecare an, în cel mai răcoros loc al pivniței, este
-                            îngropată o sticlă din primul vin obținut, drept
-                            ofrandă plantățiilor și celor care au muncit pe
-                            acele tărâmuri. Cu siguranță, Domeniile Averești
-                            merită vizitate și, de ce nu, părăsite în urma
-                            achiziționării unei sticle de vin aleasă după bunul
-                            plac din multitudinea de tipuri puse la dispoziție.
+                            Once you reach <span class="font-bold">Husi</span> ,
+                            the city among the vineyards, you will encounter the
+                            renowned
+                            <span class="font-bold">Averesti Wine Center</span>.
+                            Here, the vine has been cultivated for thousands of
+                            years, with the trade being passed down from father
+                            to son. Each year, in the coolest corner of the
+                            cellar, a bottle of the first wine produced is
+                            buried as an offering to the vineyards and those who
+                            have worked on those lands. Certainly, the Averesti
+                            Estates are worth a visit and, why not, leaving
+                            behind after acquiring a bottle of wine chosen
+                            according to personal preference from the multitude
+                            of types available.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] lg:max-w-[32rem]"
@@ -1429,7 +1434,7 @@
             </section>
         </main>
         <footer
-            class="relative mt-44 flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold text-white xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
+            class="relative flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold text-white xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
         >
             <!-- METEO IN VASLUI + ORA IN RO -->
             <div
@@ -1480,7 +1485,7 @@
                 class="flex w-[80%] items-center justify-center lg:justify-start lg:self-start"
             >
                 <a
-                    href="/"
+                    href="/en"
                     class="flex items-center justify-center gap-1.5 xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
                 >
                     <svg
@@ -1515,7 +1520,7 @@
                 <div id="go_up" class="mr-4">
                     <a href="#top" class="flex items-center justify-center">
                         <span class="relative text-green-500 md:text-lg"
-                            >Sus</span
+                            >Back to top</span
                         >
                         <img
                             class="w-10"
