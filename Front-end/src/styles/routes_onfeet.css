@@ -135,11 +135,6 @@
 /* AL TREILEA TRASEU */
 
 /* curtea domneasca */
-.curtea_domneasca1 {
-  background: url('../assets/curtea_domneasca.jpg');
-  background-size: cover;
-  background-position: center;
-}
 .curtea_domneasca2 {
   background: url('../assets/curtile_domnesti2.jpg');
   background-size: cover;
