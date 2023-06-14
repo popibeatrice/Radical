@@ -286,11 +286,6 @@
 }
 
 /* curtea domneasca */
-.curtea_domneasca1 {
-    background: url("../assets/curtea_domneasca.jpg");
-    background-size: cover;
-    background-position: center;
-}
 .curtea_domneasca2 {
     background: url("../assets/curtile_domnesti2.jpg");
     background-size: cover;
@@ -302,11 +297,15 @@
     background-position: center;
 }
 .curtea_domneasca4 {
+    background: url("../assets/curtile_domnesti5.png");
+    background-size: cover;
+    background-position: center;
+}
+.curtea_domneasca5 {
     background: url("../assets/curtea_domneasca4.jpg");
     background-size: cover;
     background-position: center;
 }
-
 /* zoo */
 .zoo1 {
     background: url("../assets/zoo1.jpg");
