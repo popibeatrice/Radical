@@ -1,265 +1,248 @@
 #map {
-    position: sticky !important ;
+  position: sticky !important ;
 }
 
 .menu-btn__burger {
-    background: #000;
+  background: #000;
 }
 
 /* This creates the top and bottom lines but it does not position them */
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-    background: #000;
+  background: #000;
 }
 
 .palatu_copiilor {
-    background: url("../assets/casa_mavrocordat.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_mavrocordat.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .stefanutz {
-    background: url("../assets/stefanutz.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/stefanutz.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .monument {
-    background: url("../assets/monument_eroi.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/monument_eroi.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .pictor {
-    background: url("../assets/monument_pictor.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/monument_pictor.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* PRIMUL TRASEU */
 
 /* manastirea fastaci */
 .teatru_vara1 {
-    background: url("../assets/teatrul_vara1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/teatrul_vara1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .teatru_vara2 {
-    background: url("../assets/teatrul_vara2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/teatrul_vara2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .teatru_vara3 {
-    background: url("../assets/teatrul_vara3.webp");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/teatrul_vara3.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 /* muzeu Vaslui */
 .muzeu_vaslui1 {
-    background: url("../assets/muzeul_vaslui2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_vaslui2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_vaslui2 {
-    background: url("../assets/muzeu_vaslui3.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeu_vaslui3.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_vaslui3 {
-    background: url("../assets/muzeul_vaslui.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_vaslui.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_vaslui4 {
-    background: url("../assets/muzeu_vaslui.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-/* centru */
-.centru_vaslui1 {
-    background: url("../assets/centru_vasluui.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.centru_vaslui2 {
-    background: url("../assets/centru_vaslui2.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.centru_vaslui3 {
-    background: url("../assets/centru_vaslui3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeu_vaslui.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Movila + Biserica*/
 .secu1 {
-    background: url("../assets/secu1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/secu1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .secu2 {
-    background: url("../assets/secu2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/secu2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .secu3 {
-    background: url("../assets/secu3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/secu3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* emil racovita */
 .copou1 {
-    background: url("../assets/copou_vaslui2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/copou_vaslui2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .copou2 {
-    background: url("../assets/copou-vaslui.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/copou-vaslui.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .copou3 {
-    background: url("../assets/copou_vaslui3.jpg");
-    background-size: cover;
-    background-position: 25% 75%;
+  background: url('../assets/copou_vaslui3.jpg');
+  background-size: cover;
+  background-position: 25% 75%;
 }
 .copou4 {
-    background: url("../assets/copou_vaslui4.jpg");
-    background-size: cover;
-    background-position: 25% 75%;
+  background: url('../assets/copou_vaslui4.jpg');
+  background-size: cover;
+  background-position: 25% 75%;
 }
 .copou5 {
-    background: url("../assets/copou_vaslui5.jpg");
-    background-size: cover;
-    background-position: 25% 75%;
+  background: url('../assets/copou_vaslui5.jpg');
+  background-size: cover;
+  background-position: 25% 75%;
 }
 
 /* AL DOILEA TRASEU */
 
 /* casa alexandru ioan cuza */
 .alexandru_cuza1 {
-    background: url("../assets/casa-cuza.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa-cuza.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .alexandru_cuza2 {
-    background: url("../assets/casa-cuza2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa-cuza2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* AL TREILEA TRASEU */
 
 /* curtea domneasca */
 .curtea_domneasca1 {
-    background: url("../assets/curtea_domneasca.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtea_domneasca.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca2 {
-    background: url("../assets/curtile_domnesti2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtile_domnesti2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca3 {
-    background: url("../assets/curtile_domnesti3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtile_domnesti3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca4 {
-    background: url("../assets/curtile_domnesti5.png");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtile_domnesti5.png');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca5 {
-    background: url("../assets/curtea_domneasca4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtea_domneasca4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* zoo */
 .zoo1 {
-    background: url("../assets/zoo1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/zoo1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .zoo2 {
-    background: url("../assets/zoo2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/zoo2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* muzeu vasile parvan */
 .parvan1 {
-    background: url("../assets/muzeul_parvan.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .parvan2 {
-    background: url("../assets/muzeul_parvan.webp");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan.webp');
+  background-size: cover;
+  background-position: center;
 }
 .parvan4 {
-    background: url("../assets/muzeul_parvan4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .parvan5 {
-    background: url("../assets/observator.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/observator.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .parvan6 {
-    background: url("../assets/muzeu_parvan5.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeu_parvan5.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .gradina_publica1 {
-    background: url("../assets/gradina_publica2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/gradina_publica2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .gradina_publica2 {
-    background: url("../assets/gradina_publica1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/gradina_publica1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* teatru victor ion popa */
 .teatru_barlad1 {
-    background: url("../assets/teatru2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/teatru2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .teatru_barlad2 {
-    background: url("../assets/teatru1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/teatru1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* eminescu */
 .eminescu1 {
-    background: url("../assets/eminescu2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/eminescu2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .eminescu2 {
-    background: url("../assets/eminescu1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/eminescu1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* casa sturza */
 .sturza1 {
-    background: url("../assets/muzeul_parvan3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .sturza2 {
-    background: url("../assets/casa_sturza2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_sturza2.jpg');
+  background-size: cover;
+  background-position: center;
 }

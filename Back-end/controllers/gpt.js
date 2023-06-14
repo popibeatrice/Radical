@@ -26,10 +26,12 @@ const GptRo = async (req, res) => {
       ],
       temperature: 0.5,
     });
+    console.log(response.data);
     res.status(200).json({
       completion: response.data.choices[0].message,
     });
   } catch (error) {
+    console.log(error);
     res.status(404).send(error);
   }
 };

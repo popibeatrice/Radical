@@ -1,8 +1,8 @@
-import './vreme';
-import './header';
 import '../styles/header.css';
 import '../styles/index.css';
 import '../styles/tailwind.css';
+import './vreme';
+import './header';
 
 import ScrollReveal from 'scrollreveal';
 import axios from 'axios';
@@ -29,7 +29,8 @@ gptForm.addEventListener('submit', async (e) => {
   // UI CHANGE
   gptSpitContent.textContent = '';
   gptSpinner.classList.remove('hidden');
-
+  gptSpit.classList.add('items-center', 'justify-center');
+  gptSpit.classList.remove('items-start', 'justify-start');
   const promptObject = {
     prompt: prompt,
   };

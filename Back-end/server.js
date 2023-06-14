@@ -52,13 +52,13 @@ app.get('/sights', async (req, res) => {
 app.get('/routes/car', async (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, '../Front-end/public/trasee_masina.html'));
+    .sendFile(path.join(__dirname, '../Front-end/public/routes_car.html'));
 });
 
 app.get('/routes/onfoot', async (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, '../Front-end/public/trasee_pe_jos.html'));
+    .sendFile(path.join(__dirname, '../Front-end/public/routes_onfeet.html'));
 });
 
 app.get('/routes/bike', async (req, res) => {
