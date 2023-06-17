@@ -57,7 +57,7 @@
                 <!-- LOGO -->
                 <a
                     id="logo"
-                    href="/"
+                    href="/en"
                     class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
                 >
                     <svg
@@ -83,24 +83,23 @@
                     <ul class="flex items-center justify-center gap-7 text-xl">
                         <li class="">
                             <a
-                                href="/obiective"
+                                href="/sights"
                                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
-                                >Obiective</a
+                                >Sights</a
                             >
                         </li>
                         <li class="">
                             <a
-                                href="/trasee/pejos"
-                                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-md after:bg-green-500 after:transition-transform after:duration-500"
-                                >Trasee</a
+                                href="/routes/car"
+                                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-md after:bg-green-500"
+                                >Routes</a
                             >
                         </li>
-
                         <li class="">
                             <a
-                                href="/evenimente"
+                                href="/events"
                                 class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
-                                >Evenimente</a
+                                >Events</a
                             >
                         </li>
                     </ul>
@@ -115,7 +114,7 @@
                 >
                     <button
                         type="button"
-                        class="flex items-center justify-center gap-1.5 font-logo font-bold"
+                        class="ro-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
                     >
                         <img
                             src="../assets/steag-ro.png"
@@ -126,7 +125,7 @@
                     </button>
                     <button
                         type="button"
-                        class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+                        class="flex items-center justify-center gap-1.5 font-logo font-bold"
                     >
                         <img
                             src="../assets/steag-en.png"
@@ -149,7 +148,7 @@
             >
                 <button
                     type="button"
-                    class="flex items-center justify-center gap-1.5 font-logo font-bold"
+                    class="ro-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
                 >
                     <img
                         src="../assets/steag-ro.png"
@@ -160,7 +159,7 @@
                 </button>
                 <button
                     type="button"
-                    class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+                    class="flex items-center justify-center gap-1.5 font-logo font-bold"
                 >
                     <img
                         src="../assets/steag-en.png"
@@ -176,7 +175,7 @@
                 <li
                     class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
                 >
-                    <a href="/obiective" class="">Obiective</a>
+                    <a href="/sights" class="">Sights</a>
                 </li>
                 <li
                     id="trasee"
@@ -186,12 +185,12 @@
                         type="button"
                         class="block w-full text-left font-logo font-bold text-white duration-500 hover:text-green-500"
                     >
-                        Trasee
+                        Routes
                     </button>
                     <ul id="trasee-options" class="ml-5 hidden flex-col gap-6">
                         <li>
                             <a
-                                href="/trasee/bicicleta"
+                                href="/routes/bike"
                                 class="flex items-center gap-4 duration-500 hover:scale-110"
                             >
                                 <img
@@ -200,13 +199,13 @@
                                     alt="traseu bicicleta"
                                 />
                                 <p class="text-xl font-normal xs:text-2xl">
-                                    cu bicicleta
+                                    by bicycle
                                 </p>
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/trasee/masina"
+                                href="/routes/car"
                                 class="flex items-center gap-4 duration-500 hover:scale-110"
                             >
                                 <img
@@ -215,13 +214,13 @@
                                     alt="traseu masina"
                                 />
                                 <p class="text-xl font-normal xs:text-2xl">
-                                    cu masina
+                                    by car
                                 </p>
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/trasee/pejos"
+                                href="/routes/onfoot"
                                 class="flex items-center gap-4 duration-500 hover:scale-110"
                             >
                                 <img
@@ -230,16 +229,17 @@
                                     alt="traseu pe jos"
                                 />
                                 <p class="text-xl font-normal xs:text-2xl">
-                                    pe jos
+                                    on foot
                                 </p>
                             </a>
                         </li>
                     </ul>
                 </li>
+
                 <li
                     class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
                 >
-                    <a href="/evenimente" class="">Evenimente</a>
+                    <a href="/events" class="">Events</a>
                 </li>
             </ul>
         </section>
@@ -253,12 +253,11 @@
                 >
                     <span
                         class="font-logo text-6xl font-thin uppercase tracking-wider xs:text-7xl sm:text-8xl lg:text-9xl"
-                        >Trasee</span
+                        >Bicycle</span
                     >
                     <br />
-                    pentru
                     <span class="font-title uppercase text-green-500"
-                        >bicicletă</span
+                        >routes</span
                     ><img
                         class="absolute top-[97%] -right-[53%] -z-10 hidden w-auto max-w-[26rem] md:block lg:top-[70%] lg:-right-[46%] lg:max-w-[32rem] xl:top-[50%] xl:-right-[67%] xl:max-w-[40rem]"
                         src="../assets/bicicleta_trasee.png"
@@ -266,10 +265,9 @@
                     />
                 </h1>
                 <p class="max-w-xs text-center font-logo lg:max-w-md">
-                    Creează-ți experiențe unice, pe două roți, prin județul
-                    Vaslui, străbătând câmpuri nesfârșite, pedalând de-a lungul
-                    dealurilor, lăsând urme în pământul darnic al acestei
-                    regiuni pline de farmec.
+                    Create unique experiences on two wheels in Vaslui County,
+                    traversing endless fields, pedaling along the hills, leaving
+                    traces in the generous earth of this charming region.
                 </p>
                 <img
                     class="w-[85%] max-w-[20rem] sm:max-w-[22rem] md:hidden md:max-w-[24rem]"
@@ -284,9 +282,9 @@
                 <h2
                     class="m-6 w-[80%] max-w-lg text-center font-title text-3xl text-green-500 xxs:text-4xl sm:text-5xl lg:order-1 lg:hidden"
                 >
-                    Către Pădurea Paiu
+                    To the Paiu Forest
                     <span class="font-cur font-normal text-black"
-                        >- primul traseu</span
+                        >- the first route</span
                     >
                 </h2>
                 <div
@@ -304,28 +302,28 @@
                     <h2
                         class="hidden max-w-2xl text-center font-title text-5xl text-green-500 lg:block 2xl:text-6xl"
                     >
-                        Către Pădurea Paiu
+                        To the Paiu Forest
                         <span class="font-cur font-normal text-black"
-                            >- primul traseu</span
+                            >- the first route</span
                         >
                     </h2>
                     <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                        Un traseu simplu, dar incitant, ce urcă prin inima
-                        <span class="font-bold">Pădurii Paiu</span>, ca
-                        ulterior, să te ghideze pe carările pădurii, spre comuna
-                        <span class="font-bold">Puscași</span>.
+                        A simple yet exciting route that climbs through the
+                        heart of the
+                        <span class="font-bold">Paiu Forest</span> and later
+                        guides you along the forest trails towards the
+                        <span class="font-bold">Puscași</span> commune.
                     </p>
                     <div
                         class="m-6 flex w-full flex-col-reverse items-center justify-center gap-6"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Traseul pornește din
-                            <span class="font-bold"
-                                >centrul orașului Vaslui</span
-                            >, pe <span class="font-bold">strada DN24</span>, ca
-                            mai apoi, să continue pe
-                            <span class="font-bold">DN2F</span>, spre ieșirea
-                            din oraș.
+                            The route starts from the
+                            <span class="font-bold">city center of Vaslui</span
+                            >, on <span class="font-bold">DN24 Street</span>,
+                            and then continues on
+                            <span class="font-bold">DN2F</span> towards the city
+                            exit.
                         </p>
                         <div
                             class="stefanutz h-[250px] w-[85%] max-w-md rounded-2xl xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
@@ -335,12 +333,12 @@
                         class="m-6 flex w-full flex-col-reverse items-center justify-center gap-6"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            După 10-15 minute de mers, vei putea observa,
-                            <span class="font-bold">pe partea stângă</span>,
-                            <span class="font-bold">înainte de un râuleț</span>
-                            care trece pe sub un pod, mai mulți stâlpi de ciment
-                            care indică drumul pe care va trebui să mergi pentru
-                            a continua traseul.
+                            After 10-15 minutes of walking, you will notice,
+                            <span class="font-bold">on the left side</span>,
+                            <span class="font-bold">before a small stream</span>
+                            passing under a bridge, several cement pillars
+                            indicating the path you need to take to continue the
+                            route.
                         </p>
                         <div
                             class="stalpulet h-[250px] w-[85%] max-w-md rounded-2xl xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
@@ -350,8 +348,8 @@
                         class="m-6 flex w-full flex-col-reverse items-center justify-center gap-6"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Caruselul de poze de mai sus explică cel mai bine
-                            cum decurge drumul până la destinație.
+                            The photo carousel above explains best how the road
+                            unfolds until reaching the destination.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
@@ -378,12 +376,12 @@
                         class="m-6 flex w-full flex-col-reverse items-center justify-center gap-6"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Deși până in acest moment drumul a fost potrivit și
-                            pentru autoturisme, ajuns în
-                            <span class="font-bold">vârful Pădurii Paiu</span>,
-                            vei putea observa o pancardă care iți lansează
-                            provocarea de a continua pe cărările pădurii până în
-                            <span class="font-bold">comuna Pușcași</span>.
+                            Although the road has been suitable for cars up to
+                            this point, upon reaching the
+                            <span class="font-bold">peak of Paiu Forest</span>,
+                            you will notice a sign that challenges you to
+                            continue on the forest trails all the way to
+                            <span class="font-bold">Pușcași commune</span>.
                         </p>
                         <div
                             class="paiu-final h-[250px] w-[85%] max-w-md rounded-2xl xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
@@ -398,9 +396,9 @@
                 <h2
                     class="m-6 w-[80%] max-w-lg text-center font-title text-3xl text-green-500 xxs:text-4xl sm:text-5xl lg:order-1 lg:hidden"
                 >
-                    Drumul Troițelor
+                    The Path of the Crosses
                     <span class="font-cur font-normal text-black"
-                        >- al doilea traseu</span
+                        >- the second route</span
                     >
                 </h2>
                 <div
@@ -417,28 +415,30 @@
                     <h2
                         class="hidden max-w-2xl text-center font-title text-5xl text-green-500 lg:block 2xl:text-6xl"
                     >
-                        Drumul Troițelor
+                        The Path of the Crosses
                         <span class="font-cur font-normal text-black"
-                            >- al doilea traseu</span
+                            >- the second route</span
                         >
                     </h2>
                     <div
                         class="m-6 flex w-full flex-col items-center justify-center gap-8"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            <span class="font-bold">Drumul Troițelor</span>, un
-                            traseu cicloturistic renumit creat de Clubul de
-                            Ciclism Vaslui, de
-                            <span class="font-bold">dificultate medie</span>, ce
-                            te va purta pe o distanță
-                            <span class="font-bold">de 75 km</span> prin
-                            numeroase sate pitorești, oferindu-ți ocazia de a
-                            vizita troițe și locuri turistice remarcabile.
+                            <span class="font-bold"
+                                >The Path of the Crosses</span
+                            >, a renowned cycling route created by Vaslui
+                            Cycling Club, of
+                            <span class="font-bold">medium difficulty</span>,
+                            will take you on a distance of
+                            <span class="font-bold">75 km</span> through
+                            numerous picturesque villages, offering you the
+                            opportunity to visit crosses and remarkable tourist
+                            spots.
                             <a
                                 class="relative font-cur text-green-500 xl:after:absolute xl:after:-bottom-1 xl:after:left-0 xl:after:h-0.5 xl:after:w-full xl:after:scale-x-0 xl:after:rounded-md xl:after:bg-green-500 xl:after:transition-transform xl:after:duration-500 xl:hover:after:scale-x-100"
                                 href="https://www.google.com/maps/d/edit?mid=1cQCIHotzHdD-98vdqoIi4pTrZJs6q1Y&usp=sharing"
                                 target="blank"
-                                >Descoperă ruta originală a traseului</a
+                                >Discover the original route of the trail</a
                             >.
                         </p>
                     </div>
@@ -446,19 +446,16 @@
                         class="m-6 flex w-full flex-col-reverse items-center justify-center gap-6"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Traseul pornește din
-                            <span class="font-bold"
-                                >centrul orașului Vaslui</span
-                            >, continuând pe
-                            <span class="font-bold">drumul DN24</span> iar apoi
-                            pe <span class="font-bold">DN2F spre Bacău</span>.
-                            <span class="font-bold">Prima troiță</span> a
-                            traseului se gasește
-                            <span class="font-bold">pe partea stângă</span> a
-                            străzii
-                            <span class="font-bold"
-                                >dintre Ivănești și Dragomirești</span
-                            >.
+                            The route starts from the
+                            <span class="font-bold">city center of Vaslui</span
+                            >, continuing on
+                            <span class="font-bold">DN24 road</span>, and then
+                            on
+                            <span class="font-bold">DN2F towards Bacău</span>.
+                            The <span class="font-bold">first cross</span> of
+                            the trail can be found on the
+                            <span class="font-bold">left side</span> of the
+                            street between Ivănești and Dragomirești.
                         </p>
                         <div
                             id="map_troita1"
@@ -469,17 +466,17 @@
                         class="m-6 flex w-full flex-col items-center justify-center gap-6"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Primul obiectiv este
+                            The first landmark is the
                             <span class="font-bold"
-                                >Mănăstirea Nașterea Sfântului Ioan
-                                Botezătorul</span
-                            >
-
-                            , numită și
+                                >Monastery of the Nativity of Saint John the
+                                Baptist</span
+                            >, also known as the
                             <span class="font-bold"
-                                >Mănăstirea Poiana lui Borș</span
-                            >, din
-                            <span class="font-bold">satul Ivănești</span>.
+                                >Poiana lui Borș Monastery</span
+                            >, located in
+                            <span class="font-bold"
+                                >the village of Ivănești</span
+                            >.
                         </p>
                         <div
                             class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
@@ -506,58 +503,58 @@
                         class="m-6 flex w-full flex-col items-center justify-center gap-10"
                     >
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Vei continua traseul spre
-                            <span class="font-bold">satul Busca</span>, unde vei
-                            putea observa, lângă Pădurea Colonelului,
-                            <span class="font-bold">troițele gemene</span>.
+                            You will continue the route towards the village of
+                            <span class="font-bold">Busca</span>, where you will
+                            be able to observe, near Colonel's Forest, the
+                            <span class="font-bold">twin crosses</span>.
                         </p>
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Mai apoi, te vei indrepta spre
-                            <span clas="font-bold">Dealul Mangaralei</span>, cel
-                            mai înalt punct din județul Vaslui, având
-                            aproximativ
-                            <span class="font-bold">500m altitudine</span>. De
-                            aici, vei coborî pe lângă
-                            <span class="font-bold">fântâna lui Plăcinta</span>
-                            și vei înconjura
-                            <span class="font-bold">satul Rugăria</span> pentru
-                            a ajunge la următorul obiectiv.
+                            Then, you will head towards
+                            <span class="font-bold">Mangaralei Hill</span>, the
+                            highest point in Vaslui County, reaching an altitude
+                            of approximately
+                            <span class="font-bold">500m</span>. From here, you
+                            will descend alongside
+                            <span class="font-bold">Plăcinta's Fountain</span>
+                            and circle around the village of
+                            <span class="font-bold">Rugăria</span> to reach the
+                            next landmark.
                         </p>
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Se spune că Ștefan cel Mare ar fi avut așezată
-                            tabăra
-                            <span class="font-bold">pe Dealul Taberei</span> în
-                            timpul Bătăliei de la Vaslui, următorul loc pe care
-                            îl vei vizita fiind
+                            It is said that Stephen the Great had his camp set
+                            up on
+                            <span class="font-bold">Taberei Hill</span> during
+                            the Battle of Vaslui. The next place you will visit
+                            is the
                             <span class="font-bold"
-                                >troița situată pe acesta</span
+                                >cross located on this hill</span
                             >.
                         </p>
+
                         <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Următoarea Troiță este cea de pe
-                            <span class="font-bold">Dealul Cetatea</span>,
-                            <span class="font-bold"
-                                >deasupra satului Frasinu</span
-                            >, de unde o vei lua in sud spre
-                            <span class="font-bold">Teiul secular</span>, tei
-                            care are peste 600 de ani. De aici, te vei îndrepta
-                            către
-                            <span class="font-bold">satul Fundu Văii</span>,
-                            care este înconjurat complet de pădure, spre
-                            <span class="font-bold">Fântâna Popii</span>.
+                            The next cross is located on
+                            <span class="font-bold">Cetatea Hill</span>, above
+                            the village of Frasinu. From there, you will head
+                            south towards the
+                            <span class="font-bold">ancient lime tree</span>,
+                            which is over 600 years old. Then, you will proceed
+                            towards the village of Fundu Văii, completely
+                            surrounded by forests, towards the
+                            <span class="font-bold">Priest's Well</span>.
                         </p>
                         <div
                             class="mx-6 mb-6 flex w-full flex-col items-center justify-center gap-6"
                         >
                             <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                                în cazul în care iți dorești să te mai
-                                aventurezi puțin, poți vizita
+                                If you wish to venture a bit further, you can
+                                visit the
                                 <span class="font-bold"
-                                    >Mănăstirea Florești</span
+                                    >Florești Monastery</span
                                 >
-                                și <span class="font-bold">Lacul Gădeasa</span>,
-                                ambele fiind din
-                                <span class="font-bold">comuna Poienești</span>.
+                                and <span class="font-bold">Lake Gădeasa</span>,
+                                both located in the
+                                <span class="font-bold">Poienești commune</span
+                                >.
                             </p>
                             <div
                                 class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
@@ -586,13 +583,11 @@
                     </div>
 
                     <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                        <span class="font-bold">Ultima troița</span>, dar și
-                        punctul final, este
-                        <span class="font-bold">troița de pe Dealul Toma</span>
-                        de
-                        <span class="font-bold">deasupra satului Poienești</span
-                        >. De aici vei ajunge înapoi în oraș parcurgând
-                        aproximativ 20km.
+                        The <span class="font-bold">last cross</span>, as well
+                        as the final point, is the
+                        <span class="font-bold">cross on Toma Hill</span> above
+                        the village of Poienești. From here, you will return to
+                        the city by covering approximately 20km.
                     </p>
                 </section>
             </section>
@@ -649,7 +644,7 @@
                 class="flex w-[80%] items-center justify-center lg:justify-start lg:self-start"
             >
                 <a
-                    href="/"
+                    href="/en"
                     class="flex items-center justify-center gap-1.5 xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
                 >
                     <svg
@@ -684,7 +679,7 @@
                 <div id="go_up" class="mr-4">
                     <a href="#top" class="flex items-center justify-center">
                         <span class="relative text-green-500 md:text-lg"
-                            >Sus</span
+                            >Back to top</span
                         >
                         <img
                             class="w-10"

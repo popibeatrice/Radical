@@ -9,6 +9,7 @@ const traseeBtn = document.querySelector("#trasee button");
 const traseeOptions = document.querySelector("#trasee-options");
 const header = document.querySelector("header");
 const headerChild = document.querySelector("#header-child");
+const goUp = document.querySelector("#go_up");
 let traseeOpen = false;
 
 const body = document.body;

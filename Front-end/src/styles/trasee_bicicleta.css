@@ -1,0 +1,108 @@
+#map {
+    position: sticky !important ;
+}
+
+.menu-btn__burger {
+    background: #000;
+}
+
+/* This creates the top and bottom lines but it does not position them */
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    background: #000;
+}
+
+.troite_sticky {
+    background: url("../assets/troite_omuleti_edited.jpg");
+    background-size: cover;
+    background-position: 75% 60%;
+}
+
+.stefanutz {
+    background: url("../assets/stefanutz.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.stalpulet {
+    background: url("../assets/spre_paiu1.png");
+    background-size: cover;
+    background-position: center;
+}
+.paiu1 {
+    background: url("../assets/spre_paiu2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.paiu2 {
+    background: url("../assets/spre_paiu3.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.paiu3 {
+    background: url("../assets/spre_paiu4.jpeg");
+    background-size: cover;
+    background-position: 0 70%;
+}
+.paiu4 {
+    background: url("../assets/spre_paiu5.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.paiu-final {
+    background: url("../assets/paiu-final.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.troite_harta {
+    background: url("../assets/drumu_troitelor_maps.png");
+    background-size: cover;
+    background-position: center;
+}
+/* PRIMUL TRASEU */
+
+.sf-ioan1 {
+    background: url("../assets/manastirea_stantu_ion.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.sf-ioan2 {
+    background: url("../assets/manastirea_stantu_ion2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.sf-ioan3 {
+    background: url("../assets/manastirea_stantu_ion3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.sf-ioan4 {
+    background: url("../assets/manastirea_stantu_ion4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.floresti1 {
+    background: url("../assets/floresti1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.floresti2 {
+    background: url("../assets/floresti2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.floresti3 {
+    background: url("../assets/floresti3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.floresti4 {
+    background: url("../assets/floresti4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.lac_Gaseasa {
+    background: url("../assets/lac_gadeasa.jpg");
+    background-size: cover;
+    background-position: center;
+}
