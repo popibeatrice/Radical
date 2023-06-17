@@ -64,9 +64,7 @@ app.get('/routes/onfoot', async (req, res) => {
 app.get('/routes/bike', async (req, res) => {
   res
     .status(200)
-    .sendFile(
-      path.join(__dirname, '../Front-end/public/trasee_bicicleta.html')
-    );
+    .sendFile(path.join(__dirname, '../Front-end/public/routes_bicycle.html'));
 });
 
 app.get('/trasee/masina', async (req, res) => {
