@@ -1,8 +1,8 @@
-import './vreme';
-import './header';
 import '../styles/header.css';
 import '../styles/trasee_pe_jos.css';
 import '../styles/tailwind.css';
+import './vreme';
+import './header';
 
 // EN SWITCH
 const enSwitchs = document.querySelectorAll('.en-switch');

@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 6060;
 
 app.use(express.static(path.join(__dirname, '../Front-end/public')));
-app.use(express.json({ limit: '30mb' }));
+app.use(express.json({ limit: '100mb' }));
 
 app.use('/vreme', vremeRout);
 app.use('/gpt', gptRout);
@@ -46,7 +46,7 @@ app.get('/obiective', async (req, res) => {
 app.get('/sights', async (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, '../Front-end/public/obiective.html'));
+    .sendFile(path.join(__dirname, '../Front-end/public/obiectiveEN.html'));
 });
 
 app.get('/routes/car', async (req, res) => {

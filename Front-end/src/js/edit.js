@@ -15,10 +15,10 @@ const IsLogged = async () => {
       }
     );
     if (res.status !== 200) {
-      location.href = location.origin + '/login.html';
+      location.href = location.origin + '/admin/login';
     }
   } catch (error) {
-    location.href = location.origin + '/login.html';
+    location.href = location.origin + '/admin/login';
   }
 };
 
@@ -337,8 +337,6 @@ imagini.addEventListener('change', handleMultiplePhotosUpload);
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   // Convert the main image file to base64
-  console.log(coperta.files);
-  console.log(selectedImages);
   if (coperta.files.length === 0) {
     console.log('Nu ati schimbat poza de coperta');
   }
@@ -399,7 +397,7 @@ form.addEventListener('submit', async (e) => {
           .catch((error) => {
             console.log(error);
           });
-        if (res.status === 200) location.href = location.origin + '/admin';
+        location.href = location.origin + '/admin';
       } catch (error) {
         console.log(error);
       }
@@ -428,7 +426,7 @@ form.addEventListener('submit', async (e) => {
         .catch((error) => {
           console.log(error);
         });
-      if (res.status === 200) location.href = location.origin + '/admin';
+      location.href = location.origin + '/admin';
     } catch (error) {
       console.log(error);
     }
@@ -461,7 +459,7 @@ form.addEventListener('submit', async (e) => {
           .catch((error) => {
             console.log(error);
           });
-        if (res.status === 200) location.href = location.origin + '/admin';
+        location.href = location.origin + '/admin';
       } catch (error) {
         console.log(error);
       }
@@ -504,7 +502,7 @@ form.addEventListener('submit', async (e) => {
         .catch((error) => {
           console.log(error);
         });
-      if (res.status === 200) location.href = location.origin + '/admin';
+      location.href = location.origin + '/admin';
     } catch (error) {
       console.log(error);
     }

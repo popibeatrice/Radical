@@ -8,7 +8,7 @@ const {
   DeleteObjectCommand,
   DeleteObjectsCommand,
 } = require('@aws-sdk/client-s3');
-const sights = require('../models/sights');
+
 require('dotenv').config();
 
 const LogIn = async (req, res) => {
@@ -26,7 +26,7 @@ const LogIn = async (req, res) => {
     return;
   }
   const id = new Date().getDate();
-  const token = jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+  const token = jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1d' });
   res.status(200).json({
     token,
   });

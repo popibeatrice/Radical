@@ -6,12 +6,12 @@ import './header';
 
 import axios from 'axios';
 
-// EN SWITCH
-const enSwitchs = document.querySelectorAll('.en-switch');
+// RO SWITCH
+const roSwitchs = document.querySelectorAll('.ro-switch');
 
-enSwitchs.forEach((enSwitch) => {
-  enSwitch.addEventListener('click', () => {
-    location.href = location.origin + '/en';
+roSwitchs.forEach((roSwitch) => {
+  roSwitch.addEventListener('click', () => {
+    location.href = location.origin;
   });
 });
 
@@ -168,7 +168,7 @@ const RenderCard = (title, descp, id, lat, lng, type) => {
   );
   // BUTON
   cardBtn.setAttribute('type', 'button');
-  cardBtn.textContent = 'Descopera';
+  cardBtn.textContent = 'Discover';
   cardBtn.addEventListener('click', async () => {
     AddMarker({ lat: lat, lng: lng });
     ChangeMapCenter({ lat: lat, lng: lng });
@@ -217,7 +217,7 @@ const GetSights = async () => {
     sights.forEach((sight) => {
       const lat = parseFloat(sight.lat['$numberDecimal']);
       const lng = parseFloat(sight.lng['$numberDecimal']);
-      RenderCard(sight.titleRo, sight.descpRo, sight._id, lat, lng, sight.type);
+      RenderCard(sight.titleEn, sight.descpEn, sight._id, lat, lng, sight.type);
     });
   } catch (error) {
     console.log(error);

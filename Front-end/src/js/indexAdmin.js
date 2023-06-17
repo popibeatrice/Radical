@@ -22,10 +22,10 @@ const IsLogged = async () => {
       }
     );
     if (res.status !== 200) {
-      location.href = location.origin + '/login.html';
+      location.href = location.origin + '/admin/login';
     }
   } catch (error) {
-    location.href = location.origin + '/login.html';
+    location.href = location.origin + '/admin/login';
   }
 };
 IsLogged();
@@ -49,7 +49,7 @@ const RenderCard = (id, titlu, type) => {
     'max-w-4xl',
     'items-center',
     'justify-between',
-    'gap-2',
+    'gap-3',
     'rounded-xl',
     'border',
     'border-zinc-400',
@@ -57,19 +57,39 @@ const RenderCard = (id, titlu, type) => {
     'px-4'
   );
 
-  title.classList.add('font-title', 'text-lg', 'xxs:text-xl', 'md:text-2xl');
+  title.classList.add(
+    'font-title',
+    'xs:text-lg',
+    'sm:text-xl',
+    'md:text-2xl',
+    'xs:text-center'
+  );
   title.textContent = titlu;
 
-  icon.classList.add('w-14');
+  icon.classList.add('w-10', 'hidden', 'xs:block', 'sm:w-12');
   if (type === 'religie') icon.src = biserica;
   else if (type === 'istorie') icon.src = castel;
   else icon.src = fotbal;
 
   edit.href = location.origin + '/admin/edit/?variable=' + id;
-  edit.classList.add('w-10', 'h-10', 'bg-cover', 'bg-center');
+  edit.classList.add(
+    'w-8',
+    'h-8',
+    'bg-cover',
+    'bg-center',
+    'sm:w-10',
+    'sm:h-10'
+  );
   edit.style.backgroundImage = `url('${editIcon}')`;
 
-  deleteBtn.classList.add('w-10', 'h-10', 'bg-cover', 'bg-center');
+  deleteBtn.classList.add(
+    'w-8',
+    'h-8',
+    'bg-cover',
+    'bg-center',
+    'sm:w-10',
+    'sm:h-10'
+  );
   deleteBtn.style.backgroundImage = `url('${deleteIcon}')`;
   deleteBtn.setAttribute('type', 'button');
   deleteBtn.addEventListener('click', async () => {
@@ -89,7 +109,14 @@ const RenderCard = (id, titlu, type) => {
     }
   });
 
-  wrap.classList.add('flex', 'items-center', 'justify-center', 'gap-3');
+  wrap.classList.add(
+    'flex',
+    'flex-col',
+    'xs:flex-row',
+    'items-center',
+    'justify-center',
+    'gap-3'
+  );
   wrap.appendChild(deleteBtn);
   wrap.appendChild(edit);
 

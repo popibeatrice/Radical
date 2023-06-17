@@ -245,25 +245,29 @@
             </label>
           </form>
           <button
+            id="toate"
             type="button"
-            class="text-title w-[95%] max-w-md rounded-md bg-green-500 py-2 font-bold text-white xxs:w-[85%]"
+            class="text-title w-[95%] max-w-md rounded-md border-zinc-300 bg-green-500 py-2 text-sm font-bold text-white xxs:w-[85%] xxs:text-base"
           >
             Toate
           </button>
           <div class="grid w-[95%] max-w-md grid-cols-3 gap-3 xxs:w-[85%]">
             <button
+              id="istorie"
               type="button"
               class="text-title rounded-md border-2 border-zinc-300 py-2 text-sm font-bold text-black xxs:text-base"
             >
               Istorie
             </button>
             <button
+              id="religie"
               type="button"
               class="text-title rounded-md border-2 border-zinc-300 py-2 text-sm font-bold text-black xxs:text-base"
             >
               Religie
             </button>
             <button
+              id="agrement"
               type="button"
               class="text-title rounded-md border-2 border-zinc-300 py-2 text-sm font-bold text-black xxs:text-base"
             >
@@ -273,7 +277,7 @@
         </div>
       </div>
       <div
-        class="grid-cont mx-auto mt-10 w-[90%] max-w-screen-2xl justify-center"
+        class="grid-cont mx-auto my-28 w-[90%] max-w-screen-2xl justify-center"
       ></div>
     </main>
 
@@ -282,12 +286,14 @@
       class="slide-up fixed left-0 right-0 bottom-0 z-[80] mx-auto h-0 w-[95%] overflow-hidden rounded-t-xl bg-white transition-all duration-1000"
     >
       <div
-        class="flex h-full w-full flex-col items-center justify-start gap-32 overflow-x-hidden overflow-y-scroll pb-[2rem] text-black"
+        class="flex h-full w-full flex-col items-center justify-start gap-24 overflow-x-hidden overflow-y-scroll pb-[2rem] text-black"
       >
         <div
           class="flex w-[80%] max-w-screen-3xl flex-col items-center justify-center gap-6 lg:flex-row lg:justify-between"
         >
-          <div class="flex w-[40%] flex-col items-center justify-center gap-6">
+          <div
+            class="flex w-full flex-col items-center justify-center gap-10 lg:w-[40%] lg:px-12"
+          >
             <h2
               class="title text-center font-title text-3xl tracking-wider text-green-500 xxs:text-4xl xl:text-5xl 2xl:text-6xl"
             >
@@ -300,7 +306,7 @@
             </p>
           </div>
           <div
-            class="flex h-full w-[60%] flex-col items-center justify-center gap-32 lg:gap-6"
+            class="flex h-full w-full flex-col items-center justify-center gap-32 lg:w-[60%] lg:gap-6"
           >
             <div
               id="map"

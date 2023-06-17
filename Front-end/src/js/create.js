@@ -16,10 +16,10 @@ const IsLogged = async () => {
       }
     );
     if (res.status !== 200) {
-      location.href = location.origin + '/login.html';
+      location.href = location.origin + '/admin/login';
     }
   } catch (error) {
-    location.href = location.origin + '/login.html';
+    location.href = location.origin + '/admin/login';
   }
 };
 IsLogged();
