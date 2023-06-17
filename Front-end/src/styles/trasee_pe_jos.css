@@ -167,6 +167,11 @@
   background-size: cover;
   background-position: center;
 }
+.zoo3 {
+  background: url('../assets/533.Gr_dina_Zoologic_din_B_rlad_9.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 /* muzeu vasile parvan */
 .parvan1 {
@@ -214,6 +219,11 @@
 }
 .teatru_barlad2 {
   background: url('../assets/teatru1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.teatru_barlad3 {
+  background: url('../assets/teatru3.jpg');
   background-size: cover;
   background-position: center;
 }

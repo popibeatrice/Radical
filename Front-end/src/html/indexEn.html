@@ -224,9 +224,9 @@
     <!-- MAIN CONTENT -->
     <main class="relative">
       <!-- HERO -->
-      <div class="hero-bg relative min-h-screen">
+      <div class="hero-bg relative flex min-h-screen">
         <section
-          class="mx-auto grid w-[85%] content-center pb-16 pt-44 font-bold xxs:pt-60 xs:pt-64 xl:pt-72 2xl:pt-80 3xl:pt-96"
+          class="mx-auto mt-28 grid w-[85%] content-start pb-16 pt-[15vh] font-bold xl:pt-[25vh]"
         >
           <div class="flex flex-col items-start justify-center gap-3">
             <h1
@@ -276,7 +276,7 @@
         </h2>
         <div class="flex flex-col items-center justify-center">
           <p
-            class="text-introductiv my-28 max-w-xl text-center text-xl duration-1000 lg:my-44"
+            class="text-introductiv mt-28 mb-[8.5rem] max-w-xl text-center text-xl duration-1000 lg:my-44"
           >
             Located in
             <span class="font-bold">Eastern Romania</span>, in the historical
@@ -286,7 +286,7 @@
             <span class="font-bold">Stephen the Great</span>.
           </p>
           <p
-            class="text-introductiv my-28 max-w-xl text-center text-xl duration-1000 lg:my-44"
+            class="text-introductiv my-[8.5rem] max-w-xl text-center text-xl duration-1000 lg:my-44"
           >
             The most significant cities of the county are, without a doubt,
             <span class="font-bold">Vaslui</span>, the county seat, forming a
@@ -297,7 +297,7 @@
             presence of numerous wineries and vineyards.
           </p>
           <p
-            class="text-introductiv my-28 mb-48 max-w-xl text-center text-xl duration-1000 lg:my-44 lg:mb-80"
+            class="text-introductiv mt-[8.5rem] mb-48 max-w-xl text-center text-xl duration-1000 lg:my-44 lg:mb-80"
           >
             All three cities share a specific atmosphere, they are peaceful,
             have picturesque landscapes, and a walk along their story-filled
@@ -339,7 +339,7 @@
       >
         <div class="swiper-wrapper h-full w-full py-14">
           <div
-            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
+            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] sm:h-[24rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
           >
             <div
               class="absolute -top-[12rem] h-[20rem] w-full rounded-[50%] bg-green-500 bg-opacity-50"
@@ -362,7 +362,7 @@
             </div>
           </div>
           <div
-            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
+            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] sm:h-[24rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
           >
             <div
               class="absolute -top-[12rem] h-[20rem] w-full rounded-[50%] bg-green-500 bg-opacity-50"
@@ -387,7 +387,7 @@
             </div>
           </div>
           <div
-            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
+            class="swiper-slide relative flex h-[26rem] max-w-[14rem] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-zinc-100 py-8 shadow-2xl xs:max-w-[18rem] sm:h-[24rem] md:max-w-[24rem] md:gap-6 2xl:max-w-[26rem]"
           >
             <div
               class="absolute -top-[12rem] h-[20rem] w-full rounded-[50%] bg-green-500 bg-opacity-50"
@@ -412,21 +412,30 @@
         </div>
         <div class="tranding-slider-control w-[14rem]">
           <div class="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+            <img
+              class="w-10 rotate-180"
+              src="../assets/icons8-right-arrow-256.svg"
+              alt=""
+            />
           </div>
           <div class="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+            <img
+              class="w-10"
+              src="../assets/icons8-right-arrow-256.svg"
+              alt=""
+            />
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
 
+    <!-- OBIECTIVE -->
     <div
-      class="sectiune-obiective flex min-h-[100vh] items-center justify-center py-20"
+      class="sectiune-obiective flex min-h-[100vh] items-center justify-center overflow-x-hidden py-20"
     >
       <div
-        class="mx-auto flex w-[90%] max-w-3xl flex-col items-center justify-center lg:my-28 lg:max-w-screen-2xl"
+        class="mx-auto flex w-[90%] max-w-3xl flex-col items-center justify-center overflow-x-hidden lg:my-28 lg:max-w-screen-2xl"
       >
         <h2
           class="text-center font-logo text-5xl font-bold text-green-500 xxs:text-6xl xs:text-7xl md:text-8xl"
@@ -441,10 +450,10 @@
             class="absolute left-[47%] top-[50%] flex items-center gap-2 2xl:top-[52%]"
           >
             <div
-              class="circle absolute -left-10 flex h-3 w-3 items-center justify-center rounded-3xl bg-green-500 p-4 duration-[450ms] sm:-left-14 sm:h-4 sm:w-4 sm:p-6"
+              class="circle absolute -left-10 flex h-3 w-3 items-center justify-center rounded-3xl bg-green-500 p-4 duration-[450ms] xxs:-left-11 xxs:h-4 xxs:w-4 xxs:p-5 xs:-left-14 xs:h-5 xs:w-5 xs:p-6 sm:h-6 sm:w-6"
             >
               <img
-                class="absolute left-1.5 my-auto w-5 sm:left-4"
+                class="absolute left-1.5 my-auto w-5 xxs:left-2.5 xs:left-3.5 sm:left-4"
                 src="../assets/descover.png"
                 alt=""
               />
@@ -676,23 +685,26 @@
           <div>POPICA BEATRICE</div>
           <div>MARIAN DAVID</div>
         </div>
+        <a
+          href="/admin/login"
+          class="hidden text-center font-logo text-lg font-thin text-green-500 xs:block"
+          >Esti admin?</a
+        >
         <div id="go_up" class="mr-4">
           <a href="#top" class="flex items-center justify-center">
             <span class="relative text-green-500 md:text-lg">Back to top</span>
             <img class="w-10" src="../assets/arrow-top.png" alt="sageata" />
           </a>
+          <a
+            href="/admin/login"
+            class="text-center font-logo text-lg font-thin text-green-500 xs:hidden"
+            >Esti admin?</a
+          >
         </div>
       </div>
       <!-- BACK TO TOP -->
     </footer>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

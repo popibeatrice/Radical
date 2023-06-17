@@ -13,14 +13,8 @@ roSwitchs.forEach((roSwitch) => {
   });
 });
 
-const mapOptions1 = {
+const mapOptions = {
   center: { lat: 46.638361, lng: 27.732389 },
-  zoom: 15,
-  minZoom: 8,
-  maxZoom: 16,
-};
-const mapOptions2 = {
-  center: { lat: 46.226581, lng: 27.669327 },
   zoom: 15,
   minZoom: 8,
   maxZoom: 16,
@@ -54,8 +48,7 @@ const EditMap = (map, locations) => {
 };
 
 function initMap() {
-  var map1 = new google.maps.Map(document.getElementById('map'), mapOptions1);
-  var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
+  var map1 = new google.maps.Map(document.getElementById('map'), mapOptions);
   // Valui
   const locations1 = [
     {
@@ -115,8 +108,15 @@ function initMap() {
     // Add more locations as needed
   ];
   EditMap(map1, locations1);
-  EditMap(map2, locations2);
+  map1.addListener('tilesloaded', function () {
+    var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions);
+    EditMap(map2, locations2);
+  });
 }
 initMap();
 
 // swiper fastaci
+const swiperFastaci = new Swiper('.swiper-fastaci', {
+  effect: 'cards',
+  grabCursor: true,
+});

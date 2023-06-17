@@ -9,6 +9,13 @@ import biserica from '../assets/icons8-church.svg';
 import castel from '../assets/icons8-castle.svg';
 import fotbal from '../assets/icons8-stadium.svg';
 
+const religieBtn = document.querySelector('#religie');
+const agrementBtn = document.querySelector('#agrement');
+const istorieBtn = document.querySelector('#istorie');
+const toateBtn = document.querySelector('#toate');
+const cardCont = document.querySelector('.grid-cont');
+const search = document.querySelector('#search');
+
 const token = localStorage.getItem('token');
 const IsLogged = async () => {
   try {
@@ -31,6 +38,24 @@ const IsLogged = async () => {
 IsLogged();
 
 const gridCont = document.querySelector('.grid-cont');
+
+const filterTodos = (term) => {
+  Array.from(cardCont.children)
+    .filter((card) => {
+      return !card.childNodes[1].textContent.toLowerCase().includes(term);
+    })
+    .forEach((card) => {
+      if (!card.classList.contains('ascuns')) card.classList.add('hidden');
+    });
+
+  Array.from(cardCont.children)
+    .filter((card) => {
+      return card.childNodes[1].textContent.toLowerCase().includes(term);
+    })
+    .forEach((card) => {
+      if (!card.classList.contains('ascuns')) card.classList.remove('hidden');
+    });
+};
 
 const RenderCard = (id, titlu, type) => {
   // ELEMENTE
@@ -56,6 +81,10 @@ const RenderCard = (id, titlu, type) => {
     'py-4',
     'px-4'
   );
+
+  if (type === 'religie') card.classList.add('religie');
+  else if (type === 'agrement') card.classList.add('agrement');
+  else card.classList.add('istorie');
 
   title.classList.add(
     'font-title',
@@ -239,3 +268,116 @@ window.addEventListener('scroll', () => {
 if (window.scrollY > 0) {
   body.classList.add('scroll-up');
 }
+//keyup event
+search.addEventListener('keyup', () => {
+  const term = search.value.trim().toLowerCase();
+  filterTodos(term);
+});
+
+religieBtn.addEventListener('click', () => {
+  const agrement = document.querySelectorAll('.agrement');
+  const istorie = document.querySelectorAll('.istorie');
+  const religie = document.querySelectorAll('.religie');
+  agrement.forEach((card) => {
+    card.classList.add('hidden', 'ascuns');
+  });
+  istorie.forEach((card) => {
+    card.classList.add('hidden', 'ascuns');
+  });
+  religie.forEach((card) => {
+    card.classList.remove('hidden', 'ascuns');
+  });
+
+  const term = search.value;
+  if (term) filterTodos(term.trim().toLowerCase());
+
+  religieBtn.classList.add('bg-green-500', 'text-white', 'border-0');
+  religieBtn.classList.remove('bg-white', 'text-black', 'border-2');
+  agrementBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  istorieBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  agrementBtn.classList.add('bg-white', 'text-black', 'border-2');
+  istorieBtn.classList.add('bg-white', 'text-black', 'border-2');
+  toateBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  toateBtn.classList.add('bg-white', 'text-black', 'border-2');
+});
+
+istorieBtn.addEventListener('click', () => {
+  const agrement = document.querySelectorAll('.agrement');
+  const istorie = document.querySelectorAll('.istorie');
+  const religie = document.querySelectorAll('.religie');
+  agrement.forEach((card) => {
+    card.classList.add('hidden', 'ascuns');
+  });
+  religie.forEach((card) => {
+    card.classList.add('hidden', 'ascuns');
+  });
+  istorie.forEach((card) => {
+    card.classList.remove('hidden', 'ascuns');
+  });
+
+  const term = search.value;
+  if (term) filterTodos(term.trim().toLowerCase());
+
+  istorieBtn.classList.add('bg-green-500', 'text-white', 'border-0');
+  istorieBtn.classList.remove('bg-white', 'text-black', 'border-2');
+  agrementBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  religieBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  agrementBtn.classList.add('bg-white', 'text-black', 'border-2');
+  religieBtn.classList.add('bg-white', 'text-black', 'border-2');
+  toateBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  toateBtn.classList.add('bg-white', 'text-black', 'border-2');
+});
+
+agrementBtn.addEventListener('click', () => {
+  const agrement = document.querySelectorAll('.agrement');
+  const istorie = document.querySelectorAll('.istorie');
+  const religie = document.querySelectorAll('.religie');
+  religie.forEach((card) => {
+    card.classList.add('hidden', 'ascuns');
+  });
+  istorie.forEach((card) => {
+    card.classList.add('hidden', 'ascuns');
+  });
+  agrement.forEach((card) => {
+    card.classList.remove('hidden', 'ascuns');
+  });
+
+  const term = search.value;
+  if (term) filterTodos(term.trim().toLowerCase());
+
+  agrementBtn.classList.add('bg-green-500', 'text-white', 'border-0');
+  agrementBtn.classList.remove('bg-white', 'text-black', 'border-2');
+  religieBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  istorieBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  religieBtn.classList.add('bg-white', 'text-black', 'border-2');
+  istorieBtn.classList.add('bg-white', 'text-black', 'border-2');
+  toateBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  toateBtn.classList.add('bg-white', 'text-black', 'border-2');
+});
+
+toateBtn.addEventListener('click', () => {
+  const agrement = document.querySelectorAll('.agrement');
+  const istorie = document.querySelectorAll('.istorie');
+  const religie = document.querySelectorAll('.religie');
+  religie.forEach((card) => {
+    card.classList.remove('hidden', 'ascuns');
+  });
+  istorie.forEach((card) => {
+    card.classList.remove('hidden', 'ascuns');
+  });
+  agrement.forEach((card) => {
+    card.classList.remove('hidden', 'ascuns');
+  });
+
+  const term = search.value;
+  if (term) filterTodos(term.trim().toLowerCase());
+
+  toateBtn.classList.add('bg-green-500', 'text-white', 'border-0');
+  toateBtn.classList.remove('bg-white', 'text-black', 'border-2');
+  agrementBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  istorieBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  agrementBtn.classList.add('bg-white', 'text-black', 'border-2');
+  istorieBtn.classList.add('bg-white', 'text-black', 'border-2');
+  religieBtn.classList.remove('bg-green-500', 'text-white', 'border-0');
+  religieBtn.classList.add('bg-white', 'text-black', 'border-2');
+});

@@ -54,8 +54,7 @@ const EditMap = (map, locations) => {
 
 function initMap() {
   var map1 = new google.maps.Map(document.getElementById('map'), mapOptions);
-  var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions);
-  var map3 = new google.maps.Map(document.getElementById('map3'), mapOptions);
+
   const locations1 = [
     // Change the coordinates and title as needed
     { title: 'fastaci', location: { lat: 46.733398, lng: 27.450334 } },
@@ -119,9 +118,23 @@ function initMap() {
     // Add more locations as needed
   ];
   EditMap(map1, locations1);
-  EditMap(map2, locations2);
-  EditMap(map3, locations3);
+  map1.addListener('tilesloaded', function () {
+    var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions);
+    EditMap(map2, locations2);
+    // Load the third map after the second one is fully loaded
+    map2.addListener('tilesloaded', function () {
+      var map3 = new google.maps.Map(
+        document.getElementById('map3'),
+        mapOptions
+      );
+      EditMap(map3, locations3);
+    });
+  });
 }
 initMap();
 
 // swiper fastaci
+const swiperFastaci = new Swiper('.swiper-fastaci', {
+  effect: 'cards',
+  grabCursor: true,
+});

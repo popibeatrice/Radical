@@ -11,6 +11,7 @@ module.exports = {
     trasee_masina: './src/js/trasee_masina.js',
     routes_car: './src/js/routes_car.js',
     trasee_bicicleta: './src/js/trasee_bicicleta.js',
+    routes_bicycle: './src/js/routes_bicycle.js',
     obiective: './src/js/obiective.js',
     login: './src/js/login.js',
     indexAdmin: './src/js/indexAdmin.js',
@@ -89,6 +90,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       // Also generate a test.html
+      filename: 'obiectiveEN.html',
+      template: 'src/html/obiectiveEN.html',
+      chunks: ['obiectiveEN'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
       filename: 'login.html',
       template: 'src/html/login.html',
       chunks: ['login'],
@@ -131,9 +138,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       // Also generate a test.html
-      filename: 'obiectiveEN.html',
-      template: 'src/html/obiectiveEN.html',
-      chunks: ['obiectiveEN'],
+      filename: 'routes_bicycle.html',
+      template: 'src/html/routes_bicycle.html',
+      chunks: ['routes_bicycle'],
     }),
   ],
   output: {
