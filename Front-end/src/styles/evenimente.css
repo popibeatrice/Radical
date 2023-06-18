@@ -29,7 +29,7 @@
     background-position: center;
     background-size: cover;
 }
-.open {
+.open_camp {
     background: url("../assets/open3.jpg");
     background-position: center;
     background-size: cover;
@@ -43,4 +43,14 @@
     background: url("../assets/hora.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.784);
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    width: 3rem;
+    height: 3rem;
 }
