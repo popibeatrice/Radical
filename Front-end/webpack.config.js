@@ -13,11 +13,14 @@ module.exports = {
     trasee_bicicleta: './src/js/trasee_bicicleta.js',
     routes_bicycle: './src/js/routes_bicycle.js',
     obiective: './src/js/obiective.js',
+    evenimente: './src/js/evenimente.js',
     login: './src/js/login.js',
     indexAdmin: './src/js/indexAdmin.js',
     create: './src/js/create.js',
     edit: './src/js/edit.js',
     obiectiveEN: './src/js/obiectiveEN.js',
+    createEvent: './src/js/createEvent.js',
+    indexAdminEvenimente: './src/js/indexAdminEvenimente.js',
   },
   mode: 'development',
   devServer: {
@@ -141,6 +144,24 @@ module.exports = {
       filename: 'routes_bicycle.html',
       template: 'src/html/routes_bicycle.html',
       chunks: ['routes_bicycle'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'evenimente.html',
+      template: 'src/html/evenimente.html',
+      chunks: ['evenimente'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'indexAdminEvenimente.html',
+      template: 'src/html/indexAdminEvenimente.html',
+      chunks: ['indexAdminEvenimente'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'createEvent.html',
+      template: 'src/html/createEvent.html',
+      chunks: ['createEvent'],
     }),
   ],
   output: {

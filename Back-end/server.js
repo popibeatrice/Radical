@@ -5,6 +5,8 @@ const vremeRout = require('./routes/vreme');
 const gptRout = require('./routes/gpt');
 const sightsRout = require('./routes/sights');
 const adminRout = require('./routes/admin');
+const eventsRout = require('./routes/events');
+const { deleteExpiredPosts } = require('./controllers/admin.js');
 
 require('dotenv').config();
 
@@ -18,6 +20,7 @@ app.use('/vreme', vremeRout);
 app.use('/gpt', gptRout);
 app.use('/sights', sightsRout);
 app.use('/admin', adminRout);
+app.use('/evenimente', eventsRout);
 
 app.get('/en', async (req, res) => {
   res
@@ -90,13 +93,13 @@ app.get('/trasee/bicicleta', async (req, res) => {
 app.get('/evenimente', async (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, '../Front-end/public/obiective.html'));
+    .sendFile(path.join(__dirname, '../Front-end/public/evenimente.html'));
 });
 
 app.get('/events', async (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, '../Front-end/public/obiective.html'));
+    .sendFile(path.join(__dirname, '../Front-end/public/evenimente.html'));
 });
 
 const start = async () => {
@@ -105,6 +108,7 @@ const start = async () => {
     app.listen(port, () => {
       console.log(`Listening on port ${port}...`);
     });
+    setInterval(deleteExpiredPosts, 24 * 60 * 60 * 1000); // Run every 24 hours
   } catch (error) {
     console.log(error);
   }
