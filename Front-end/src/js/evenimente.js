@@ -1,0 +1,21 @@
+import "./vreme";
+import "./header";
+import "../styles/header.css";
+import "../styles/evenimente.css";
+import "../styles/tailwind.css";
+
+// EN SWITCH
+const enSwitchs = document.querySelectorAll(".en-switch");
+
+enSwitchs.forEach((enSwitch) => {
+    enSwitch.addEventListener("click", () => {
+        location.href = location.origin + "/en";
+    });
+});
+var swiper = new Swiper(".swiper", {
+    effect: "fade",
+    autoplay: {
+        delay: 3000,
+    },
+    speed: 1000,
+});

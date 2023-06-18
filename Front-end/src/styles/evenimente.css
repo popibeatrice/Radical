@@ -1,0 +1,30 @@
+.photo1 {
+    background: url("../assets/constantin_tanase.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.photo2 {
+    background: url("../assets/constantin_tanase2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.photo3 {
+    background: url("../assets/open.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.photo4 {
+    background: url("../assets/hora_strabuni2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.grid-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 400px));
+    gap: 2rem;
+}
