@@ -12,10 +12,21 @@ enSwitchs.forEach((enSwitch) => {
         location.href = location.origin + "/en";
     });
 });
-var swiper = new Swiper(".swiper", {
+var swiperHero = new Swiper(".swiper-hero", {
     effect: "fade",
     autoplay: {
         delay: 3000,
     },
     speed: 1000,
+});
+
+const swiper = new Swiper(".swiper", {
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
