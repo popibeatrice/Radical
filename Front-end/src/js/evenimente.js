@@ -15,7 +15,7 @@ enSwitchs.forEach((enSwitch) => {
 var swiperHero = new Swiper(".swiper-hero", {
     effect: "fade",
     autoplay: {
-        delay: 3000,
+        delay: 1000,
     },
     speed: 1000,
 });
