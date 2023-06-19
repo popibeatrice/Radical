@@ -1,46 +1,62 @@
 .photo1 {
-    background: url("../assets/constantin_tanase.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/constantin_tanase.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .photo2 {
-    background: url("../assets/constantin_tanase2.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/constantin_tanase2.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .photo3 {
-    background: url("../assets/open.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/open.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .photo4 {
-    background: url("../assets/hora_strabuni2.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/hora_strabuni2.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .grid-cont {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 400px));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 400px));
+  gap: 2rem;
 }
 .constantin {
-    background: url("../assets/constantin_tanase3.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/constantin_tanase3.jpg');
+  background-position: center;
+  background-size: cover;
 }
-.open {
-    background: url("../assets/open3.jpg");
-    background-position: center;
-    background-size: cover;
+.open_camp {
+  background: url('../assets/open3.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .folk {
-    background: url("../assets/folk.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/folk.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .hora {
-    background: url("../assets/hora.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url('../assets/hora.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.784);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  width: 3rem;
+  height: 3rem;
+}
+.duo-colo {
+  background-image: linear-gradient(to bottom, black 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

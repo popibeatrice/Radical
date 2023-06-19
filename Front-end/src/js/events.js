@@ -5,12 +5,12 @@ import '../styles/evenimente.css';
 import '../styles/tailwind.css';
 import axios from 'axios';
 
-// EN SWITCH
-const enSwitchs = document.querySelectorAll('.en-switch');
+// RO SWITCH
+const roSwitchs = document.querySelectorAll('.ro-switch');
 
-enSwitchs.forEach((enSwitch) => {
-  enSwitch.addEventListener('click', () => {
-    location.href = location.origin + '/en';
+roSwitchs.forEach((roSwitch) => {
+  roSwitch.addEventListener('click', () => {
+    location.href = location.origin;
   });
 });
 

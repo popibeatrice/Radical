@@ -17,6 +17,7 @@ form.addEventListener('submit', async (e) => {
     if (res.status === 200) location.href = location.origin + '/admin';
   } catch (error) {
     console.log(error);
+    alert('Numele sau Parola sunt greșite!');
   }
 
   form.reset();

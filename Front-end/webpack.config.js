@@ -21,6 +21,7 @@ module.exports = {
     obiectiveEN: './src/js/obiectiveEN.js',
     createEvent: './src/js/createEvent.js',
     indexAdminEvenimente: './src/js/indexAdminEvenimente.js',
+    events: './src/js/events.js',
   },
   mode: 'development',
   devServer: {
@@ -162,6 +163,12 @@ module.exports = {
       filename: 'createEvent.html',
       template: 'src/html/createEvent.html',
       chunks: ['createEvent'],
+    }),
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'events.html',
+      template: 'src/html/events.html',
+      chunks: ['events'],
     }),
   ],
   output: {

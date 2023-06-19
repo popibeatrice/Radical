@@ -99,7 +99,7 @@ app.get('/evenimente', async (req, res) => {
 app.get('/events', async (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, '../Front-end/public/evenimente.html'));
+    .sendFile(path.join(__dirname, '../Front-end/public/events.html'));
 });
 
 const start = async () => {
