@@ -1,1142 +1,964 @@
 <!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden">
-    <head class="overflow-x-hidden">
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;700&family=Nunito:wght@200;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="../assets/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="../assets/favicon-16x16.png"
-        />
-        <link rel="manifest" href="../assets/site.webmanifest" />
-        <link
-            rel="mask-icon"
-            href="../assets/safari-pinned-tab.svg"
-            color="#5bbad5"
-        />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+  <head class="overflow-x-hidden">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;700&family=Nunito:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../assets/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-        />
-        <title>Trasee pe jos</title>
-    </head>
-    <body class="">
-        <!-- HEADER -->
-        <header
-            class="fixed top-0 left-0 z-50 w-screen py-[0.75rem] font-logo font-bold transition-all duration-1000"
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Trasee pe jos</title>
+  </head>
+  <body class="">
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 left-0 z-50 w-screen py-[0.75rem] font-logo font-bold transition-all duration-1000"
+    >
+      <div
+        id="header-child"
+        class="mx-auto grid h-[56px] w-[90%] grid-cols-[1fr_50px] items-center justify-between gap-10 md:h-[80px] xl:grid-cols-3 xl:justify-items-center xl:gap-0"
+      >
+        <!-- LOGO -->
+        <a
+          id="logo"
+          href="/"
+          class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
         >
-            <div
-                id="header-child"
-                class="mx-auto grid h-[56px] w-[90%] grid-cols-[1fr_50px] items-center justify-between gap-10 md:h-[80px] xl:grid-cols-3 xl:justify-items-center xl:gap-0"
+          <svg
+            class="color-swap logo h-14 w-14 transition-colors duration-1000 md:h-20 md:w-20"
+            viewBox="0 0 300 300"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              transform="matrix(0.1, 0, 0, -0.1, 0, 300)"
+              fill="#000000"
+              stroke="none"
             >
-                <!-- LOGO -->
-                <a
-                    id="logo"
-                    href="/"
-                    class="flex items-center justify-center gap-1.5 justify-self-start xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
-                >
-                    <svg
-                        class="color-swap logo h-14 w-14 transition-colors duration-1000 md:h-20 md:w-20"
-                        viewBox="0 0 300 300"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <g
-                            transform="matrix(0.1, 0, 0, -0.1, 0, 300)"
-                            fill="#000000"
-                            stroke="none"
-                        >
-                            <path
-                                d="M1223 2943 c-15 -10 -23 -26 -23 -44 0 -15 -4 -31 -10 -34 -19 -12 -10 -37 30 -85 43 -51 51 -87 23 -96 -10 -3 -26 -10 -35 -15 -27 -14 -36 -11 -61 17 -33 38 -53 47 -79 33 -31 -16 -39 -30 -33 -56 4 -18 1 -23 -14 -23 -11 0 -22 -4 -26 -9 -12 -20 -63 -39 -74 -28 -9 9 -17 8 -33 -2 -20 -13 -24 -11 -48 18 -35 41 -68 40 -134 -4 -60 -39 -72 -42 -104 -19 -19 13 -26 13 -38 3 -13 -10 -17 -10 -24 1 -5 8 -18 11 -38 7 -20 -4 -34 -1 -42 8 -14 17 -38 9 -68 -23 -19 -19 -21 -27 -11 -39 7 -8 23 -40 35 -70 21 -52 22 -58 8 -86 -18 -34 -6 -77 22 -77 11 0 14 -5 10 -16 -3 -9 -6 -18 -6 -20 0 -3 -4 -2 -10 1 -6 4 -10 -11 -10 -36 0 -38 5 -48 45 -86 25 -23 62 -50 83 -59 59 -28 61 -30 50 -75 -9 -35 -8 -43 11 -63 16 -17 18 -25 9 -34 -7 -7 -18 -12 -24 -12 -18 0 -44 -40 -44 -66 0 -12 22 -45 51 -75 29 -30 60 -73 70 -96 10 -24 23 -43 29 -43 6 0 10 -10 8 -23 -3 -26 18 -59 50 -76 18 -9 22 -20 22 -55 0 -27 6 -48 16 -57 23 -19 45 -67 49 -108 4 -43 25 -85 54 -112 12 -11 21 -27 21 -37 0 -9 7 -26 15 -36 8 -11 15 -29 15 -41 0 -12 7 -30 15 -41 19 -25 19 -58 0 -74 -17 -14 -19 -32 -6 -58 33 -65 34 -71 19 -94 -22 -35 -30 -88 -16 -106 7 -8 18 -31 23 -51 6 -20 20 -41 34 -47 33 -17 38 -25 46 -72 5 -33 4 -42 -8 -42 -8 0 -25 -8 -37 -18 -20 -16 -21 -21 -10 -43 18 -34 49 -59 65 -53 22 9 48 -52 37 -84 -6 -18 -6 -33 1 -43 8 -13 6 -21 -6 -34 -20 -19 -20 -26 -8 -57 5 -13 12 -35 15 -50 3 -15 15 -30 26 -33 11 -3 20 -12 20 -20 0 -7 12 -23 27 -35 20 -15 34 -19 57 -14 47 10 63 34 71 104 5 47 13 68 29 81 l21 17 -22 24 c-13 13 -23 34 -23 47 0 12 -9 31 -20 43 -26 29 -27 68 -1 68 11 0 23 -5 26 -10 8 -13 58 -13 72 1 7 7 27 7 68 0 31 -6 62 -8 67 -5 28 17 98 -47 98 -90 0 -9 7 -16 16 -16 21 0 94 60 94 78 0 8 17 32 38 53 35 37 40 39 100 39 46 0 64 -4 68 -15 4 -8 17 -15 31 -15 15 0 34 -12 50 -30 17 -20 34 -30 53 -30 16 0 32 -4 35 -10 8 -13 112 -13 120 1 14 22 56 30 91 17 30 -11 35 -10 48 7 8 11 12 23 9 28 -3 5 2 16 11 26 15 16 15 20 0 50 -14 27 -14 37 -4 56 10 18 10 31 2 52 -6 15 -14 43 -17 60 -4 18 -12 36 -19 40 -19 12 -27 53 -11 53 15 0 55 51 55 70 0 6 -7 18 -15 26 -14 15 -10 48 6 39 11 -7 55 20 93 57 26 26 28 32 21 75 -4 27 -12 54 -17 61 -17 19 19 91 66 134 38 33 40 38 28 58 -11 19 -11 25 3 40 13 14 15 31 10 81 -9 98 -13 109 -35 109 -12 0 -24 10 -30 24 -5 13 -14 27 -19 31 -16 9 -13 41 5 56 10 9 14 22 10 41 -4 21 -1 30 14 38 19 10 19 12 4 35 -13 20 -14 30 -4 62 6 21 16 51 20 66 5 17 5 39 -1 55 -6 15 -8 41 -4 58 4 23 1 33 -10 37 -10 5 -12 12 -7 28 14 35 1 70 -30 88 -19 10 -27 22 -24 33 2 10 0 21 -5 24 -5 3 -9 12 -9 20 0 8 -11 32 -25 52 -14 20 -25 49 -25 65 0 15 -6 40 -14 55 -15 28 -77 82 -95 82 -15 0 -41 42 -41 65 0 30 -43 68 -68 61 -11 -4 -24 0 -31 8 -10 11 -19 13 -38 5 -18 -6 -30 -6 -39 2 -11 9 -16 5 -25 -20 -13 -37 -32 -40 -53 -9 -9 12 -16 19 -16 15 0 -4 -11 0 -25 9 -14 9 -34 14 -45 11 -10 -3 -24 1 -31 9 -6 8 -20 14 -30 14 -24 0 -25 -31 -3 -66 14 -20 15 -30 6 -49 -13 -29 -31 -31 -73 -9 -25 12 -30 20 -27 46 2 19 -2 33 -12 38 -51 26 -70 31 -88 26 -16 -6 -20 -1 -24 26 -3 17 -1 48 3 68 5 20 7 58 6 86 -2 47 -3 49 -32 52 -16 1 -40 8 -52 14 -41 20 -51 6 -48 -66 4 -70 -6 -91 -26 -54 -24 46 -73 98 -91 98 -10 0 -18 4 -18 8 0 18 -47 62 -78 73 -17 6 -32 17 -32 24 0 12 -22 26 -38 24 -4 0 -17 -7 -29 -16z m145 -116 c8 -16 25 -33 38 -39 13 -6 24 -17 24 -25 0 -7 4 -13 9 -13 5 0 19 -15 30 -33 11 -19 33 -39 48 -46 23 -11 29 -10 40 5 7 10 13 37 13 60 0 54 8 74 29 74 29 0 43 -51 30 -106 -13 -57 -12 -115 2 -129 6 -5 34 -10 62 -10 l52 0 3 -37 c3 -30 11 -43 45 -68 40 -30 77 -39 77 -20 0 5 11 12 25 16 28 7 38 30 33 77 -2 27 1 33 19 35 14 2 26 -4 33 -17 10 -20 59 -51 79 -51 5 0 23 12 41 26 l31 26 54 -17 c45 -14 55 -21 55 -39 0 -22 53 -86 71 -86 14 0 50 -40 45 -49 -3 -5 3 -16 13 -25 12 -11 16 -25 13 -41 -3 -18 6 -38 32 -72 39 -50 43 -62 25 -80 -17 -17 14 -61 47 -69 23 -6 25 -10 20 -37 -4 -22 -1 -33 11 -43 15 -10 16 -17 7 -43 -10 -26 -9 -32 12 -52 22 -20 22 -24 9 -39 -8 -9 -15 -26 -15 -38 0 -12 -9 -31 -20 -42 -17 -17 -18 -24 -8 -45 9 -21 8 -28 -7 -46 -15 -16 -17 -24 -8 -39 9 -13 9 -28 2 -55 -12 -42 -6 -65 16 -65 10 0 15 -10 15 -30 0 -25 4 -30 25 -30 26 0 35 -26 15 -46 -12 -12 -3 -44 11 -44 5 0 9 -11 9 -25 0 -18 -7 -28 -25 -35 -18 -7 -25 -17 -25 -37 0 -15 -11 -38 -24 -52 -46 -50 -65 -177 -33 -218 19 -24 19 -24 -4 -41 -32 -23 -76 -42 -83 -35 -2 3 -12 -11 -20 -32 -11 -26 -13 -42 -6 -55 16 -30 12 -39 -27 -57 -21 -10 -39 -18 -41 -19 -2 -1 4 -16 13 -34 9 -17 15 -39 13 -49 -2 -10 8 -27 20 -38 22 -17 24 -26 25 -128 l2 -110 -42 3 c-23 2 -57 -3 -75 -11 -58 -26 -89 -29 -109 -11 -10 9 -25 14 -33 11 -8 -3 -26 7 -43 23 -15 16 -36 30 -46 30 -10 0 -27 9 -39 20 -17 15 -36 20 -80 20 -50 0 -58 3 -58 19 0 29 -28 34 -45 7 -9 -13 -15 -28 -14 -32 4 -19 -21 -64 -45 -79 -13 -9 -26 -25 -29 -35 -3 -13 -14 -20 -30 -20 -20 0 -27 6 -32 30 -8 37 -12 39 -88 52 -81 13 -153 16 -200 6 -28 -6 -44 -4 -62 8 -13 9 -29 13 -35 9 -15 -9 0 -115 21 -145 12 -19 15 -30 8 -43 -12 -20 -4 -37 17 -37 20 0 18 -10 -7 -37 -18 -18 -20 -25 -10 -37 16 -19 -21 -96 -47 -96 -21 0 -72 62 -72 87 0 11 -5 24 -11 30 -8 8 -7 17 3 32 11 17 11 25 0 42 -10 15 -11 24 -3 32 36 36 -11 139 -68 150 -37 8 -39 19 -8 32 19 9 22 19 25 77 3 65 2 67 -30 91 -21 17 -41 47 -57 86 -22 57 -23 62 -8 79 18 20 23 67 8 76 -17 11 -20 77 -4 102 14 22 14 26 -1 49 -9 13 -16 42 -16 63 0 44 -24 96 -72 154 -18 23 -34 45 -34 49 -1 5 -3 12 -4 17 -1 4 -1 15 0 25 1 10 -12 40 -29 67 -21 33 -31 63 -31 89 0 38 -35 91 -60 91 -5 0 -10 13 -10 29 0 16 -7 34 -15 41 -8 7 -15 18 -15 24 0 18 -58 98 -95 133 -19 18 -35 36 -35 42 0 5 16 18 35 30 38 22 46 54 23 91 -11 16 -9 26 6 54 10 19 16 42 13 50 -4 9 -34 29 -69 46 -35 17 -83 48 -108 70 l-45 38 21 24 c12 13 24 28 28 35 9 16 -4 43 -20 43 -21 0 -27 25 -14 50 18 34 20 58 4 71 -8 6 -14 24 -14 40 0 16 -9 38 -21 50 -17 17 -19 23 -8 30 9 6 18 3 25 -6 6 -8 22 -15 35 -15 13 0 60 -2 103 -5 56 -4 84 -1 95 8 9 7 31 20 49 31 29 16 35 16 50 3 58 -50 169 -61 213 -21 12 10 31 18 43 16 33 -4 52 22 37 54 -16 35 -14 44 9 44 16 0 20 -7 20 -34 0 -19 5 -38 12 -42 21 -13 73 -11 98 5 14 9 34 20 45 26 33 17 49 61 35 96 -7 16 -16 29 -20 29 -4 0 -11 11 -14 24 -3 14 -13 32 -22 41 -13 12 -14 19 -5 28 6 6 11 19 11 28 0 27 101 -28 118 -64z"
-                                style="fill: rgb(0, 0, 0)"
-                            />
-                        </g>
-                    </svg>
-                    <span><span class="text-green-500">Visit</span>VASLUI</span>
-                </a>
-                <!-- DESKTOP NAV -->
-                <nav class="hidden justify-self-center rounded-lg xl:block">
-                    <ul class="flex items-center justify-center gap-7 text-xl">
-                        <li class="">
-                            <a
-                                href="/obiective"
-                                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
-                                >Obiective</a
-                            >
-                        </li>
-                        <li class="">
-                            <a
-                                href="/trasee/pejos"
-                                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
-                                >Trasee</a
-                            >
-                        </li>
+              <path
+                d="M1223 2943 c-15 -10 -23 -26 -23 -44 0 -15 -4 -31 -10 -34 -19 -12 -10 -37 30 -85 43 -51 51 -87 23 -96 -10 -3 -26 -10 -35 -15 -27 -14 -36 -11 -61 17 -33 38 -53 47 -79 33 -31 -16 -39 -30 -33 -56 4 -18 1 -23 -14 -23 -11 0 -22 -4 -26 -9 -12 -20 -63 -39 -74 -28 -9 9 -17 8 -33 -2 -20 -13 -24 -11 -48 18 -35 41 -68 40 -134 -4 -60 -39 -72 -42 -104 -19 -19 13 -26 13 -38 3 -13 -10 -17 -10 -24 1 -5 8 -18 11 -38 7 -20 -4 -34 -1 -42 8 -14 17 -38 9 -68 -23 -19 -19 -21 -27 -11 -39 7 -8 23 -40 35 -70 21 -52 22 -58 8 -86 -18 -34 -6 -77 22 -77 11 0 14 -5 10 -16 -3 -9 -6 -18 -6 -20 0 -3 -4 -2 -10 1 -6 4 -10 -11 -10 -36 0 -38 5 -48 45 -86 25 -23 62 -50 83 -59 59 -28 61 -30 50 -75 -9 -35 -8 -43 11 -63 16 -17 18 -25 9 -34 -7 -7 -18 -12 -24 -12 -18 0 -44 -40 -44 -66 0 -12 22 -45 51 -75 29 -30 60 -73 70 -96 10 -24 23 -43 29 -43 6 0 10 -10 8 -23 -3 -26 18 -59 50 -76 18 -9 22 -20 22 -55 0 -27 6 -48 16 -57 23 -19 45 -67 49 -108 4 -43 25 -85 54 -112 12 -11 21 -27 21 -37 0 -9 7 -26 15 -36 8 -11 15 -29 15 -41 0 -12 7 -30 15 -41 19 -25 19 -58 0 -74 -17 -14 -19 -32 -6 -58 33 -65 34 -71 19 -94 -22 -35 -30 -88 -16 -106 7 -8 18 -31 23 -51 6 -20 20 -41 34 -47 33 -17 38 -25 46 -72 5 -33 4 -42 -8 -42 -8 0 -25 -8 -37 -18 -20 -16 -21 -21 -10 -43 18 -34 49 -59 65 -53 22 9 48 -52 37 -84 -6 -18 -6 -33 1 -43 8 -13 6 -21 -6 -34 -20 -19 -20 -26 -8 -57 5 -13 12 -35 15 -50 3 -15 15 -30 26 -33 11 -3 20 -12 20 -20 0 -7 12 -23 27 -35 20 -15 34 -19 57 -14 47 10 63 34 71 104 5 47 13 68 29 81 l21 17 -22 24 c-13 13 -23 34 -23 47 0 12 -9 31 -20 43 -26 29 -27 68 -1 68 11 0 23 -5 26 -10 8 -13 58 -13 72 1 7 7 27 7 68 0 31 -6 62 -8 67 -5 28 17 98 -47 98 -90 0 -9 7 -16 16 -16 21 0 94 60 94 78 0 8 17 32 38 53 35 37 40 39 100 39 46 0 64 -4 68 -15 4 -8 17 -15 31 -15 15 0 34 -12 50 -30 17 -20 34 -30 53 -30 16 0 32 -4 35 -10 8 -13 112 -13 120 1 14 22 56 30 91 17 30 -11 35 -10 48 7 8 11 12 23 9 28 -3 5 2 16 11 26 15 16 15 20 0 50 -14 27 -14 37 -4 56 10 18 10 31 2 52 -6 15 -14 43 -17 60 -4 18 -12 36 -19 40 -19 12 -27 53 -11 53 15 0 55 51 55 70 0 6 -7 18 -15 26 -14 15 -10 48 6 39 11 -7 55 20 93 57 26 26 28 32 21 75 -4 27 -12 54 -17 61 -17 19 19 91 66 134 38 33 40 38 28 58 -11 19 -11 25 3 40 13 14 15 31 10 81 -9 98 -13 109 -35 109 -12 0 -24 10 -30 24 -5 13 -14 27 -19 31 -16 9 -13 41 5 56 10 9 14 22 10 41 -4 21 -1 30 14 38 19 10 19 12 4 35 -13 20 -14 30 -4 62 6 21 16 51 20 66 5 17 5 39 -1 55 -6 15 -8 41 -4 58 4 23 1 33 -10 37 -10 5 -12 12 -7 28 14 35 1 70 -30 88 -19 10 -27 22 -24 33 2 10 0 21 -5 24 -5 3 -9 12 -9 20 0 8 -11 32 -25 52 -14 20 -25 49 -25 65 0 15 -6 40 -14 55 -15 28 -77 82 -95 82 -15 0 -41 42 -41 65 0 30 -43 68 -68 61 -11 -4 -24 0 -31 8 -10 11 -19 13 -38 5 -18 -6 -30 -6 -39 2 -11 9 -16 5 -25 -20 -13 -37 -32 -40 -53 -9 -9 12 -16 19 -16 15 0 -4 -11 0 -25 9 -14 9 -34 14 -45 11 -10 -3 -24 1 -31 9 -6 8 -20 14 -30 14 -24 0 -25 -31 -3 -66 14 -20 15 -30 6 -49 -13 -29 -31 -31 -73 -9 -25 12 -30 20 -27 46 2 19 -2 33 -12 38 -51 26 -70 31 -88 26 -16 -6 -20 -1 -24 26 -3 17 -1 48 3 68 5 20 7 58 6 86 -2 47 -3 49 -32 52 -16 1 -40 8 -52 14 -41 20 -51 6 -48 -66 4 -70 -6 -91 -26 -54 -24 46 -73 98 -91 98 -10 0 -18 4 -18 8 0 18 -47 62 -78 73 -17 6 -32 17 -32 24 0 12 -22 26 -38 24 -4 0 -17 -7 -29 -16z m145 -116 c8 -16 25 -33 38 -39 13 -6 24 -17 24 -25 0 -7 4 -13 9 -13 5 0 19 -15 30 -33 11 -19 33 -39 48 -46 23 -11 29 -10 40 5 7 10 13 37 13 60 0 54 8 74 29 74 29 0 43 -51 30 -106 -13 -57 -12 -115 2 -129 6 -5 34 -10 62 -10 l52 0 3 -37 c3 -30 11 -43 45 -68 40 -30 77 -39 77 -20 0 5 11 12 25 16 28 7 38 30 33 77 -2 27 1 33 19 35 14 2 26 -4 33 -17 10 -20 59 -51 79 -51 5 0 23 12 41 26 l31 26 54 -17 c45 -14 55 -21 55 -39 0 -22 53 -86 71 -86 14 0 50 -40 45 -49 -3 -5 3 -16 13 -25 12 -11 16 -25 13 -41 -3 -18 6 -38 32 -72 39 -50 43 -62 25 -80 -17 -17 14 -61 47 -69 23 -6 25 -10 20 -37 -4 -22 -1 -33 11 -43 15 -10 16 -17 7 -43 -10 -26 -9 -32 12 -52 22 -20 22 -24 9 -39 -8 -9 -15 -26 -15 -38 0 -12 -9 -31 -20 -42 -17 -17 -18 -24 -8 -45 9 -21 8 -28 -7 -46 -15 -16 -17 -24 -8 -39 9 -13 9 -28 2 -55 -12 -42 -6 -65 16 -65 10 0 15 -10 15 -30 0 -25 4 -30 25 -30 26 0 35 -26 15 -46 -12 -12 -3 -44 11 -44 5 0 9 -11 9 -25 0 -18 -7 -28 -25 -35 -18 -7 -25 -17 -25 -37 0 -15 -11 -38 -24 -52 -46 -50 -65 -177 -33 -218 19 -24 19 -24 -4 -41 -32 -23 -76 -42 -83 -35 -2 3 -12 -11 -20 -32 -11 -26 -13 -42 -6 -55 16 -30 12 -39 -27 -57 -21 -10 -39 -18 -41 -19 -2 -1 4 -16 13 -34 9 -17 15 -39 13 -49 -2 -10 8 -27 20 -38 22 -17 24 -26 25 -128 l2 -110 -42 3 c-23 2 -57 -3 -75 -11 -58 -26 -89 -29 -109 -11 -10 9 -25 14 -33 11 -8 -3 -26 7 -43 23 -15 16 -36 30 -46 30 -10 0 -27 9 -39 20 -17 15 -36 20 -80 20 -50 0 -58 3 -58 19 0 29 -28 34 -45 7 -9 -13 -15 -28 -14 -32 4 -19 -21 -64 -45 -79 -13 -9 -26 -25 -29 -35 -3 -13 -14 -20 -30 -20 -20 0 -27 6 -32 30 -8 37 -12 39 -88 52 -81 13 -153 16 -200 6 -28 -6 -44 -4 -62 8 -13 9 -29 13 -35 9 -15 -9 0 -115 21 -145 12 -19 15 -30 8 -43 -12 -20 -4 -37 17 -37 20 0 18 -10 -7 -37 -18 -18 -20 -25 -10 -37 16 -19 -21 -96 -47 -96 -21 0 -72 62 -72 87 0 11 -5 24 -11 30 -8 8 -7 17 3 32 11 17 11 25 0 42 -10 15 -11 24 -3 32 36 36 -11 139 -68 150 -37 8 -39 19 -8 32 19 9 22 19 25 77 3 65 2 67 -30 91 -21 17 -41 47 -57 86 -22 57 -23 62 -8 79 18 20 23 67 8 76 -17 11 -20 77 -4 102 14 22 14 26 -1 49 -9 13 -16 42 -16 63 0 44 -24 96 -72 154 -18 23 -34 45 -34 49 -1 5 -3 12 -4 17 -1 4 -1 15 0 25 1 10 -12 40 -29 67 -21 33 -31 63 -31 89 0 38 -35 91 -60 91 -5 0 -10 13 -10 29 0 16 -7 34 -15 41 -8 7 -15 18 -15 24 0 18 -58 98 -95 133 -19 18 -35 36 -35 42 0 5 16 18 35 30 38 22 46 54 23 91 -11 16 -9 26 6 54 10 19 16 42 13 50 -4 9 -34 29 -69 46 -35 17 -83 48 -108 70 l-45 38 21 24 c12 13 24 28 28 35 9 16 -4 43 -20 43 -21 0 -27 25 -14 50 18 34 20 58 4 71 -8 6 -14 24 -14 40 0 16 -9 38 -21 50 -17 17 -19 23 -8 30 9 6 18 3 25 -6 6 -8 22 -15 35 -15 13 0 60 -2 103 -5 56 -4 84 -1 95 8 9 7 31 20 49 31 29 16 35 16 50 3 58 -50 169 -61 213 -21 12 10 31 18 43 16 33 -4 52 22 37 54 -16 35 -14 44 9 44 16 0 20 -7 20 -34 0 -19 5 -38 12 -42 21 -13 73 -11 98 5 14 9 34 20 45 26 33 17 49 61 35 96 -7 16 -16 29 -20 29 -4 0 -11 11 -14 24 -3 14 -13 32 -22 41 -13 12 -14 19 -5 28 6 6 11 19 11 28 0 27 101 -28 118 -64z"
+                style="fill: rgb(0, 0, 0)"
+              />
+            </g>
+          </svg>
+          <span><span class="text-green-500">Visit</span>VASLUI</span>
+        </a>
+        <!-- DESKTOP NAV -->
+        <nav class="hidden justify-self-center rounded-lg xl:block">
+          <ul class="flex items-center justify-center gap-7 text-xl">
+            <li class="">
+              <a
+                href="/obiective"
+                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                >Obiective</a
+              >
+            </li>
+            <li class="">
+              <a
+                href="/#trasee-section"
+                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-md after:bg-green-500"
+                >Trasee</a
+              >
+            </li>
 
-                        <li class="">
-                            <a
-                                href="/evenimente"
-                                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
-                                >Evenimente</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-                <!-- BURGUR BTN -->
-                <div class="menu-btn justify-self-end xl:hidden">
-                    <div class="menu-btn__burger"></div>
-                </div>
-                <!-- LANG SELECTOR -->
-                <div
-                    class="hidden items-center justify-center gap-4 justify-self-end rounded-xl px-1.5 py-2.5 xl:flex"
-                >
-                    <button
-                        type="button"
-                        class="flex items-center justify-center gap-1.5 font-logo font-bold"
-                    >
-                        <img
-                            src="../assets/steag-ro.png"
-                            class="w-7"
-                            alt="steag-ro"
-                        />
-                        <span class="">RO</span>
-                    </button>
-                    <button
-                        type="button"
-                        class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
-                    >
-                        <img
-                            src="../assets/steag-en.png"
-                            class="w-7"
-                            alt="steag-en"
-                        />
-                        <span class="">EN</span>
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <!-- DROPDOWN -->
-        <section
-            id="menu_wrap"
-            class="fixed top-0 bottom-0 -right-[100vw] z-40 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-24 text-white transition-all duration-700"
+            <li class="">
+              <a
+                href="/evenimente"
+                class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-md after:bg-green-500 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                >Evenimente</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- BURGUR BTN -->
+        <div class="menu-btn justify-self-end xl:hidden">
+          <div class="menu-btn__burger"></div>
+        </div>
+        <!-- LANG SELECTOR -->
+        <div
+          class="hidden items-center justify-center gap-4 justify-self-end rounded-xl px-1.5 py-2.5 xl:flex"
         >
-            <div
-                class="z-20 flex items-center justify-center gap-4 px-1.5 py-2.5"
-            >
-                <button
-                    type="button"
-                    class="flex items-center justify-center gap-1.5 font-logo font-bold"
-                >
-                    <img
-                        src="../assets/steag-ro.png"
-                        class="w-7"
-                        alt="steag-ro"
-                    />
-                    <span class="">RO</span>
-                </button>
-                <button
-                    type="button"
-                    class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
-                >
-                    <img
-                        src="../assets/steag-en.png"
-                        class="w-7"
-                        alt="steag-en"
-                    />
-                    <span class="">EN</span>
-                </button>
-            </div>
-            <ul
-                class="flex flex-col items-start justify-center gap-10 pl-[10%] font-logo"
-            >
-                <li
-                    class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
-                >
-                    <a href="/obiective" class="">Obiective</a>
-                </li>
-                <li
-                    id="trasee"
-                    class="flex flex-col justify-start gap-5 text-3xl font-bold xxs:text-4xl xs:text-5xl md:text-6xl"
-                >
-                    <button
-                        type="button"
-                        class="block w-full text-left font-logo font-bold text-white duration-500 hover:text-green-500"
-                    >
-                        Trasee
-                    </button>
-                    <ul id="trasee-options" class="ml-5 hidden flex-col gap-6">
-                        <li>
-                            <a
-                                href="/trasee/bicicleta"
-                                class="flex items-center gap-4 duration-500 hover:scale-110"
-                            >
-                                <img
-                                    class="sm:w-18 w-14 xs:w-16"
-                                    src="../assets/traseu_bici.png"
-                                    alt="traseu bicicleta"
-                                />
-                                <p class="text-xl font-normal xs:text-2xl">
-                                    cu bicicleta
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/trasee/masina"
-                                class="flex items-center gap-4 duration-500 hover:scale-110"
-                            >
-                                <img
-                                    class="sm:w-18 w-14 xs:w-16"
-                                    src="../assets/traseu_car.png"
-                                    alt="traseu masina"
-                                />
-                                <p class="text-xl font-normal xs:text-2xl">
-                                    cu masina
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/trasee/pejos"
-                                class="flex items-center gap-4 duration-500 hover:scale-110"
-                            >
-                                <img
-                                    class="sm:w-18 w-14 xs:w-16"
-                                    src="../assets/traseu_piciorus.png"
-                                    alt="traseu pe jos"
-                                />
-                                <p class="text-xl font-normal xs:text-2xl">
-                                    pe jos
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li
-                    class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
-                >
-                    <a href="/evenimente" class="">Evenimente</a>
-                </li>
-            </ul>
-        </section>
+          <button
+            type="button"
+            class="flex items-center justify-center gap-1.5 font-logo font-bold"
+          >
+            <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
+            <span class="">RO</span>
+          </button>
+          <button
+            type="button"
+            class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+          >
+            <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
+            <span class="">EN</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-        <main>
-            <section
-                class="flex min-h-screen flex-col items-center justify-center gap-6 overflow-x-hidden px-6 py-36"
-            >
-                <h1
-                    class="relative text-center font-cur text-2xl font-bold sm:text-3xl lg:text-4xl"
-                >
-                    <span
-                        class="font-logo text-6xl font-thin uppercase tracking-wider xs:text-7xl sm:text-8xl lg:text-9xl"
-                        >Trasee</span
-                    >
-                    <br />
-                    pe
-                    <span class="font-title uppercase text-green-500">jos</span
-                    ><img
-                        class="absolute -top-[10%] -right-[52%] -z-10 hidden w-auto max-w-[380px] opacity-80 md:block lg:-top-[15%] lg:-right-[48%] lg:max-w-[420px] xl:-top-[35%] xl:-right-[65%] xl:max-w-[480px]"
-                        src="../assets/city-walking.png"
-                        alt=""
-                    />
-                </h1>
-                <p class="max-w-xs text-center font-logo lg:max-w-md">
-                    O selecție de trasee ce evidențiază obiective turistice
-                    esențiale istoriei și culturii județului, atât din reședința
-                    de județ cât și din orașul Bârlad.
-                </p>
+    <!-- DROPDOWN -->
+    <section
+      id="menu_wrap"
+      class="fixed top-0 bottom-0 -right-[100vw] z-40 flex w-screen flex-col gap-[15%] overflow-y-auto bg-zinc-900 pt-24 text-white transition-all duration-700"
+    >
+      <div class="z-20 flex items-center justify-center gap-4 px-1.5 py-2.5">
+        <button
+          type="button"
+          class="flex items-center justify-center gap-1.5 font-logo font-bold"
+        >
+          <img src="../assets/steag-ro.png" class="w-7" alt="steag-ro" />
+          <span class="">RO</span>
+        </button>
+        <button
+          type="button"
+          class="en-switch flex items-center justify-center gap-1.5 font-logo font-bold opacity-30"
+        >
+          <img src="../assets/steag-en.png" class="w-7" alt="steag-en" />
+          <span class="">EN</span>
+        </button>
+      </div>
+      <ul
+        class="flex flex-col items-start justify-center gap-10 pl-[10%] font-logo"
+      >
+        <li
+          class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
+        >
+          <a href="/obiective" class="">Obiective</a>
+        </li>
+        <li
+          id="trasee"
+          class="flex flex-col justify-start gap-5 text-3xl font-bold xxs:text-4xl xs:text-5xl md:text-6xl"
+        >
+          <button
+            type="button"
+            class="block w-full text-left font-logo font-bold text-white duration-500 hover:text-green-500"
+          >
+            Trasee
+          </button>
+          <ul id="trasee-options" class="ml-5 hidden flex-col gap-6">
+            <li>
+              <a
+                href="/trasee/bicicleta"
+                class="flex items-center gap-4 duration-500 hover:scale-110"
+              >
                 <img
-                    class="w-[85%] max-w-[15rem] sm:max-w-[18rem] md:hidden"
-                    src="../assets/city-walking.png"
-                    alt=""
+                  class="sm:w-18 w-14 xs:w-16"
+                  src="../assets/traseu_bici.png"
+                  alt="traseu bicicleta"
                 />
-            </section>
-            <!-- Vaslui -->
-            <section
-                class="relative flex w-full flex-col items-center justify-center gap-5 lg:flex-row lg:items-start lg:justify-between lg:gap-0"
-            >
-                <h2
-                    class="m-6 w-[80%] max-w-lg text-center font-title text-3xl text-green-500 xxs:text-4xl sm:text-5xl lg:order-1 lg:hidden"
-                >
-                    Orașul Vaslui
-                    <span class="font-cur font-normal text-black"
-                        >- primul traseu</span
-                    >
-                </h2>
-                <div
-                    class="top-0 flex h-[50vh] min-h-[300px] w-full items-center justify-center overflow-x-hidden lg:sticky lg:order-2 lg:h-screen lg:w-[40%]"
-                >
-                    <div
-                        id="map"
-                        class="flex h-full w-[90%] rounded-2xl bg-gray-200 lg:w-full lg:rounded-none"
-                    ></div>
-                </div>
-
-                <section
-                    class="flex w-[100%] flex-col items-center justify-center gap-[5rem] overflow-x-hidden py-16 px-8 text-center lg:order-1 lg:mt-36 lg:w-[60%]"
-                >
-                    <h2
-                        class="hidden max-w-2xl text-center font-title text-5xl text-green-500 lg:block 2xl:text-6xl"
-                    >
-                        Orașul Vaslui
-                        <span class="font-cur font-normal text-black"
-                            >- primul traseu</span
-                        >
-                    </h2>
-                    <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                        Un traseu ce te călăuzește de la sud la nord prin ușile
-                        istoriei județului, pe poteci îmbrățișate de frumusețea
-                        naturală și până la comoara vie a patrimoniului său,
-                        unde trecutul prinde viață și te întâmpină într-o lume
-                        vibrantă, plină de povești și artefacte fascinante.
-                    </p>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Ansamblul
-                            <span class="font-bold text-green-500"
-                                >Curților Domnești</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Este un sit istoric ce cuprinde atât o reconstituire
-                            arhitecturală a fostei Curți Domnești, ce a fost
-                            construită
-                            <span class="font-bold">în perioada 1435-1436</span
-                            >, cât și
-                            <span class="font-bold"
-                                >Biserica Tăierea Capului Sfântului Ioan
-                                Botezătorul</span
-                            >, ctitorită de însuși
-                            <span class="font-bold"
-                                >Ștefan cel Mare în anul 1490</span
-                            >. Este simbolul turistic al Municipiului Vaslui,
-                            fiind vizitat zilnic de zeci de persoane. Mai mult,
-                            întreaga zonă reprezintă un spațiu propice relaxării
-                            în armonia naturii, istoriei și a spiritualității.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide curtea_domneasca2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide curtea_domneasca3 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide curtea_domneasca4 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide curtea_domneasca5 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="m-6 flex w-full flex-col items-center justify-center gap-6"
-                    >
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            În drum spre Teatrul de Vară, la mai puțin de cinci
-                            minute de Curtea Domnească, pe partea dreaptă a
-                            drumului, vei putea observa Casa Mavrocordat, o
-                            clădire istorică ridicată între anii 1883 și 1892,
-                            ce a fost deținută de-a lungul timpului de diferite
-                            familii nobile, dar care acum găzduiește diverse
-                            cursuri la care copiii pot lua parte.
-                        </p>
-                        <div
-                            class="palatu_copiilor h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
-                        ></div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Teatrul
-                            <span class="font-bold text-green-500"
-                                >de Vara</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            O construcție impunătoare, din cadrul centrului
-                            orașului, amplasată chiar în inima parcului ce-i
-                            poartă numele, este gazda spectacolelor și serilor
-                            cinematografice desfășurate în oraș.
-                            <span class="font-bold"
-                                >Parcul Teatrului de Vară</span
-                            >
-                            , cunoscut și ca Parcul Tineretului, este locul din
-                            oraș care a fost martor aprinderii primei flăcări cu
-                            gaz metan. O bună parte din acest parc este formată
-                            dintr-o vastă zonă verde, presărată cu bănci ce
-                            îndeamnă spre o pauză de la stresul cotidian, dar
-                            este și locul unde se află
-                            <span class="font-bold">fântâna arteziană</span>,
-                            lucrare de peste 15 tone, realizată de
-                            <span class="font-bold"
-                                >arhitectul Nicolae Munteanu în anul 1975</span
-                            >, în același timp cu ridicarea parcului.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide teatru_vara1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide teatru_vara2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide teatru_vara3 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="m-6 flex w-full flex-col items-center justify-center gap-6"
-                    >
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Pe cealaltă parte a centrului, se află Piața Civică,
-                            în mijlocul căreia se distinge statuia domnitorului
-                            <span class="font-bold">Ștefan cel Mare</span>,
-                            ridicată în 1975 de Iftimie Bârleanu.
-                        </p>
-                        <div
-                            class="stefanutz h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
-                        ></div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Muzeul Județean
-                            <span class="font-bold text-green-500"
-                                >Ștefan cel Mare</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            <span class="font-bold">Muzeul Județean</span>
-                            cuprinde
-                            <span class="font-bold"
-                                >șapte secții din cinci domenii</span
-                            >, respectiv istorie, arheologie, etnografie,
-                            cultură și artă. Tot în acest muzeu poate fi
-                            observată o
-                            <span class="font-bold"
-                                >dioramă a bătăliei de la Vaslui</span
-                            >, care s-a distins de alte bătălii dintre creștini
-                            și turci prin amploarea forțelor desfășurate, prin
-                            armamentul folosit, prin tacticile de luptă aplicate
-                            și, mai ales, prin ingeniozitatea armatei
-                            voievodului
-                            <span class="font-bold"> Ștefan cel Mare</span>,
-                            domnitorul Țării Moldovei, de a învinge o oaste de
-                            aproximativ două ori mai mare decât a sa.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide muzeu_vaslui1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide muzeu_vaslui2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide muzeu_vaslui3 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide muzeu_vaslui4 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Parcul
-                            <span class="font-bold text-green-500">Secu</span> -
-                            Piața Independenței
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            În spatele Pieței Civice, se află
-                            <span class="font-bold">Piața Independenței</span> ,
-                            cunoscută și sub numele de Parcul Secu datorită
-                            vecinătății cu fostul sediu al securității. Zona
-                            este populată pe tot parcursul zilei, dimineața cei
-                            mai în vârstă se întâlnesc pentru a juca șah sau
-                            table, iar seara parcul este inundat de adolescenți
-                            dornici de socializare. Tot în Parcul Secu se pot
-                            observa atât
-                            <span class="font-bold"
-                                >cea mai mare tablă de șah din România</span
-                            >, a cărei piese de mărime umană sunt amplasate la
-                            ocazii speciale, cât și
-                            <span class="font-bold"
-                                >un monument ridicat eroilor căzuți în urma
-                                luptei pentru libertatea și independența
-                                patriei</span
-                            >.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide secu1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide secu2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide secu3 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="m-6 flex w-full flex-col items-center justify-center gap-6"
-                    >
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Înainte de a ajunge la ultima oprire a traseului,
-                            vei trece, urcând spre Parcul Copou, pe lângă
-                            Monumentul Eroilor căzuți în cel de-al Doilea Război
-                            Mondial.
-                        </p>
-                        <div
-                            class="monument h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
-                        ></div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Parcul
-                            <span class="font-bold text-green-500">Copou</span>
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            <span class="font-bold">Parcul Copou</span>,
-                            cunoscut ca fiind unul dintre cele mai frumoase
-                            parcuri din Moldova, îmbină în mod armonios elemente
-                            naturale și amenajări peisagistice pentru a crea un
-                            spațiu perfect pentru recreere și relaxare. Copacii
-                            înalți și deși ce se întind pe cele
-                            <span class="font-bold">peste 10 hectare</span>
-                            ale parcului constituie un loc de refugiu în timpul
-                            verilor aride. Mai mult, pe teritoriul parcului sunt
-                            amplasate un loc de joacă destinat copiilor și
-                            <span class="font-bold">Aleea scriitorilor</span>.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide copou1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide copou2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide copou3 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide copou4 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide copou5 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <!-- Barlad -->
-            <section
-                class="relative flex w-full flex-col items-center justify-center gap-5 lg:flex-row-reverse lg:items-start lg:justify-between lg:gap-0"
-            >
-                <h2
-                    class="m-6 w-[80%] max-w-lg text-center font-title text-3xl text-green-500 xxs:text-4xl sm:text-5xl lg:order-1 lg:hidden"
-                >
-                    Orasul Bârlad
-                    <span class="font-cur font-normal text-black"
-                        >- al doilea traseu</span
-                    >
-                </h2>
-                <div
-                    class="top-0 flex h-[50vh] min-h-[300px] w-full items-center justify-center overflow-x-hidden lg:sticky lg:order-2 lg:h-screen lg:w-[40%]"
-                >
-                    <div
-                        id="map2"
-                        class="flex h-full w-[90%] rounded-2xl bg-gray-200 lg:w-full lg:rounded-none"
-                    ></div>
-                </div>
-
-                <section
-                    class="flex w-[100%] flex-col items-center justify-center gap-[5rem] overflow-x-hidden py-16 px-8 text-center lg:order-1 lg:mt-36 lg:w-[60%]"
-                >
-                    <h2
-                        class="hidden max-w-2xl text-center font-title text-5xl text-green-500 lg:block 2xl:text-6xl"
-                    >
-                        Municipiul Bârlad
-                        <span class="font-cur font-normal text-black"
-                            >- al doilea traseu</span
-                        >
-                    </h2>
-                    <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                        Prin opoziție, traseul din Bârlad pleacă din nordul
-                        orașului și până în partea de sud-est, ajunge atât la
-                        rădăcinile îndepărtate ale unor importante personalități
-                        ale țării, cât și la granița dintre terestru și spațial.
-                    </p>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Grădina
-                            <span class="font-bold text-green-500">
-                                Zoologică</span
-                            >
-                            Bârlad
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Desi la început era formată dintr-un singur urs
-                            închis într-o cușcă,
-                            <span class="font-bold"
-                                >Grădina Zoologică Bârlad</span
-                            >, înființată
-                            <span class="font-bold">în anul 1959</span>, deține
-                            acum
-                            <span class="font-bold"
-                                >peste 540 de exemplare din 65 de specii</span
-                            >, fiind cea mai mare grădină de acest tip din
-                            Moldova.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide zoo1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide zoo2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide zoo3 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Grădina
-                            <span class="font-bold text-green-500"
-                                >Publică</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Este una dintre
-                            <span class="font-bold"
-                                >cele mai vechi și frumoase grădini de acest gen
-                                din Moldova</span
-                            >
-                            și are în spate o legendă ce merită cunoscută.
-                            <span class="font-cur font-bold"
-                                >Se spune că, Domnitorul Mihail Sturdza, care
-                                cunoscuse la Bârlad o „cucoană frumoasă”,
-                                întorcându-se de la Constantinopol, în anul
-                                1834, a poposit aici și a poruncit autorităților
-                                Ținutului Tutova să aducă pui de copaci din
-                                esența cea mai bună pentru a „înfiripa o
-                                grădină”, ca omagiu frumoaselor doamne
-                                bârlădene.</span
-                            >
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide gradina_publica1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide gradina_publica2 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="m-6 flex w-full flex-col items-center justify-center gap-6"
-                    >
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Tot în Bârlad poți observa și monumentul ridicat în
-                            memoria pictorului bârlădean Nicolae Tonitza, loc în
-                            care, în trecut, era așezată casa în care s-a născut
-                            și a copilărit.
-                        </p>
-                        <div
-                            class="pictor h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
-                        ></div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Centrul Cultural
-                            <span class="font-bold text-green-500">
-                                Mihai Eminescu</span
-                            >
-                            - Casa
-                            <span class="font-bold text-green-500">Rosie</span>
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            <span class="font-bold"
-                                >Centrul Cultural Mihai Eminescu</span
-                            >
-                            din Bârlad este un concept unic la nivel naţional ca
-                            patrimoniu şi prezentare. Este locul unde se găseşte
-                            capodopera eminesciană si care are o colectie care
-                            constă în
-                            <span class="font-bold"
-                                >peste 5.800 de volume din care 2.100 sunt cu şi
-                                despre Mihai Eminescu</span
-                            >
-                            . Lada în care poetul ţinea manuscrisele, numeroase
-                            discuri, casete audio şi CD-uri cu romanţe pe
-                            versurile lui Mihai Eminescu sau lucrări de artă
-                            realizate pentru a ilustra cât mai bine creația
-                            eminesciană, pot fi admirate în cadrul unei vizite.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide eminescu1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide eminescu2 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Muzeul
-                            <span class="font-bold text-green-500"
-                                >Vasile Pârvân</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            <span class="font-bold"
-                                >Muzeul "Vasile Pârvan"</span
-                            >
-                            din Bârlad este un muzeu de istorie și artă, fondat
-                            <span class="font-bold">în anul 1947</span> și este
-                            denumit în onoarea arheologului român
-                            <span class="font-bold">Vasile Pârvan</span>, care
-                            s-a născut în Bârlad. Muzeul găzduiește colecții
-                            variate care prezintă istoria și cultura orașului și
-                            a regiunii înconjurătoare. În cadrul lui puteți
-                            vizita
-                            <span class="font-bold"> 6 secțiuni</span>diferite:
-                            arheologie, artă, istorie, astronomie, Bârladul
-                            cultural și științe ale naturii. Printre exponatele
-                            sale se numără obiecte arheologice, documente
-                            istorice, artefacte etnografice, tablouri și
-                            sculpturi. Secțiunea de astrologie cuprinde un
-                            observator și singurul planetariu digital din
-                            județul Vaslui, care este și printre puținele
-                            planetații digitale din țară. Aceste două atracții
-                            pot fi vizitate în cadrul
-                            <span class="font-bold">
-                                Pavilionului Expozițional Marcel Guguianu</span
-                            >, împreună cu o serie de lucrări ale artistului
-                            bârlădean.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide parvan1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide parvan2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide parvan4 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide parvan5 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide parvan6 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Casa
-                            <span class="font-bold text-green-500">
-                                Sturza</span
-                            >
-                            - Muzeul
-                            <span class="font-bold text-green-500">
-                                Colecțiilor</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            <span class="font-bold">Casa Sturza</span> a fost
-                            construită în
-                            <span class="font-bold">anul 1812</span> de către
-                            familia nobilă
-                            <span class="font-bold"
-                                >Ștefan Sturdza Bârlădeanu și soția sa</span
-                            >. Aceasta
-                            <span class="font-bold"
-                                >face acum parte din secțiunile Muzeului Vasile
-                                Pârvan</span
-                            >, cunoscută în mod specific sub numele de
-                            <span class="font-bold">Muzeul Colecțiilor</span>,
-                            unde găzduiește numeroase colecții de artă. Casa
-                            Sturza este o cladire arhitecturală și istorică
-                            semnificativă, ilustrând măreția și eleganța
-                            perioadei în care a fost construită. În cadrul
-                            muzeului, vizitatorii pot explora o varietate de
-                            colecții de artă, oferind perspective asupra
-                            diferitelor stiluri artistice, perioade și medii.
-                            Aceasta oferă o călătorie captivantă prin lumea
-                            artei și servește drept mărturie a patrimoniului
-                            cultural al regiunii.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide sturza1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide sturza2 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Teatrul
-                            <span class="font-bold text-green-500"
-                                >Victor Ion Popa</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            Inaugurat încă din
-                            <span class="font-bold">anul 1955</span>,
-                            <span class="font-bold"
-                                >Teatrul Victor Ion Popa</span
-                            >
-                            este, de la debutul lui și până în ziua de astăzi,
-                            gazda numeroaselor piese de teatru constituite pe
-                            baza textelor din literatura dramatică română și
-                            universală.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide teatru_barlad1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide teatru_barlad2 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide teatru_barlad3 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
-                    >
-                        <img
-                            class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
-                            src="../assets/pin.png"
-                            alt="pin point"
-                        />
-                        <h3
-                            class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
-                        >
-                            Casa Memorială
-                            <span class="font-bold text-green-500"
-                                >Alexandru Ioan Cuza</span
-                            >
-                        </h3>
-                        <p class="w-[85%] max-w-2xl text-lg md:text-xl">
-                            În cartierul Podeni, pe strada Alexandru Ioan Cuza
-                            Nr. 95AS, se află casa în care domnitorul
-                            Principatelor Unite,
-                            <span class="font-bold">Alexandru Ioan Cuza</span>,
-                            s-a născut.
-                        </p>
-                        <div
-                            class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
-                        >
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper w-full">
-                                <!-- Slides -->
-                                <div
-                                    class="swiper-slide alexandru_cuza1 rounded-2xl"
-                                ></div>
-                                <div
-                                    class="swiper-slide alexandru_cuza2 rounded-2xl"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-        </main>
-        <footer
-            class="relative mt-44 flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold text-white xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
+                <p class="text-xl font-normal xs:text-2xl">cu bicicleta</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/trasee/masina"
+                class="flex items-center gap-4 duration-500 hover:scale-110"
+              >
+                <img
+                  class="sm:w-18 w-14 xs:w-16"
+                  src="../assets/traseu_car.png"
+                  alt="traseu masina"
+                />
+                <p class="text-xl font-normal xs:text-2xl">cu masina</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/trasee/pejos"
+                class="flex items-center gap-4 duration-500 hover:scale-110"
+              >
+                <img
+                  class="sm:w-18 w-14 xs:w-16"
+                  src="../assets/traseu_piciorus.png"
+                  alt="traseu pe jos"
+                />
+                <p class="text-xl font-normal xs:text-2xl">pe jos</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="text-3xl font-bold duration-500 hover:text-green-500 xxs:text-4xl xs:text-5xl md:text-6xl"
         >
-            <!-- METEO IN VASLUI + ORA IN RO -->
-            <div
-                id="weather"
-                class="meteo-ora absolute left-0 right-0 -top-24 mx-auto flex h-min w-[80%] max-w-md flex-col items-center justify-center gap-8 rounded-lg bg-white py-8 text-black shadow-2xl shadow-zinc-800 xxs:w-[70%] lg:-top-24 lg:left-auto lg:w-[55%] lg:max-w-none lg:items-start lg:gap-8 lg:rounded-r-none lg:rounded-l-lg lg:bg-white lg:py-10 lg:px-14"
+          <a href="/evenimente" class="">Evenimente</a>
+        </li>
+      </ul>
+    </section>
+
+    <main>
+      <section
+        class="flex min-h-screen flex-col items-center justify-center gap-6 overflow-x-hidden px-6 py-36"
+      >
+        <h1
+          class="relative text-center font-cur text-2xl font-bold sm:text-3xl lg:text-4xl"
+        >
+          <span
+            class="font-logo text-6xl font-thin uppercase tracking-wider xs:text-7xl sm:text-8xl lg:text-9xl"
+            >Trasee</span
+          >
+          <br />
+          pe
+          <span class="font-title uppercase text-green-500">jos</span
+          ><img
+            class="absolute -top-[10%] -right-[52%] -z-10 hidden w-auto max-w-[380px] opacity-80 md:block lg:-top-[15%] lg:-right-[48%] lg:max-w-[420px] xl:-top-[35%] xl:-right-[65%] xl:max-w-[480px]"
+            src="../assets/city-walking.png"
+            alt=""
+          />
+        </h1>
+        <p class="max-w-xs text-center font-logo lg:max-w-md">
+          O selecție de trasee ce evidențiază obiective turistice esențiale
+          istoriei și culturii județului, atât din reședința de județ cât și din
+          orașul Bârlad.
+        </p>
+        <img
+          class="w-[85%] max-w-[15rem] sm:max-w-[18rem] md:hidden"
+          src="../assets/city-walking.png"
+          alt=""
+        />
+      </section>
+      <!-- Vaslui -->
+      <section
+        class="relative flex w-full flex-col items-center justify-center gap-5 lg:flex-row lg:items-start lg:justify-between lg:gap-0"
+      >
+        <h2
+          class="m-6 w-[80%] max-w-lg text-center font-title text-3xl text-green-500 xxs:text-4xl sm:text-5xl lg:order-1 lg:hidden"
+        >
+          Orașul Vaslui
+          <span class="font-cur font-normal text-black">- primul traseu</span>
+        </h2>
+        <div
+          class="top-0 flex h-[50vh] min-h-[300px] w-full items-center justify-center overflow-x-hidden lg:sticky lg:order-2 lg:h-screen lg:w-[40%]"
+        >
+          <div
+            id="map"
+            class="flex h-full w-[90%] rounded-2xl bg-gray-200 lg:w-full lg:rounded-none"
+          ></div>
+        </div>
+
+        <section
+          class="flex w-[100%] flex-col items-center justify-center gap-[5rem] overflow-x-hidden py-16 px-8 text-center lg:order-1 lg:mt-36 lg:w-[60%]"
+        >
+          <h2
+            class="hidden max-w-2xl text-center font-title text-5xl text-green-500 lg:block 2xl:text-6xl"
+          >
+            Orașul Vaslui
+            <span class="font-cur font-normal text-black">- primul traseu</span>
+          </h2>
+          <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+            Un traseu ce te călăuzește de la sud la nord prin ușile istoriei
+            județului, pe poteci îmbrățișate de frumusețea naturală și până la
+            comoara vie a patrimoniului său, unde trecutul prinde viață și te
+            întâmpină într-o lume vibrantă, plină de povești și artefacte
+            fascinante.
+          </p>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
             >
-                <div class="basi-0 flex items-baseline justify-center gap-5">
-                    <span
-                        class="text-center font-title text-4xl font-light xxs:text-5xl lg:text-4xl 2xl:text-5xl"
-                        >Vaslui<span class="hidden lg:inline">,</span>
-                    </span>
-                    <div
-                        class="hidden text-xl xxs:text-2xl lg:block lg:text-xl 2xl:text-2xl 3xl:text-3xl"
-                    >
-                        <span class="ora text-green-500">3:56:56</span>
-                        <span class="pm-am uppercase"> PM</span>
-                    </div>
-                </div>
-                <div
-                    class="info-wrap basi-0 flex flex-col items-center justify-center gap-3 lg:items-start lg:gap-10"
-                >
-                    <div
-                        class="meteo order-2 flex flex-col gap-4 text-xl xxs:text-2xl lg:text-xl 2xl:text-2xl 3xl:text-3xl"
-                    >
-                        <div class="flex items-center justify-center gap-4">
-                            <img
-                                src="../assets/cloud.png"
-                                class="w-16 lg:w-20"
-                                id="vreme-icon"
-                                alt="iconita vreme"
-                            />
-                            <span class="">
-                                <span class="temp text-green-500">17</span>
-                                &degC
-                            </span>
-                        </div>
-                    </div>
-                    <div
-                        class="order-1 text-xl xxs:text-2xl lg:hidden lg:text-xl 2xl:text-2xl 3xl:text-3xl"
-                    >
-                        <span class="ora text-green-500">3:56:56</span>
-                        <span class="pm-am uppercase"> PM</span>
-                    </div>
-                </div>
-            </div>
-            <!-- DE CINE E FACUT SITE-UL -->
+              Ansamblul
+              <span class="font-bold text-green-500">Curților Domnești</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Este un sit istoric ce cuprinde atât o reconstituire arhitecturală
+              a fostei Curți Domnești, ce a fost construită
+              <span class="font-bold">în perioada 1435-1436</span>, cât și
+              <span class="font-bold"
+                >Biserica Tăierea Capului Sfântului Ioan Botezătorul</span
+              >, ctitorită de însuși
+              <span class="font-bold">Ștefan cel Mare în anul 1490</span>. Este
+              simbolul turistic al Municipiului Vaslui, fiind vizitat zilnic de
+              zeci de persoane. Mai mult, întreaga zonă reprezintă un spațiu
+              propice relaxării în armonia naturii, istoriei și a
+              spiritualității.
+            </p>
             <div
-                class="flex w-[80%] items-center justify-center lg:justify-start lg:self-start"
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
             >
-                <a
-                    href="/"
-                    class="flex items-center justify-center gap-1.5 xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
-                >
-                    <svg
-                        class="logo h-14 w-14 transition-colors duration-1000 md:h-20 md:w-20"
-                        viewBox="0 0 300 300"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <g
-                            transform="matrix(0.1, 0, 0, -0.1, 0, 300)"
-                            fill="#000000"
-                            stroke="none"
-                        >
-                            <path
-                                d="M1223 2943 c-15 -10 -23 -26 -23 -44 0 -15 -4 -31 -10 -34 -19 -12 -10 -37 30 -85 43 -51 51 -87 23 -96 -10 -3 -26 -10 -35 -15 -27 -14 -36 -11 -61 17 -33 38 -53 47 -79 33 -31 -16 -39 -30 -33 -56 4 -18 1 -23 -14 -23 -11 0 -22 -4 -26 -9 -12 -20 -63 -39 -74 -28 -9 9 -17 8 -33 -2 -20 -13 -24 -11 -48 18 -35 41 -68 40 -134 -4 -60 -39 -72 -42 -104 -19 -19 13 -26 13 -38 3 -13 -10 -17 -10 -24 1 -5 8 -18 11 -38 7 -20 -4 -34 -1 -42 8 -14 17 -38 9 -68 -23 -19 -19 -21 -27 -11 -39 7 -8 23 -40 35 -70 21 -52 22 -58 8 -86 -18 -34 -6 -77 22 -77 11 0 14 -5 10 -16 -3 -9 -6 -18 -6 -20 0 -3 -4 -2 -10 1 -6 4 -10 -11 -10 -36 0 -38 5 -48 45 -86 25 -23 62 -50 83 -59 59 -28 61 -30 50 -75 -9 -35 -8 -43 11 -63 16 -17 18 -25 9 -34 -7 -7 -18 -12 -24 -12 -18 0 -44 -40 -44 -66 0 -12 22 -45 51 -75 29 -30 60 -73 70 -96 10 -24 23 -43 29 -43 6 0 10 -10 8 -23 -3 -26 18 -59 50 -76 18 -9 22 -20 22 -55 0 -27 6 -48 16 -57 23 -19 45 -67 49 -108 4 -43 25 -85 54 -112 12 -11 21 -27 21 -37 0 -9 7 -26 15 -36 8 -11 15 -29 15 -41 0 -12 7 -30 15 -41 19 -25 19 -58 0 -74 -17 -14 -19 -32 -6 -58 33 -65 34 -71 19 -94 -22 -35 -30 -88 -16 -106 7 -8 18 -31 23 -51 6 -20 20 -41 34 -47 33 -17 38 -25 46 -72 5 -33 4 -42 -8 -42 -8 0 -25 -8 -37 -18 -20 -16 -21 -21 -10 -43 18 -34 49 -59 65 -53 22 9 48 -52 37 -84 -6 -18 -6 -33 1 -43 8 -13 6 -21 -6 -34 -20 -19 -20 -26 -8 -57 5 -13 12 -35 15 -50 3 -15 15 -30 26 -33 11 -3 20 -12 20 -20 0 -7 12 -23 27 -35 20 -15 34 -19 57 -14 47 10 63 34 71 104 5 47 13 68 29 81 l21 17 -22 24 c-13 13 -23 34 -23 47 0 12 -9 31 -20 43 -26 29 -27 68 -1 68 11 0 23 -5 26 -10 8 -13 58 -13 72 1 7 7 27 7 68 0 31 -6 62 -8 67 -5 28 17 98 -47 98 -90 0 -9 7 -16 16 -16 21 0 94 60 94 78 0 8 17 32 38 53 35 37 40 39 100 39 46 0 64 -4 68 -15 4 -8 17 -15 31 -15 15 0 34 -12 50 -30 17 -20 34 -30 53 -30 16 0 32 -4 35 -10 8 -13 112 -13 120 1 14 22 56 30 91 17 30 -11 35 -10 48 7 8 11 12 23 9 28 -3 5 2 16 11 26 15 16 15 20 0 50 -14 27 -14 37 -4 56 10 18 10 31 2 52 -6 15 -14 43 -17 60 -4 18 -12 36 -19 40 -19 12 -27 53 -11 53 15 0 55 51 55 70 0 6 -7 18 -15 26 -14 15 -10 48 6 39 11 -7 55 20 93 57 26 26 28 32 21 75 -4 27 -12 54 -17 61 -17 19 19 91 66 134 38 33 40 38 28 58 -11 19 -11 25 3 40 13 14 15 31 10 81 -9 98 -13 109 -35 109 -12 0 -24 10 -30 24 -5 13 -14 27 -19 31 -16 9 -13 41 5 56 10 9 14 22 10 41 -4 21 -1 30 14 38 19 10 19 12 4 35 -13 20 -14 30 -4 62 6 21 16 51 20 66 5 17 5 39 -1 55 -6 15 -8 41 -4 58 4 23 1 33 -10 37 -10 5 -12 12 -7 28 14 35 1 70 -30 88 -19 10 -27 22 -24 33 2 10 0 21 -5 24 -5 3 -9 12 -9 20 0 8 -11 32 -25 52 -14 20 -25 49 -25 65 0 15 -6 40 -14 55 -15 28 -77 82 -95 82 -15 0 -41 42 -41 65 0 30 -43 68 -68 61 -11 -4 -24 0 -31 8 -10 11 -19 13 -38 5 -18 -6 -30 -6 -39 2 -11 9 -16 5 -25 -20 -13 -37 -32 -40 -53 -9 -9 12 -16 19 -16 15 0 -4 -11 0 -25 9 -14 9 -34 14 -45 11 -10 -3 -24 1 -31 9 -6 8 -20 14 -30 14 -24 0 -25 -31 -3 -66 14 -20 15 -30 6 -49 -13 -29 -31 -31 -73 -9 -25 12 -30 20 -27 46 2 19 -2 33 -12 38 -51 26 -70 31 -88 26 -16 -6 -20 -1 -24 26 -3 17 -1 48 3 68 5 20 7 58 6 86 -2 47 -3 49 -32 52 -16 1 -40 8 -52 14 -41 20 -51 6 -48 -66 4 -70 -6 -91 -26 -54 -24 46 -73 98 -91 98 -10 0 -18 4 -18 8 0 18 -47 62 -78 73 -17 6 -32 17 -32 24 0 12 -22 26 -38 24 -4 0 -17 -7 -29 -16z m145 -116 c8 -16 25 -33 38 -39 13 -6 24 -17 24 -25 0 -7 4 -13 9 -13 5 0 19 -15 30 -33 11 -19 33 -39 48 -46 23 -11 29 -10 40 5 7 10 13 37 13 60 0 54 8 74 29 74 29 0 43 -51 30 -106 -13 -57 -12 -115 2 -129 6 -5 34 -10 62 -10 l52 0 3 -37 c3 -30 11 -43 45 -68 40 -30 77 -39 77 -20 0 5 11 12 25 16 28 7 38 30 33 77 -2 27 1 33 19 35 14 2 26 -4 33 -17 10 -20 59 -51 79 -51 5 0 23 12 41 26 l31 26 54 -17 c45 -14 55 -21 55 -39 0 -22 53 -86 71 -86 14 0 50 -40 45 -49 -3 -5 3 -16 13 -25 12 -11 16 -25 13 -41 -3 -18 6 -38 32 -72 39 -50 43 -62 25 -80 -17 -17 14 -61 47 -69 23 -6 25 -10 20 -37 -4 -22 -1 -33 11 -43 15 -10 16 -17 7 -43 -10 -26 -9 -32 12 -52 22 -20 22 -24 9 -39 -8 -9 -15 -26 -15 -38 0 -12 -9 -31 -20 -42 -17 -17 -18 -24 -8 -45 9 -21 8 -28 -7 -46 -15 -16 -17 -24 -8 -39 9 -13 9 -28 2 -55 -12 -42 -6 -65 16 -65 10 0 15 -10 15 -30 0 -25 4 -30 25 -30 26 0 35 -26 15 -46 -12 -12 -3 -44 11 -44 5 0 9 -11 9 -25 0 -18 -7 -28 -25 -35 -18 -7 -25 -17 -25 -37 0 -15 -11 -38 -24 -52 -46 -50 -65 -177 -33 -218 19 -24 19 -24 -4 -41 -32 -23 -76 -42 -83 -35 -2 3 -12 -11 -20 -32 -11 -26 -13 -42 -6 -55 16 -30 12 -39 -27 -57 -21 -10 -39 -18 -41 -19 -2 -1 4 -16 13 -34 9 -17 15 -39 13 -49 -2 -10 8 -27 20 -38 22 -17 24 -26 25 -128 l2 -110 -42 3 c-23 2 -57 -3 -75 -11 -58 -26 -89 -29 -109 -11 -10 9 -25 14 -33 11 -8 -3 -26 7 -43 23 -15 16 -36 30 -46 30 -10 0 -27 9 -39 20 -17 15 -36 20 -80 20 -50 0 -58 3 -58 19 0 29 -28 34 -45 7 -9 -13 -15 -28 -14 -32 4 -19 -21 -64 -45 -79 -13 -9 -26 -25 -29 -35 -3 -13 -14 -20 -30 -20 -20 0 -27 6 -32 30 -8 37 -12 39 -88 52 -81 13 -153 16 -200 6 -28 -6 -44 -4 -62 8 -13 9 -29 13 -35 9 -15 -9 0 -115 21 -145 12 -19 15 -30 8 -43 -12 -20 -4 -37 17 -37 20 0 18 -10 -7 -37 -18 -18 -20 -25 -10 -37 16 -19 -21 -96 -47 -96 -21 0 -72 62 -72 87 0 11 -5 24 -11 30 -8 8 -7 17 3 32 11 17 11 25 0 42 -10 15 -11 24 -3 32 36 36 -11 139 -68 150 -37 8 -39 19 -8 32 19 9 22 19 25 77 3 65 2 67 -30 91 -21 17 -41 47 -57 86 -22 57 -23 62 -8 79 18 20 23 67 8 76 -17 11 -20 77 -4 102 14 22 14 26 -1 49 -9 13 -16 42 -16 63 0 44 -24 96 -72 154 -18 23 -34 45 -34 49 -1 5 -3 12 -4 17 -1 4 -1 15 0 25 1 10 -12 40 -29 67 -21 33 -31 63 -31 89 0 38 -35 91 -60 91 -5 0 -10 13 -10 29 0 16 -7 34 -15 41 -8 7 -15 18 -15 24 0 18 -58 98 -95 133 -19 18 -35 36 -35 42 0 5 16 18 35 30 38 22 46 54 23 91 -11 16 -9 26 6 54 10 19 16 42 13 50 -4 9 -34 29 -69 46 -35 17 -83 48 -108 70 l-45 38 21 24 c12 13 24 28 28 35 9 16 -4 43 -20 43 -21 0 -27 25 -14 50 18 34 20 58 4 71 -8 6 -14 24 -14 40 0 16 -9 38 -21 50 -17 17 -19 23 -8 30 9 6 18 3 25 -6 6 -8 22 -15 35 -15 13 0 60 -2 103 -5 56 -4 84 -1 95 8 9 7 31 20 49 31 29 16 35 16 50 3 58 -50 169 -61 213 -21 12 10 31 18 43 16 33 -4 52 22 37 54 -16 35 -14 44 9 44 16 0 20 -7 20 -34 0 -19 5 -38 12 -42 21 -13 73 -11 98 5 14 9 34 20 45 26 33 17 49 61 35 96 -7 16 -16 29 -20 29 -4 0 -11 11 -14 24 -3 14 -13 32 -22 41 -13 12 -14 19 -5 28 6 6 11 19 11 28 0 27 101 -28 118 -64z"
-                                style="fill: rgb(255, 255, 255)"
-                            />
-                        </g>
-                    </svg>
-                    <span><span class="text-green-500">Visit</span>VASLUI</span>
-                </a>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide curtea_domneasca2 rounded-2xl"></div>
+                <div class="swiper-slide curtea_domneasca3 rounded-2xl"></div>
+                <div class="swiper-slide curtea_domneasca4 rounded-2xl"></div>
+                <div class="swiper-slide curtea_domneasca5 rounded-2xl"></div>
+              </div>
             </div>
+          </div>
+          <div
+            class="m-6 flex w-full flex-col items-center justify-center gap-6"
+          >
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              În drum spre Teatrul de Vară, la mai puțin de cinci minute de
+              Curtea Domnească, pe partea dreaptă a drumului, vei putea observa
+              Casa Mavrocordat, o clădire istorică ridicată între anii 1883 și
+              1892, ce a fost deținută de-a lungul timpului de diferite familii
+              nobile, dar care acum găzduiește diverse cursuri la care copiii
+              pot lua parte.
+            </p>
             <div
-                class="flex w-full flex-col items-center justify-center gap-8 xs:flex-row xs:justify-between"
+              class="palatu_copiilor h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
+            ></div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
             >
-                <div
-                    class="flex flex-col items-center justify-center font-normal xs:items-start lg:ml-4"
-                >
-                    <div class="text-xl font-bold text-green-500">By</div>
-                    <div>POPICA BEATRICE</div>
-                    <div>MARIAN DAVID</div>
-                </div>
-                <div id="go_up" class="mr-4">
-                    <a href="#top" class="flex items-center justify-center">
-                        <span class="relative text-green-500 md:text-lg"
-                            >Sus</span
-                        >
-                        <img
-                            class="w-10"
-                            src="../assets/arrow-top.png"
-                            alt="sageata"
-                        />
-                    </a>
-                </div>
+              Teatrul
+              <span class="font-bold text-green-500">de Vara</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              O construcție impunătoare, din cadrul centrului orașului,
+              amplasată chiar în inima parcului ce-i poartă numele, este gazda
+              spectacolelor și serilor cinematografice desfășurate în oraș.
+              <span class="font-bold">Parcul Teatrului de Vară</span>
+              , cunoscut și ca Parcul Tineretului, este locul din oraș care a
+              fost martor aprinderii primei flăcări cu gaz metan. O bună parte
+              din acest parc este formată dintr-o vastă zonă verde, presărată cu
+              bănci ce îndeamnă spre o pauză de la stresul cotidian, dar este și
+              locul unde se află
+              <span class="font-bold">fântâna arteziană</span>, lucrare de peste
+              15 tone, realizată de
+              <span class="font-bold"
+                >arhitectul Nicolae Munteanu în anul 1975</span
+              >, în același timp cu ridicarea parcului.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide teatru_vara1 rounded-2xl"></div>
+                <div class="swiper-slide teatru_vara2 rounded-2xl"></div>
+                <div class="swiper-slide teatru_vara3 rounded-2xl"></div>
+              </div>
             </div>
-            <!-- BACK TO TOP -->
-        </footer>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk4l13atzv3uO55ilho7vzc3XYb1Cpgcc&libraries=places"></script>
-    </body>
+          </div>
+          <div
+            class="m-6 flex w-full flex-col items-center justify-center gap-6"
+          >
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Pe cealaltă parte a centrului, se află Piața Civică, în mijlocul
+              căreia se distinge statuia domnitorului
+              <span class="font-bold">Ștefan cel Mare</span>, ridicată în 1975
+              de Iftimie Bârleanu.
+            </p>
+            <div
+              class="stefanutz h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
+            ></div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Muzeul Județean
+              <span class="font-bold text-green-500">Ștefan cel Mare</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              <span class="font-bold">Muzeul Județean</span>
+              cuprinde
+              <span class="font-bold">șapte secții din cinci domenii</span>,
+              respectiv istorie, arheologie, etnografie, cultură și artă. Tot în
+              acest muzeu poate fi observată o
+              <span class="font-bold">dioramă a bătăliei de la Vaslui</span>,
+              care s-a distins de alte bătălii dintre creștini și turci prin
+              amploarea forțelor desfășurate, prin armamentul folosit, prin
+              tacticile de luptă aplicate și, mai ales, prin ingeniozitatea
+              armatei voievodului
+              <span class="font-bold"> Ștefan cel Mare</span>, domnitorul Țării
+              Moldovei, de a învinge o oaste de aproximativ două ori mai mare
+              decât a sa.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide muzeu_vaslui1 rounded-2xl"></div>
+                <div class="swiper-slide muzeu_vaslui2 rounded-2xl"></div>
+                <div class="swiper-slide muzeu_vaslui3 rounded-2xl"></div>
+                <div class="swiper-slide muzeu_vaslui4 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Parcul
+              <span class="font-bold text-green-500">Secu</span> - Piața
+              Independenței
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              În spatele Pieței Civice, se află
+              <span class="font-bold">Piața Independenței</span> , cunoscută și
+              sub numele de Parcul Secu datorită vecinătății cu fostul sediu al
+              securității. Zona este populată pe tot parcursul zilei, dimineața
+              cei mai în vârstă se întâlnesc pentru a juca șah sau table, iar
+              seara parcul este inundat de adolescenți dornici de socializare.
+              Tot în Parcul Secu se pot observa atât
+              <span class="font-bold"
+                >cea mai mare tablă de șah din România</span
+              >, a cărei piese de mărime umană sunt amplasate la ocazii
+              speciale, cât și
+              <span class="font-bold"
+                >un monument ridicat eroilor căzuți în urma luptei pentru
+                libertatea și independența patriei</span
+              >.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide secu1 rounded-2xl"></div>
+                <div class="swiper-slide secu2 rounded-2xl"></div>
+                <div class="swiper-slide secu3 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-6 flex w-full flex-col items-center justify-center gap-6"
+          >
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Înainte de a ajunge la ultima oprire a traseului, vei trece,
+              urcând spre Parcul Copou, pe lângă Monumentul Eroilor căzuți în
+              cel de-al Doilea Război Mondial.
+            </p>
+            <div
+              class="monument h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
+            ></div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Parcul
+              <span class="font-bold text-green-500">Copou</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              <span class="font-bold">Parcul Copou</span>, cunoscut ca fiind
+              unul dintre cele mai frumoase parcuri din Moldova, îmbină în mod
+              armonios elemente naturale și amenajări peisagistice pentru a crea
+              un spațiu perfect pentru recreere și relaxare. Copacii înalți și
+              deși ce se întind pe cele
+              <span class="font-bold">peste 10 hectare</span>
+              ale parcului constituie un loc de refugiu în timpul verilor aride.
+              Mai mult, pe teritoriul parcului sunt amplasate un loc de joacă
+              destinat copiilor și
+              <span class="font-bold">Aleea scriitorilor</span>.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide copou1 rounded-2xl"></div>
+                <div class="swiper-slide copou2 rounded-2xl"></div>
+                <div class="swiper-slide copou3 rounded-2xl"></div>
+                <div class="swiper-slide copou4 rounded-2xl"></div>
+                <div class="swiper-slide copou5 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Barlad -->
+      <section
+        class="relative flex w-full flex-col items-center justify-center gap-5 lg:flex-row-reverse lg:items-start lg:justify-between lg:gap-0"
+      >
+        <h2
+          class="m-6 w-[80%] max-w-lg text-center font-title text-3xl text-green-500 xxs:text-4xl sm:text-5xl lg:order-1 lg:hidden"
+        >
+          Orasul Bârlad
+          <span class="font-cur font-normal text-black"
+            >- al doilea traseu</span
+          >
+        </h2>
+        <div
+          class="top-0 flex h-[50vh] min-h-[300px] w-full items-center justify-center overflow-x-hidden lg:sticky lg:order-2 lg:h-screen lg:w-[40%]"
+        >
+          <div
+            id="map2"
+            class="flex h-full w-[90%] rounded-2xl bg-gray-200 lg:w-full lg:rounded-none"
+          ></div>
+        </div>
+
+        <section
+          class="flex w-[100%] flex-col items-center justify-center gap-[5rem] overflow-x-hidden py-16 px-8 text-center lg:order-1 lg:mt-36 lg:w-[60%]"
+        >
+          <h2
+            class="hidden max-w-2xl text-center font-title text-5xl text-green-500 lg:block 2xl:text-6xl"
+          >
+            Municipiul Bârlad
+            <span class="font-cur font-normal text-black"
+              >- al doilea traseu</span
+            >
+          </h2>
+          <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+            Prin opoziție, traseul din Bârlad pleacă din nordul orașului și până
+            în partea de sud-est, ajunge atât la rădăcinile îndepărtate ale unor
+            importante personalități ale țării, cât și la granița dintre
+            terestru și spațial.
+          </p>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Grădina
+              <span class="font-bold text-green-500"> Zoologică</span>
+              Bârlad
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Desi la început era formată dintr-un singur urs închis într-o
+              cușcă,
+              <span class="font-bold">Grădina Zoologică Bârlad</span>,
+              înființată <span class="font-bold">în anul 1959</span>, deține
+              acum
+              <span class="font-bold"
+                >peste 540 de exemplare din 65 de specii</span
+              >, fiind cea mai mare grădină de acest tip din Moldova.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide zoo1 rounded-2xl"></div>
+                <div class="swiper-slide zoo2 rounded-2xl"></div>
+                <div class="swiper-slide zoo3 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Grădina
+              <span class="font-bold text-green-500">Publică</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Este una dintre
+              <span class="font-bold"
+                >cele mai vechi și frumoase grădini de acest gen din
+                Moldova</span
+              >
+              și are în spate o legendă ce merită cunoscută.
+              <span class="font-cur font-bold"
+                >Se spune că, Domnitorul Mihail Sturdza, care cunoscuse la
+                Bârlad o „cucoană frumoasă”, întorcându-se de la Constantinopol,
+                în anul 1834, a poposit aici și a poruncit autorităților
+                Ținutului Tutova să aducă pui de copaci din esența cea mai bună
+                pentru a „înfiripa o grădină”, ca omagiu frumoaselor doamne
+                bârlădene.</span
+              >
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide gradina_publica1 rounded-2xl"></div>
+                <div class="swiper-slide gradina_publica2 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-6 flex w-full flex-col items-center justify-center gap-6"
+          >
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Tot în Bârlad poți observa și monumentul ridicat în memoria
+              pictorului bârlădean Nicolae Tonitza, loc în care, în trecut, era
+              așezată casa în care s-a născut și a copilărit.
+            </p>
+            <div
+              class="pictor h-[250px] w-full max-w-md rounded-2xl xs:h-[320px] lg:max-w-[32rem]"
+            ></div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Centrul Cultural
+              <span class="font-bold text-green-500"> Mihai Eminescu</span>
+              - Casa
+              <span class="font-bold text-green-500">Rosie</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              <span class="font-bold">Centrul Cultural Mihai Eminescu</span>
+              din Bârlad este un concept unic la nivel naţional ca patrimoniu şi
+              prezentare. Este locul unde se găseşte capodopera eminesciană si
+              care are o colectie care constă în
+              <span class="font-bold"
+                >peste 5.800 de volume din care 2.100 sunt cu şi despre Mihai
+                Eminescu</span
+              >
+              . Lada în care poetul ţinea manuscrisele, numeroase discuri,
+              casete audio şi CD-uri cu romanţe pe versurile lui Mihai Eminescu
+              sau lucrări de artă realizate pentru a ilustra cât mai bine
+              creația eminesciană, pot fi admirate în cadrul unei vizite.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide eminescu1 rounded-2xl"></div>
+                <div class="swiper-slide eminescu2 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Muzeul
+              <span class="font-bold text-green-500">Vasile Pârvân</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              <span class="font-bold">Muzeul "Vasile Pârvan"</span>
+              din Bârlad este un muzeu de istorie și artă, fondat
+              <span class="font-bold">în anul 1947</span> și este denumit în
+              onoarea arheologului român
+              <span class="font-bold">Vasile Pârvan</span>, care s-a născut în
+              Bârlad. Muzeul găzduiește colecții variate care prezintă istoria
+              și cultura orașului și a regiunii înconjurătoare. În cadrul lui
+              puteți vizita <span class="font-bold"> 6 secțiuni</span>diferite:
+              arheologie, artă, istorie, astronomie, Bârladul cultural și
+              științe ale naturii. Printre exponatele sale se numără obiecte
+              arheologice, documente istorice, artefacte etnografice, tablouri
+              și sculpturi. Secțiunea de astrologie cuprinde un observator și
+              singurul planetariu digital din județul Vaslui, care este și
+              printre puținele planetații digitale din țară. Aceste două
+              atracții pot fi vizitate în cadrul
+              <span class="font-bold">
+                Pavilionului Expozițional Marcel Guguianu</span
+              >, împreună cu o serie de lucrări ale artistului bârlădean.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide parvan1 rounded-2xl"></div>
+                <div class="swiper-slide parvan2 rounded-2xl"></div>
+                <div class="swiper-slide parvan4 rounded-2xl"></div>
+                <div class="swiper-slide parvan5 rounded-2xl"></div>
+                <div class="swiper-slide parvan6 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Casa
+              <span class="font-bold text-green-500"> Sturza</span>
+              - Muzeul
+              <span class="font-bold text-green-500"> Colecțiilor</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              <span class="font-bold">Casa Sturza</span> a fost construită în
+              <span class="font-bold">anul 1812</span> de către familia nobilă
+              <span class="font-bold"
+                >Ștefan Sturdza Bârlădeanu și soția sa</span
+              >. Aceasta
+              <span class="font-bold"
+                >face acum parte din secțiunile Muzeului Vasile Pârvan</span
+              >, cunoscută în mod specific sub numele de
+              <span class="font-bold">Muzeul Colecțiilor</span>, unde găzduiește
+              numeroase colecții de artă. Casa Sturza este o cladire
+              arhitecturală și istorică semnificativă, ilustrând măreția și
+              eleganța perioadei în care a fost construită. În cadrul muzeului,
+              vizitatorii pot explora o varietate de colecții de artă, oferind
+              perspective asupra diferitelor stiluri artistice, perioade și
+              medii. Aceasta oferă o călătorie captivantă prin lumea artei și
+              servește drept mărturie a patrimoniului cultural al regiunii.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide sturza1 rounded-2xl"></div>
+                <div class="swiper-slide sturza2 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Teatrul
+              <span class="font-bold text-green-500">Victor Ion Popa</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              Inaugurat încă din
+              <span class="font-bold">anul 1955</span>,
+              <span class="font-bold">Teatrul Victor Ion Popa</span>
+              este, de la debutul lui și până în ziua de astăzi, gazda
+              numeroaselor piese de teatru constituite pe baza textelor din
+              literatura dramatică română și universală.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide teatru_barlad1 rounded-2xl"></div>
+                <div class="swiper-slide teatru_barlad2 rounded-2xl"></div>
+                <div class="swiper-slide teatru_barlad3 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-10 rounded-xl py-16 px-4 shadow-2xl lg:w-[95%] lg:max-w-3xl xl:gap-14"
+          >
+            <img
+              class="absolute left-6 -top-5 h-10 w-10 lg:h-12 lg:w-12"
+              src="../assets/pin.png"
+              alt="pin point"
+            />
+            <h3
+              class="w-[80%] max-w-xl font-title text-2xl xxs:text-3xl sm:text-4xl"
+            >
+              Casa Memorială
+              <span class="font-bold text-green-500">Alexandru Ioan Cuza</span>
+            </h3>
+            <p class="w-[85%] max-w-2xl text-lg md:text-xl">
+              În cartierul Podeni, pe strada Alexandru Ioan Cuza Nr. 95AS, se
+              află casa în care domnitorul Principatelor Unite,
+              <span class="font-bold">Alexandru Ioan Cuza</span>, s-a născut.
+            </p>
+            <div
+              class="swiper-fastaci relative h-[250px] w-[85%] max-w-md xs:h-[320px] md:h-[350px] lg:max-w-[32rem] xl:h-[380px] xl:max-w-[35rem] 2xl:max-w-[37rem]"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper w-full">
+                <!-- Slides -->
+                <div class="swiper-slide alexandru_cuza1 rounded-2xl"></div>
+                <div class="swiper-slide alexandru_cuza2 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer
+      class="relative mt-44 flex h-[450px] flex-col items-center justify-end gap-4 border-t-2 bg-zinc-900 p-8 font-logo font-bold text-white xs:h-[400px] xs:gap-8 sm:p-12 md:h-[450px] lg:h-[300px] lg:p-6"
+    >
+      <!-- METEO IN VASLUI + ORA IN RO -->
+      <div
+        id="weather"
+        class="meteo-ora absolute left-0 right-0 -top-24 mx-auto flex h-min w-[80%] max-w-md flex-col items-center justify-center gap-8 rounded-lg bg-white py-8 text-black shadow-2xl shadow-zinc-800 xxs:w-[70%] lg:-top-24 lg:left-auto lg:w-[55%] lg:max-w-none lg:items-start lg:gap-8 lg:rounded-r-none lg:rounded-l-lg lg:bg-white lg:py-10 lg:px-14"
+      >
+        <div class="basi-0 flex items-baseline justify-center gap-5">
+          <span
+            class="text-center font-title text-4xl font-light xxs:text-5xl lg:text-4xl 2xl:text-5xl"
+            >Vaslui<span class="hidden lg:inline">,</span>
+          </span>
+          <div
+            class="hidden text-xl xxs:text-2xl lg:block lg:text-2xl 3xl:text-3xl"
+          >
+            <span class="ora text-green-500">3:56:56</span>
+            <span class="pm-am uppercase"> PM</span>
+          </div>
+        </div>
+        <div
+          class="info-wrap basi-0 flex flex-col items-center justify-center gap-3 lg:items-start lg:gap-10"
+        >
+          <div
+            class="meteo order-2 flex flex-col gap-4 text-xl xxs:text-2xl lg:text-2xl 3xl:text-3xl"
+          >
+            <div class="flex items-center justify-center gap-4">
+              <img
+                src="../assets/cloud.png"
+                class="w-16 lg:w-20"
+                id="vreme-icon"
+                alt="iconita vreme"
+              />
+              <span class="">
+                <span class="temp text-green-500">17</span>
+                &degC
+              </span>
+            </div>
+          </div>
+          <div
+            class="order-1 text-xl xxs:text-2xl lg:hidden lg:text-2xl 3xl:text-3xl"
+          >
+            <span class="ora text-green-500">3:56:56</span>
+            <span class="pm-am uppercase"> PM</span>
+          </div>
+        </div>
+      </div>
+      <!-- DE CINE E FACUT SITE-UL -->
+      <div
+        class="flex w-[80%] items-center justify-center lg:justify-start lg:self-start"
+      >
+        <a
+          href="/"
+          class="flex items-center justify-center gap-1.5 xs:text-lg sm:text-xl xl:text-2xl 2xl:text-3xl"
+        >
+          <svg
+            class="logo h-14 w-14 transition-colors duration-1000 md:h-20 md:w-20"
+            viewBox="0 0 300 300"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              transform="matrix(0.1, 0, 0, -0.1, 0, 300)"
+              fill="#000000"
+              stroke="none"
+            >
+              <path
+                d="M1223 2943 c-15 -10 -23 -26 -23 -44 0 -15 -4 -31 -10 -34 -19 -12 -10 -37 30 -85 43 -51 51 -87 23 -96 -10 -3 -26 -10 -35 -15 -27 -14 -36 -11 -61 17 -33 38 -53 47 -79 33 -31 -16 -39 -30 -33 -56 4 -18 1 -23 -14 -23 -11 0 -22 -4 -26 -9 -12 -20 -63 -39 -74 -28 -9 9 -17 8 -33 -2 -20 -13 -24 -11 -48 18 -35 41 -68 40 -134 -4 -60 -39 -72 -42 -104 -19 -19 13 -26 13 -38 3 -13 -10 -17 -10 -24 1 -5 8 -18 11 -38 7 -20 -4 -34 -1 -42 8 -14 17 -38 9 -68 -23 -19 -19 -21 -27 -11 -39 7 -8 23 -40 35 -70 21 -52 22 -58 8 -86 -18 -34 -6 -77 22 -77 11 0 14 -5 10 -16 -3 -9 -6 -18 -6 -20 0 -3 -4 -2 -10 1 -6 4 -10 -11 -10 -36 0 -38 5 -48 45 -86 25 -23 62 -50 83 -59 59 -28 61 -30 50 -75 -9 -35 -8 -43 11 -63 16 -17 18 -25 9 -34 -7 -7 -18 -12 -24 -12 -18 0 -44 -40 -44 -66 0 -12 22 -45 51 -75 29 -30 60 -73 70 -96 10 -24 23 -43 29 -43 6 0 10 -10 8 -23 -3 -26 18 -59 50 -76 18 -9 22 -20 22 -55 0 -27 6 -48 16 -57 23 -19 45 -67 49 -108 4 -43 25 -85 54 -112 12 -11 21 -27 21 -37 0 -9 7 -26 15 -36 8 -11 15 -29 15 -41 0 -12 7 -30 15 -41 19 -25 19 -58 0 -74 -17 -14 -19 -32 -6 -58 33 -65 34 -71 19 -94 -22 -35 -30 -88 -16 -106 7 -8 18 -31 23 -51 6 -20 20 -41 34 -47 33 -17 38 -25 46 -72 5 -33 4 -42 -8 -42 -8 0 -25 -8 -37 -18 -20 -16 -21 -21 -10 -43 18 -34 49 -59 65 -53 22 9 48 -52 37 -84 -6 -18 -6 -33 1 -43 8 -13 6 -21 -6 -34 -20 -19 -20 -26 -8 -57 5 -13 12 -35 15 -50 3 -15 15 -30 26 -33 11 -3 20 -12 20 -20 0 -7 12 -23 27 -35 20 -15 34 -19 57 -14 47 10 63 34 71 104 5 47 13 68 29 81 l21 17 -22 24 c-13 13 -23 34 -23 47 0 12 -9 31 -20 43 -26 29 -27 68 -1 68 11 0 23 -5 26 -10 8 -13 58 -13 72 1 7 7 27 7 68 0 31 -6 62 -8 67 -5 28 17 98 -47 98 -90 0 -9 7 -16 16 -16 21 0 94 60 94 78 0 8 17 32 38 53 35 37 40 39 100 39 46 0 64 -4 68 -15 4 -8 17 -15 31 -15 15 0 34 -12 50 -30 17 -20 34 -30 53 -30 16 0 32 -4 35 -10 8 -13 112 -13 120 1 14 22 56 30 91 17 30 -11 35 -10 48 7 8 11 12 23 9 28 -3 5 2 16 11 26 15 16 15 20 0 50 -14 27 -14 37 -4 56 10 18 10 31 2 52 -6 15 -14 43 -17 60 -4 18 -12 36 -19 40 -19 12 -27 53 -11 53 15 0 55 51 55 70 0 6 -7 18 -15 26 -14 15 -10 48 6 39 11 -7 55 20 93 57 26 26 28 32 21 75 -4 27 -12 54 -17 61 -17 19 19 91 66 134 38 33 40 38 28 58 -11 19 -11 25 3 40 13 14 15 31 10 81 -9 98 -13 109 -35 109 -12 0 -24 10 -30 24 -5 13 -14 27 -19 31 -16 9 -13 41 5 56 10 9 14 22 10 41 -4 21 -1 30 14 38 19 10 19 12 4 35 -13 20 -14 30 -4 62 6 21 16 51 20 66 5 17 5 39 -1 55 -6 15 -8 41 -4 58 4 23 1 33 -10 37 -10 5 -12 12 -7 28 14 35 1 70 -30 88 -19 10 -27 22 -24 33 2 10 0 21 -5 24 -5 3 -9 12 -9 20 0 8 -11 32 -25 52 -14 20 -25 49 -25 65 0 15 -6 40 -14 55 -15 28 -77 82 -95 82 -15 0 -41 42 -41 65 0 30 -43 68 -68 61 -11 -4 -24 0 -31 8 -10 11 -19 13 -38 5 -18 -6 -30 -6 -39 2 -11 9 -16 5 -25 -20 -13 -37 -32 -40 -53 -9 -9 12 -16 19 -16 15 0 -4 -11 0 -25 9 -14 9 -34 14 -45 11 -10 -3 -24 1 -31 9 -6 8 -20 14 -30 14 -24 0 -25 -31 -3 -66 14 -20 15 -30 6 -49 -13 -29 -31 -31 -73 -9 -25 12 -30 20 -27 46 2 19 -2 33 -12 38 -51 26 -70 31 -88 26 -16 -6 -20 -1 -24 26 -3 17 -1 48 3 68 5 20 7 58 6 86 -2 47 -3 49 -32 52 -16 1 -40 8 -52 14 -41 20 -51 6 -48 -66 4 -70 -6 -91 -26 -54 -24 46 -73 98 -91 98 -10 0 -18 4 -18 8 0 18 -47 62 -78 73 -17 6 -32 17 -32 24 0 12 -22 26 -38 24 -4 0 -17 -7 -29 -16z m145 -116 c8 -16 25 -33 38 -39 13 -6 24 -17 24 -25 0 -7 4 -13 9 -13 5 0 19 -15 30 -33 11 -19 33 -39 48 -46 23 -11 29 -10 40 5 7 10 13 37 13 60 0 54 8 74 29 74 29 0 43 -51 30 -106 -13 -57 -12 -115 2 -129 6 -5 34 -10 62 -10 l52 0 3 -37 c3 -30 11 -43 45 -68 40 -30 77 -39 77 -20 0 5 11 12 25 16 28 7 38 30 33 77 -2 27 1 33 19 35 14 2 26 -4 33 -17 10 -20 59 -51 79 -51 5 0 23 12 41 26 l31 26 54 -17 c45 -14 55 -21 55 -39 0 -22 53 -86 71 -86 14 0 50 -40 45 -49 -3 -5 3 -16 13 -25 12 -11 16 -25 13 -41 -3 -18 6 -38 32 -72 39 -50 43 -62 25 -80 -17 -17 14 -61 47 -69 23 -6 25 -10 20 -37 -4 -22 -1 -33 11 -43 15 -10 16 -17 7 -43 -10 -26 -9 -32 12 -52 22 -20 22 -24 9 -39 -8 -9 -15 -26 -15 -38 0 -12 -9 -31 -20 -42 -17 -17 -18 -24 -8 -45 9 -21 8 -28 -7 -46 -15 -16 -17 -24 -8 -39 9 -13 9 -28 2 -55 -12 -42 -6 -65 16 -65 10 0 15 -10 15 -30 0 -25 4 -30 25 -30 26 0 35 -26 15 -46 -12 -12 -3 -44 11 -44 5 0 9 -11 9 -25 0 -18 -7 -28 -25 -35 -18 -7 -25 -17 -25 -37 0 -15 -11 -38 -24 -52 -46 -50 -65 -177 -33 -218 19 -24 19 -24 -4 -41 -32 -23 -76 -42 -83 -35 -2 3 -12 -11 -20 -32 -11 -26 -13 -42 -6 -55 16 -30 12 -39 -27 -57 -21 -10 -39 -18 -41 -19 -2 -1 4 -16 13 -34 9 -17 15 -39 13 -49 -2 -10 8 -27 20 -38 22 -17 24 -26 25 -128 l2 -110 -42 3 c-23 2 -57 -3 -75 -11 -58 -26 -89 -29 -109 -11 -10 9 -25 14 -33 11 -8 -3 -26 7 -43 23 -15 16 -36 30 -46 30 -10 0 -27 9 -39 20 -17 15 -36 20 -80 20 -50 0 -58 3 -58 19 0 29 -28 34 -45 7 -9 -13 -15 -28 -14 -32 4 -19 -21 -64 -45 -79 -13 -9 -26 -25 -29 -35 -3 -13 -14 -20 -30 -20 -20 0 -27 6 -32 30 -8 37 -12 39 -88 52 -81 13 -153 16 -200 6 -28 -6 -44 -4 -62 8 -13 9 -29 13 -35 9 -15 -9 0 -115 21 -145 12 -19 15 -30 8 -43 -12 -20 -4 -37 17 -37 20 0 18 -10 -7 -37 -18 -18 -20 -25 -10 -37 16 -19 -21 -96 -47 -96 -21 0 -72 62 -72 87 0 11 -5 24 -11 30 -8 8 -7 17 3 32 11 17 11 25 0 42 -10 15 -11 24 -3 32 36 36 -11 139 -68 150 -37 8 -39 19 -8 32 19 9 22 19 25 77 3 65 2 67 -30 91 -21 17 -41 47 -57 86 -22 57 -23 62 -8 79 18 20 23 67 8 76 -17 11 -20 77 -4 102 14 22 14 26 -1 49 -9 13 -16 42 -16 63 0 44 -24 96 -72 154 -18 23 -34 45 -34 49 -1 5 -3 12 -4 17 -1 4 -1 15 0 25 1 10 -12 40 -29 67 -21 33 -31 63 -31 89 0 38 -35 91 -60 91 -5 0 -10 13 -10 29 0 16 -7 34 -15 41 -8 7 -15 18 -15 24 0 18 -58 98 -95 133 -19 18 -35 36 -35 42 0 5 16 18 35 30 38 22 46 54 23 91 -11 16 -9 26 6 54 10 19 16 42 13 50 -4 9 -34 29 -69 46 -35 17 -83 48 -108 70 l-45 38 21 24 c12 13 24 28 28 35 9 16 -4 43 -20 43 -21 0 -27 25 -14 50 18 34 20 58 4 71 -8 6 -14 24 -14 40 0 16 -9 38 -21 50 -17 17 -19 23 -8 30 9 6 18 3 25 -6 6 -8 22 -15 35 -15 13 0 60 -2 103 -5 56 -4 84 -1 95 8 9 7 31 20 49 31 29 16 35 16 50 3 58 -50 169 -61 213 -21 12 10 31 18 43 16 33 -4 52 22 37 54 -16 35 -14 44 9 44 16 0 20 -7 20 -34 0 -19 5 -38 12 -42 21 -13 73 -11 98 5 14 9 34 20 45 26 33 17 49 61 35 96 -7 16 -16 29 -20 29 -4 0 -11 11 -14 24 -3 14 -13 32 -22 41 -13 12 -14 19 -5 28 6 6 11 19 11 28 0 27 101 -28 118 -64z"
+                style="fill: rgb(255, 255, 255)"
+              />
+            </g>
+          </svg>
+          <span><span class="text-green-500">Visit</span>VASLUI</span>
+        </a>
+      </div>
+      <div
+        class="flex w-full flex-col items-center justify-center gap-8 xs:flex-row xs:justify-between"
+      >
+        <div
+          class="flex flex-col items-center justify-center font-normal xs:items-start lg:ml-4"
+        >
+          <div class="text-xl font-bold text-green-500">By</div>
+          <div>POPICA BEATRICE</div>
+          <div>MARIAN DAVID</div>
+        </div>
+        <div id="go_up" class="mr-4">
+          <a href="#top" class="flex items-center justify-center">
+            <span class="relative text-green-500 md:text-lg">Sus</span>
+            <img class="w-10" src="../assets/arrow-top.png" alt="sageata" />
+          </a>
+        </div>
+      </div>
+      <!-- BACK TO TOP -->
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk4l13atzv3uO55ilho7vzc3XYb1Cpgcc&libraries=places"></script>
+  </body>
 </html>

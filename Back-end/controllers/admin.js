@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const Sight = require('../models/sights');
+const Event = require('../models/events');
 const { s3Client } = require('../db/spaces');
 const { isValidObjectId } = require('mongoose');
 const {
@@ -303,9 +304,8 @@ const EditSight = async (req, res) => {
 };
 
 const DeleteSight = async (req, res) => {
-  console.log(req.headers);
   const authHeader = req.headers.authorization;
-  console.log(authHeader);
+
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     res.status(401).json({
       error: 'No token provided',
@@ -323,6 +323,62 @@ const DeleteSight = async (req, res) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     await deleteDocumentById(id);
+    await deleteFolder(id);
+    res.status(200).end('yey');
+  } catch (error) {
+    console.log(error);
+    res.status(401).json({
+      error: 'Token is not valid!',
+    });
+  }
+};
+
+const CreateEvent = async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    res.status(401).json({
+      error: 'No token provided',
+    });
+    return;
+  }
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const data = req.body;
+    if (!data) res.status(401).end();
+    const expirare = new Date(data.expirare);
+    const event = await Event.create({
+      expDate: expirare,
+    });
+    await uploadImageToSpaces(data.cover, event._id, 'poster');
+    res.status(200).end('yesy');
+  } catch (error) {
+    res.status(401).json({
+      error: 'Token is not valid!',
+    });
+  }
+};
+
+const DeleteEvent = async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    res.status(401).json({
+      error: 'No token provided',
+    });
+    return;
+  }
+  const { id } = req.params;
+  if (!id || !isValidObjectId(id)) {
+    res.status(401).json({
+      error: 'Invalid ID',
+    });
+    return;
+  }
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    await deleteEventById(id);
     await deleteFolder(id);
     res.status(200).end('yey');
   } catch (error) {
@@ -402,6 +458,15 @@ async function deleteDocumentById(documentId) {
   }
 }
 
+async function deleteEventById(documentId) {
+  try {
+    await Event.findByIdAndDelete(documentId);
+    console.log('Document deleted successfully');
+  } catch (err) {
+    throw err;
+  }
+}
+
 async function deleteFolder(folderKey) {
   try {
     // List all objects in the folder
@@ -434,6 +499,20 @@ async function deleteFolder(folderKey) {
   }
 }
 
+// Function to delete expired posts
+async function deleteExpiredPosts() {
+  const currentDate = new Date();
+  console.log(currentDate);
+  try {
+    const result = await Event.deleteMany({
+      expDate: { $lt: currentDate },
+    });
+    console.log(`${result.deletedCount} expired posts deleted.`);
+  } catch (error) {
+    console.error('Error deleting expired posts:', error);
+  }
+}
+
 module.exports = {
   LogIn,
   VerifyAdminMain,
@@ -441,4 +520,7 @@ module.exports = {
   GetDef,
   EditSight,
   DeleteSight,
+  CreateEvent,
+  DeleteEvent,
+  deleteExpiredPosts,
 };

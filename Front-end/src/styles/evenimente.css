@@ -49,3 +49,9 @@
     width: 3rem;
     height: 3rem;
 }
+.duo-colo {
+    background-image: linear-gradient(to bottom, black 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

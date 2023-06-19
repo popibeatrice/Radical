@@ -120,7 +120,7 @@ const RenderCard = (title, descp, id, lat, lng, type) => {
     'absolute',
     'inset-0',
     'bg-black',
-    'bg-opacity-0',
+    'bg-opacity-10',
     'transition-all',
     'duration-1000',
     'group-hover:bg-opacity-60'
