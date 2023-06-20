@@ -1,436 +1,441 @@
 #map {
-    position: sticky !important ;
+  position: sticky !important ;
 }
 
 .menu-btn__burger {
-    background: #000;
+  background: #000;
 }
 
 /* This creates the top and bottom lines but it does not position them */
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-    background: #000;
+  background: #000;
 }
 .pictor {
-    background: url("../assets/monument_pictor.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/monument_pictor.jpg');
+  background-size: cover;
+  background-position: center;
 }
 /* PRIMUL TRASEU */
 
 /* manastirea fastaci */
 .fastaci1 {
-    background: url("../assets/manastirea_fastaci1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_fastaci1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .fastaci2 {
-    background: url("../assets/manastirea_fastaci3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_fastaci3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .fastaci3 {
-    background: url("../assets/manastirea_fastaci2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_fastaci2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 /* muzeu Vaslui */
 .muzeu_vaslui1 {
-    background: url("../assets/muzeul_vaslui2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_vaslui2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_vaslui2 {
-    background: url("../assets/muzeu_vaslui3.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeu_vaslui3.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_vaslui3 {
-    background: url("../assets/muzeul_vaslui.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_vaslui.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_vaslui4 {
-    background: url("../assets/muzeu_vaslui.webp");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeu_vaslui.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 /* casa si mormant */
 
 .casa-Cuza1 {
-    background: url("../assets/casa_Elena_Cuza1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_Elena_Cuza1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .casa-Cuza2 {
-    background: url("../assets/casa_Elena_Cuza2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_Elena_Cuza2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .mormantCuza1 {
-    background: url("../assets/mormantCuza1.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/mormantCuza1.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .mormantCuza2 {
-    background: url("../assets/mormantCuza4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/mormantCuza4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .mormantCuza3 {
-    background: url("../assets/mormantCuza2.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/mormantCuza2.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* muzeu Satu Nou */
 .muzeu_SatuNou1 {
-    background: url("../assets/muzeul_SatuNou1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_SatuNou1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_SatuNou2 {
-    background: url("../assets/muzeul_SatuNou2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_SatuNou2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .muzeu_SatuNou3 {
-    background: url("../assets/muzeul_SatuNou3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_SatuNou3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Movila + Biserica*/
 .movila1 {
-    background: url("../assets/Movila3.webp");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila3.webp');
+  background-size: cover;
+  background-position: center;
 }
 .movila2 {
-    background: url("../assets/Movila7.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila7.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .movila3 {
-    background: url("../assets/Movila5.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila5.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .movila4 {
-    background: url("../assets/Movila6.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila6.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .movila5 {
-    background: url("../assets/Movila1.jpg");
-    background-size: cover;
-    background-position: 15% 25%;
+  background: url('../assets/Movila1.jpg');
+  background-size: cover;
+  background-position: 15% 25%;
 }
 .movila6 {
-    background: url("../assets/Movila8.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila8.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .movila7 {
-    background: url("../assets/Movila4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .movila8 {
-    background: url("../assets/Movila2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Movila2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* emil racovita */
 .emil-racovita1 {
-    background: url("../assets/casa_Emil_Racovita1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_Emil_Racovita1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .emil-racovita2 {
-    background: url("../assets/casa_Emil_Racovita2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_Emil_Racovita2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .emil-racovita3 {
-    background: url("../assets/casa_Emil_Racovita3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa_Emil_Racovita3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* AL DOILEA TRASEU */
 
 /* floresti */
 .floresti1 {
-    background: url("../assets/floresti1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/floresti1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .floresti2 {
-    background: url("../assets/floresti2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/floresti2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .floresti3 {
-    background: url("../assets/floresti3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/floresti3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .floresti4 {
-    background: url("../assets/floresti4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/floresti4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .lac_Gaseasa {
-    background: url("../assets/lac_gadeasa.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/lac_gadeasa.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* sf ioan */
 .sf-ioan1 {
-    background: url("../assets/manastirea_stantu_ion.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_stantu_ion.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .sf-ioan2 {
-    background: url("../assets/manastirea_stantu_ion2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_stantu_ion2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .sf-ioan3 {
-    background: url("../assets/manastirea_stantu_ion3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_stantu_ion3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .sf-ioan4 {
-    background: url("../assets/manastirea_stantu_ion4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_stantu_ion4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* teiul secular de la fundul vaii */
 .tei_secular1 {
-    background: url("../assets/tei_secular1.webp");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/tei_secular1.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 /* casa alexandru ioan cuza */
 .alexandru_cuza1 {
-    background: url("../assets/casa-cuza.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa-cuza.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .alexandru_cuza2 {
-    background: url("../assets/casa-cuza2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/casa-cuza2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* podul doamnei */
 .podul_doamnei1 {
-    background: url("../assets/podul_doamnei.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/podul_doamnei.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .podul_doamnei2 {
-    background: url("../assets/podul_doamnei2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/podul_doamnei2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* podu inalt */
 .podu_inalt1 {
-    background: url("../assets/podul_inalt.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/podul_inalt.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .podu_inalt2 {
-    background: url("../assets/podul_inalt2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/podul_inalt2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .podu_inalt3 {
-    background: url("../assets/podul_inalt3.png");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/podul_inalt3.png');
+  background-size: cover;
+  background-position: center;
 }
 
 /* AL TREILEA TRASEU */
 
 /* bujoreni */
 .bujoreni1 {
-    background: url("../assets/manastirea_bujoreni.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_bujoreni.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .bujoreni2 {
-    background: url("../assets/manastirea_bujoreni2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_bujoreni2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .bujoreni3 {
-    background: url("../assets/manastirea_bujoreni3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_bujoreni3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .bujoreni4 {
-    background: url("../assets/manastirea_bujoreni4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_bujoreni4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* curtea domneasca */
 .curtea_domneasca2 {
-    background: url("../assets/curtile_domnesti2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtile_domnesti2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca3 {
-    background: url("../assets/curtile_domnesti3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtile_domnesti3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca4 {
-    background: url("../assets/curtile_domnesti5.png");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtile_domnesti5.png');
+  background-size: cover;
+  background-position: center;
 }
 .curtea_domneasca5 {
-    background: url("../assets/curtea_domneasca4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/curtea_domneasca4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 /* zoo */
 .zoo1 {
-    background: url("../assets/zoo1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/zoo1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .zoo2 {
-    background: url("../assets/zoo2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/zoo2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.zoo3 {
+  background: url('../assets/533.Gr_dina_Zoologic_din_B_rlad_9.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* averesti */
 .averesti1 {
-    background: url("../assets/averesti6.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/averesti6.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .averesti2 {
-    background: url("../assets/averesti5.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/averesti5.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .averesti3 {
-    background: url("../assets/averesti3.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/averesti3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .averesti4 {
-    background: url("../assets/averesti1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/averesti1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .averesti5 {
-    background: url("../assets/averesti7.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/averesti7.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* tiganca */
 .tiganca1 {
-    background: url("../assets/tiganca1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/tiganca1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .tiganca2 {
-    background: url("../assets/tiganca2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/tiganca2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* muzeu vasile parvan */
 .parvan1 {
-    background: url("../assets/muzeul_parvan.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .parvan2 {
-    background: url("../assets/muzeul_parvan.webp");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan.webp');
+  background-size: cover;
+  background-position: center;
 }
 .parvan4 {
-    background: url("../assets/muzeul_parvan4.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeul_parvan4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .parvan5 {
-    background: url("../assets/observator.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/observator.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .parvan6 {
-    background: url("../assets/muzeu_parvan5.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/muzeu_parvan5.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* moreni */
 .moreni1 {
-    background: url("../assets/manastire_schit.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastire_schit.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .moreni2 {
-    background: url("../assets/manastire_moreni3.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastire_moreni3.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .moreni3 {
-    background: url("../assets/manastirea_moreni2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_moreni2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .moreni4 {
-    background: url("../assets/manastirea_moreni4.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_moreni4.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .moreni5 {
-    background: url("../assets/manastirea_moreni5.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/manastirea_moreni5.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .moreni6 {
-    background: url("../assets/schitul_ticlaoani.jpeg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/schitul_ticlaoani.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 .moreni7 {
-    background: url("../assets/Schitul_Ticlaoani.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/Schitul_Ticlaoani.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .eminescu1 {
-    background: url("../assets/eminescu2.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/eminescu2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .eminescu2 {
-    background: url("../assets/eminescu1.jpg");
-    background-size: cover;
-    background-position: center;
+  background: url('../assets/eminescu1.jpg');
+  background-size: cover;
+  background-position: center;
 }
